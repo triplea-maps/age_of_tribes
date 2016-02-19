@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes" version="0.1.4"/>
+  <info name="Age of Tribes" version="0.1.41"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="12"/>
@@ -2798,6 +2798,7 @@
             <option name="isKamikaze" value="true"/>
             <option name="carrierCost" value="3"/>
             <option name="isInfrastructure" value="true"/>
+            <option name="maxBuiltPerPlayer" value="1"/>
             <option name="whenCapturedChangesInto" value="any:any:true:Nuke-Explosion:1"/>
         </attatchment>
         <attatchment name="unitAttatchment" attatchTo="Nuke-Explosion" javaClass="games.strategy.triplea.attatchments.UnitAttachment" type="unitType">

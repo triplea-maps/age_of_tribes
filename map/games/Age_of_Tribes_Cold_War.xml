@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Cold War" version="0.1.4"/>
+  <info name="Age of Tribes: Cold War" version="0.1.41"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="12"/>
@@ -996,6 +996,7 @@
                 <step name="BrittonicCombatMove" delegate="move" player="Brittonic" display="Combat Move"/>
                 <step name="BrittonicBattle" delegate="battle" player="Brittonic" display="Combat"/>
                 <step name="BrittonicNonCombatMove" delegate="move" player="Brittonic" display="Non Combat Move"/>
+                <step name="BrittonicUserActions" delegate="userActions" player="Brittonic" display="Military Aid"/>
                 <step name="BrittonicPurchase" delegate="purchase" player="Brittonic" display="Purchase Units"/>
                 <step name="BrittonicPlace" delegate="place" player="Brittonic" display="Place Units"/>
                 <step name="BrittonicEndTurn" delegate="endTurn" player="Brittonic" display="Turn Complete"/>
@@ -1023,6 +1024,7 @@
                 <step name="SlavicCombatMove" delegate="move" player="Slavic" display="Combat Move"/>
                 <step name="SlavicBattle" delegate="battle" player="Slavic" display="Combat"/>
                 <step name="SlavicNonCombatMove" delegate="move" player="Slavic" display="Non Combat Move"/>
+                <step name="SlavicUserActions" delegate="userActions" player="Slavic" display="Military Aid"/>
                 <step name="SlavicPurchase" delegate="purchase" player="Slavic" display="Purchase Units"/>
                 <step name="SlavicPlace" delegate="place" player="Slavic" display="Place Units"/>
                 <step name="SlavicEndTurn" delegate="endTurn" player="Slavic" display="Turn Complete"/>
@@ -2816,6 +2818,7 @@
             <option name="isKamikaze" value="true"/>
             <option name="carrierCost" value="3"/>
             <option name="isInfrastructure" value="true"/>
+            <option name="maxBuiltPerPlayer" value="1"/>
             <option name="whenCapturedChangesInto" value="any:any:true:Nuke-Explosion:1"/>
         </attatchment>
         <attatchment name="unitAttatchment" attatchTo="Nuke-Explosion" javaClass="games.strategy.triplea.attatchments.UnitAttachment" type="unitType">
