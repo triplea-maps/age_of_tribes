@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Cold War" version="0.1.41"/>
+  <info name="Age of Tribes: Cold War" version="0.1.5"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="12"/>
@@ -2140,6 +2140,7 @@
             <option name="attack" value="5"/>
             <option name="defense" value="5"/>
             <option name="canBombard" value="true"/>
+            <option name="bombard" value="1"/>
             <option name="isSea" value="true"/>
             <option name="movement" value="2"/>
             <option name="transportCapacity" value="2"/>
@@ -2160,6 +2161,7 @@
             <option name="attack" value="6"/>
             <option name="defense" value="7"/>
             <option name="canBombard" value="true"/>
+            <option name="bombard" value="2"/>
             <option name="isSea" value="true"/>
             <option name="movement" value="2"/>
             <option name="transportCapacity" value="4"/>
@@ -2180,6 +2182,7 @@
             <option name="attack" value="8"/>
             <option name="defense" value="8"/>
             <option name="canBombard" value="true"/>
+            <option name="bombard" value="3"/>
             <option name="isSea" value="true"/>
             <option name="movement" value="3"/>
             <option name="transportCapacity" value="6"/>
@@ -17257,7 +17260,7 @@
             <boolean/>
         </property>
 
-        <property name="AI Bonus Income Flat Rate" value="15" editable="true">
+        <property name="AI Bonus Income Flat Rate" value="25" editable="true">
             <number min="0" max="100"/>
         </property>
         <property name="AI Bonus Income Percentage" value="0" editable="true">
