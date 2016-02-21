@@ -17705,7 +17705,7 @@
             <boolean/>
         </property>
 
-        <property name="AI Bonus Income Flat Rate" value="15" editable="true">
+        <property name="AI Bonus Income Flat Rate" value="20" editable="true">
             <number min="0" max="100"/>
         </property>
         <property name="AI Bonus Income Percentage" value="0" editable="true">
