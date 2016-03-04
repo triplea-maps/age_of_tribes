@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Renaissance" version="0.1.5"/>
+  <info name="Age of Tribes: Renaissance" version="0.1.6"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="12"/>
@@ -3385,7 +3385,7 @@
             <option name="originalOwner" value="Germanic"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Caledonia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="3"/>
+            <option name="production" value="4"/>
             <option name="originalOwner" value="Brittonic"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Canaan" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
@@ -3427,7 +3427,7 @@
             <option name="production" value="1"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Chunni" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="1"/>
             <option name="originalOwner" value="Slavic"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Cilicia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
@@ -3470,7 +3470,7 @@
             <option name="originalOwner" value="Romanic"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Dania" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="3"/>
+            <option name="production" value="4"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Dregovich" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -3481,7 +3481,7 @@
             <option name="originalOwner" value="Baltic"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Dumnonia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="4"/>
+            <option name="production" value="5"/>
             <option name="originalOwner" value="Brittonic"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Emi" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
@@ -3561,7 +3561,7 @@
             <option name="originalOwner" value="Germanic"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Hibernia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="3"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Hyperborea" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -3685,7 +3685,7 @@
             <option name="originalOwner" value="Slavic"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Muroma" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="1"/>
             <option name="originalOwner" value="Slavic"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Mysia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
@@ -3719,7 +3719,7 @@
             <option name="production" value="2"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Otadinia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="3"/>
             <option name="originalOwner" value="Brittonic"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Pamphylia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
@@ -3838,10 +3838,10 @@
             <option name="production" value="3"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Sindica" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="1"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Siracena" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="1"/>
             <option name="originalOwner" value="Slavic"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Sitones" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
@@ -17832,13 +17832,13 @@
 <br><span style="font-size:12px;color:0C0C0C;">These units are specialized in devastating enemy bases from a distance. They fire volleys of exploding iron ordinance towards enemy buildings. Though specialized against buildings, the mortar can also attack other military units within range.</span><br>
 <br><center><img src="Rocket-Launcher.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Rocket Launchers</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">These mobile units are in the top line of advanced military hardware. Rocket Launchers may fire large and destructive Rockets every round. These Rockets may be aimed at either enemy units or enemy buildings.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">These mobile units are in the top line of advanced military hardware. Rocket Launchers may fire large and destructive Rockets every round. These Rockets may be aimed at either enemy units or enemy buildings. Be aware that Submarines attacked by Rockets can just submerge out of danger.</span><br>
 <br><center><img src="Truck.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Trucks</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">Trucks are capable of transporting footmen and support footmen. One Truck can move one footman two territories. To move Trucks and footmen two territories, click and mark the Trucks, click and mark an equal number of footmen and then click on the targeted territory two moves away. All Trucks and footmen will now move directly into that territory. Trucks can also blitz through and capture enemy territories during this operation.</span><br>
 <br><center><img src="Air-Transport.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Air Transports</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">These planes can carry up to three Infantry, Shock Troopers or War Robots into battle. After paradrops, these Air Transports also participate in any following battle. If they survive, then they may/must fly back to a friendly territory.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">These planes can carry up to three Infantry, Shock Troopers or War Robots into battle. After paradrops, these Air Transports also participate in any following battle. If they survive, then they may/must fly back to a friendly territory. Be aware that Anti-Air Units might shoot down Air Transports before paradrops can occur.</span><br>
 <br><center><img src="Stealth-BomberNew.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Stealth Bombers</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">These aircraft use advanced technology that makes them hard to detect and hit. Each Stealth Bomber therefore causes three enemy units to fight with a -1 on their attack or defense dice.</span><br>

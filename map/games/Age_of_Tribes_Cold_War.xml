@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Cold War" version="0.1.5"/>
+  <info name="Age of Tribes: Cold War" version="0.1.6"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="12"/>
@@ -3445,7 +3445,7 @@
             <option name="production" value="3"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Caledonia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="3"/>
+            <option name="production" value="4"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Canaan" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
@@ -3483,7 +3483,7 @@
             <option name="production" value="1"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Chunni" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="1"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Cilicia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -3519,7 +3519,7 @@
             <option name="production" value="2"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Dania" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="3"/>
+            <option name="production" value="4"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Dregovich" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -3528,7 +3528,7 @@
             <option name="production" value="2"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Dumnonia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="4"/>
+            <option name="production" value="5"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Emi" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -3600,7 +3600,7 @@
             <option name="production" value="4"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Hibernia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="3"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Hyperborea" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -3707,7 +3707,7 @@
             <option name="production" value="3"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Muroma" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="1"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Mysia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -3737,7 +3737,7 @@
             <option name="production" value="2"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Otadinia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="3"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Pamphylia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -3837,10 +3837,10 @@
             <option name="production" value="3"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Sindica" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="1"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Siracena" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="1"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Sitones" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -16821,59 +16821,31 @@
             <territoryOwner territory="Zaueces" owner="Brittonic"/>
         </ownerInitialize>
         <unitInitialize>
-            <unitPlacement unitType="Infantry" territory="Aeduia" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Truck" territory="Aeduia" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Infantry" territory="Akkad" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Truck" territory="Akkad" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Fighter" territory="Alemannia" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Infantry" territory="Alemannia" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Command-Bunker" territory="Alemannia" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Truck" territory="Alemannia" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Infantry" territory="Balticum" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Infantry" territory="Balticum" quantity="2" owner="Baltic"/>
             <unitPlacement unitType="Command-Bunker" territory="Balticum" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Anti-Air" territory="Balticum" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Truck" territory="Balticum" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Warplane" territory="Balticum" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Infantry" territory="Belgica" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Bergio" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Truck" territory="Bergio" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Bomber" territory="Brigantes" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Brigantes" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Anti-Air" territory="Brigantes" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Tank" territory="Balticum" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Bomber" territory="Britannia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Fighter" territory="Britannia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Britannia" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Infantry" territory="Britannia" quantity="5" owner="Brittonic"/>
             <unitPlacement unitType="Command-Bunker" territory="Britannia" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Anti-Air" territory="Britannia" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Truck" territory="Britannia" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Tank" territory="Britannia" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Infantry" territory="Buri" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Caledonia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Canaan" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Infantry" territory="Caria" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Fighter" territory="Celtiberia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Celtiberia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Truck" territory="Celtiberia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Celtica" quantity="6" owner="Celtic"/>
+            <unitPlacement unitType="Fighter" territory="Celtica" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Infantry" territory="Celtica" quantity="3" owner="Celtic"/>
             <unitPlacement unitType="Command-Bunker" territory="Celtica" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Truck" territory="Celtica" quantity="6" owner="Celtic"/>
-            <unitPlacement unitType="Tank" territory="Celtica" quantity="2" owner="Celtic"/>
-            <unitPlacement unitType="Infantry" territory="Cilicia" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Warplane" territory="Cilicia" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Infantry" territory="Cimmeria" quantity="1" owner="Slavic"/>
+            <unitPlacement unitType="Truck" territory="Celtica" quantity="3" owner="Celtic"/>
+            <unitPlacement unitType="Infantry" territory="Cimmeria" quantity="3" owner="Slavic"/>
             <unitPlacement unitType="Command-Bunker" territory="Cimmeria" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Anti-Air" territory="Cimmeria" quantity="1" owner="Slavic"/>
+            <unitPlacement unitType="Tank" territory="Cimmeria" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Infantry" territory="Creta" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Infantry" territory="Cyprus" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Infantry" territory="Dalmatia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Dania" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Anti-Air" territory="Dania" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Bomber" territory="Dumnonia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Dumnonia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Anti-Air" territory="Dumnonia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Etruria" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Infantry" territory="Frisia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Truck" territory="Frisia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Germania" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Germania" quantity="3" owner="Germanic"/>
             <unitPlacement unitType="Anti-Air" territory="Germania" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Tank" territory="Germania" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Infantry" territory="Gothia" quantity="1" owner="Slavic"/>
@@ -16881,74 +16853,48 @@
             <unitPlacement unitType="Infantry" territory="Gotini" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Anti-Air" territory="Gotini" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Tank" territory="Gotini" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Hatti" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Infantry" territory="Hatti" quantity="3" owner="Hattic"/>
             <unitPlacement unitType="Command-Bunker" territory="Hatti" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Truck" territory="Hatti" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Truck" territory="Hatti" quantity="3" owner="Hattic"/>
             <unitPlacement unitType="Warplane" territory="Hatti" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Infantry" territory="Hellas" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Infantry" territory="Hellas" quantity="3" owner="Hellenic"/>
             <unitPlacement unitType="Command-Bunker" territory="Hellas" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Anti-Air" territory="Hellas" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Truck" territory="Hellas" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Warplane" territory="Hellas" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Tank" territory="Hellas" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Infantry" territory="Helvetia" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Truck" territory="Helvetia" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Infantry" territory="Hermunduria" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Hermunduria" quantity="3" owner="Germanic"/>
             <unitPlacement unitType="Anti-Air" territory="Hermunduria" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Tank" territory="Hermunduria" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Infantry" territory="Hibernia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Fighter" territory="Illyria" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Infantry" territory="Illyria" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Anti-Air" territory="Illyria" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Tank" territory="Illyria" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Karelia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Truck" territory="Karelia" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Fighter" territory="Ladogaski" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Infantry" territory="Ladogaski" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Command-Bunker" territory="Ladogaski" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Anti-Air" territory="Ladogaski" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Tank" territory="Ladogaski" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Latgallia" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Infantry" territory="Livonia" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Command-Bunker" territory="Livonia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Infantry" territory="Livonia" quantity="2" owner="Baltic"/>
             <unitPlacement unitType="Anti-Air" territory="Livonia" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Truck" territory="Livonia" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Warplane" territory="Livonia" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Infantry" territory="Macedonia" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Infantry" territory="Marcomanni" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Marcomanni" quantity="3" owner="Germanic"/>
             <unitPlacement unitType="Anti-Air" territory="Marcomanni" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Tank" territory="Marcomanni" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Infantry" territory="Mauria" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Infantry" territory="Norici" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Truck" territory="Norici" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Otadinia" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Command-Bunker" territory="Otadinia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Anti-Air" territory="Otadinia" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Fighter" territory="Pannonia" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Infantry" territory="Pannonia" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Anti-Air" territory="Pannonia" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Tank" territory="Pannonia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Parthia" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Truck" territory="Parthia" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Infantry" territory="Peloponnesus" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Command-Bunker" territory="Peloponnesus" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Infantry" territory="Peloponnesus" quantity="3" owner="Hellenic"/>
+            <unitPlacement unitType="Anti-Air" territory="Peloponnesus" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Truck" territory="Peloponnesus" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Infantry" territory="Pomerania" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Truck" territory="Pomerania" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Infantry" territory="Ragnarici" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Anti-Air" territory="Ragnarici" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Roma" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Command-Bunker" territory="Ragnarici" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Infantry" territory="Roma" quantity="2" owner="Romanic"/>
             <unitPlacement unitType="Command-Bunker" territory="Roma" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Anti-Air" territory="Roma" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Truck" territory="Roma" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Tank" territory="Roma" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Fighter" territory="Salluvia" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Infantry" territory="Salluvia" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Truck" territory="Salluvia" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Infantry" territory="Salluvia" quantity="3" owner="Celtic"/>
             <unitPlacement unitType="Command-Bunker" territory="Salluvia" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Infantry" territory="Samnium" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Command-Bunker" territory="Samnium" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Infantry" territory="Sardinia" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Tank" territory="Salluvia" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Infantry" territory="Samnium" quantity="2" owner="Romanic"/>
+            <unitPlacement unitType="Anti-Air" territory="Samnium" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Warship" territory="Sea Zone 6" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Submarine" territory="Sea Zone 6" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Warship" territory="Sea Zone 8" quantity="1" owner="Hellenic"/>
@@ -16958,71 +16904,51 @@
             <unitPlacement unitType="Warship" territory="Sea Zone 15" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Submarine" territory="Sea Zone 15" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Warship" territory="Sea Zone 18" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Submarine" territory="Sea Zone 18" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Warship" territory="Sea Zone 22" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Submarine" territory="Sea Zone 22" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Warship" territory="Sea Zone 24" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 24" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 27" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Warship" territory="Sea Zone 29" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Warship" territory="Sea Zone 24" quantity="2" owner="Brittonic"/>
+            <unitPlacement unitType="Submarine" territory="Sea Zone 29" quantity="2" owner="Brittonic"/>
             <unitPlacement unitType="Warship" territory="Sea Zone 32" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Submarine" territory="Sea Zone 32" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Warship" territory="Sea Zone 34" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Warship" territory="Sea Zone 34" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 34" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 35" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Submarine" territory="Sea Zone 34" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Infantry" territory="Semigallia" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Fighter" territory="Sicilia" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Infantry" territory="Sicilia" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Warship" territory="Sea Zone 34" quantity="1" owner="Slavic"/>
+            <unitPlacement unitType="Submarine" territory="Sea Zone 34" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Infantry" territory="Skalvia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Bomber" territory="Slavoicum" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Slavoicum" quantity="9" owner="Slavic"/>
+            <unitPlacement unitType="Infantry" territory="Slavoicum" quantity="5" owner="Slavic"/>
             <unitPlacement unitType="Command-Bunker" territory="Slavoicum" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Anti-Air" territory="Slavoicum" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Truck" territory="Slavoicum" quantity="9" owner="Slavic"/>
-            <unitPlacement unitType="Tank" territory="Slavoicum" quantity="3" owner="Slavic"/>
-            <unitPlacement unitType="Fighter" territory="Suiones" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Suiones" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Anti-Air" territory="Suiones" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Tank" territory="Suiones" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Sumi" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Anti-Air" territory="Sumi" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Warplane" territory="Sumi" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Tank" territory="Sumi" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Teutonia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Truck" territory="Slavoicum" quantity="5" owner="Slavic"/>
+            <unitPlacement unitType="Infantry" territory="Teutonia" quantity="3" owner="Germanic"/>
+            <unitPlacement unitType="Tank" territory="Teutonia" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Command-Bunker" territory="Teutonia" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Anti-Air" territory="Teutonia" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Tank" territory="Teutonia" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Infantry" territory="Thrace" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Infantry" territory="Turdetania" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Command-Bunker" territory="Turdetania" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Anti-Air" territory="Turdetania" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Ugarit" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Infantry" territory="Ugarit" quantity="3" owner="Hattic"/>
             <unitPlacement unitType="Command-Bunker" territory="Ugarit" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Truck" territory="Ugarit" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Warplane" territory="Ugarit" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Infantry" territory="Ulaidia" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Tank" territory="Ugarit" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Fighter" territory="Vandalia" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Infantry" territory="Vandalia" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Anti-Air" territory="Vandalia" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Tank" territory="Vandalia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Fighter" territory="Venetia" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Infantry" territory="Venetia" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Infantry" territory="Vironia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Walha" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Infantry" territory="Venetia" quantity="2" owner="Romanic"/>
+            <unitPlacement unitType="Anti-Air" territory="Venetia" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Warplane" territory="Venetia" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Tank" territory="Venetia" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Infantry" territory="Zaueces" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Truck" territory="Zaueces" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Tank" territory="Zaueces" quantity="1" owner="Brittonic"/>
         </unitInitialize>
         <resourceInitialize>
-            <resourceGiven player="Brittonic" resource="PUs" quantity="115"/>
-            <resourceGiven player="Celtic" resource="PUs" quantity="115"/>
-            <resourceGiven player="Germanic" resource="PUs" quantity="115"/>
-            <resourceGiven player="Romanic" resource="PUs" quantity="115"/>
-            <resourceGiven player="Baltic" resource="PUs" quantity="115"/>
-            <resourceGiven player="Hellenic" resource="PUs" quantity="115"/>
-            <resourceGiven player="Slavic" resource="PUs" quantity="115"/>
-            <resourceGiven player="Hattic" resource="PUs" quantity="115"/>
+            <resourceGiven player="Brittonic" resource="PUs" quantity="65"/>
+            <resourceGiven player="Celtic" resource="PUs" quantity="15"/>
+            <resourceGiven player="Germanic" resource="PUs" quantity="15"/>
+            <resourceGiven player="Romanic" resource="PUs" quantity="15"/>
+            <resourceGiven player="Baltic" resource="PUs" quantity="15"/>
+            <resourceGiven player="Hellenic" resource="PUs" quantity="15"/>
+            <resourceGiven player="Slavic" resource="PUs" quantity="85"/>
+            <resourceGiven player="Hattic" resource="PUs" quantity="15"/>
         </resourceInitialize>
         <relationshipInitialize>
             <relationship type="Alliance" player1="Brittonic" player2="Celtic" roundValue="1"/>
@@ -17387,13 +17313,13 @@
 <br><span style="font-size:12px;color:0C0C0C;">These units are specialized in devastating enemy bases from a distance. They fire volleys of exploding iron ordinance towards enemy buildings. Though specialized against buildings, the mortar can also attack other military units within range.</span><br>
 <br><center><img src="Rocket-Launcher.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Rocket Launchers</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">These mobile units are in the top line of advanced military hardware. Rocket Launchers may fire large and destructive Rockets every round. These Rockets may be aimed at either enemy units or enemy buildings.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">These mobile units are in the top line of advanced military hardware. Rocket Launchers may fire large and destructive Rockets every round. These Rockets may be aimed at either enemy units or enemy buildings. Be aware that Submarines attacked by Rockets can just submerge out of danger.</span><br>
 <br><center><img src="Truck.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Trucks</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">Trucks are capable of transporting footmen and support footmen. One Truck can move one footman two territories. To move Trucks and footmen two territories, click and mark the Trucks, click and mark an equal number of footmen and then click on the targeted territory two moves away. All Trucks and footmen will now move directly into that territory. Trucks can also blitz through and capture enemy territories during this operation.</span><br>
 <br><center><img src="Air-Transport.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Air Transports</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">These planes can carry up to three Infantry, Shock Troopers or War Robots into battle. After paradrops, these Air Transports also participate in any following battle. If they survive, then they may/must fly back to a friendly territory.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">These planes can carry up to three Infantry, Shock Troopers or War Robots into battle. After paradrops, these Air Transports also participate in any following battle. If they survive, then they may/must fly back to a friendly territory. Be aware that Anti-Air Units might shoot down Air Transports before paradrops can occur.</span><br>
 <br><center><img src="Stealth-BomberNew.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Stealth Bombers</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">These aircraft use advanced technology that makes them hard to detect and hit. Each Stealth Bomber therefore causes three enemy units to fight with a -1 on their attack or defense dice.</span><br>
