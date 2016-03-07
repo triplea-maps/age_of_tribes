@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Renaissance" version="0.1.6"/>
+  <info name="Age of Tribes: Renaissance" version="0.1.7"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="12"/>
@@ -1539,31 +1539,31 @@
 <!-- Repair rules -->
 <!-- if you use ww2v3 style factory damage, you need repair rules -->
         <repairRule name="repairFort">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Fort" quantity="1"/>
         </repairRule>
         <repairRule name="repairCastle">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Castle" quantity="1"/>
         </repairRule>
         <repairRule name="repairFortress">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Fortress" quantity="1"/>
         </repairRule>
         <repairRule name="repairCommand-Bunker">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Command-Bunker" quantity="1"/>
         </repairRule>
         <repairRule name="repairMissile-Silo">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Missile-Silo" quantity="1"/>
         </repairRule>
         <repairRule name="repairMissile-Shield">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Missile-Shield" quantity="1"/>
         </repairRule>
         <repairRule name="repairEnergy-Shield">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Energy-Shield" quantity="1"/>
         </repairRule>
 
@@ -2821,7 +2821,6 @@
             <option name="isInfrastructure" value="true"/>
             <option name="whenCapturedChangesInto" value="any:any:true:Nuke-Explosion:1"/>
         </attatchment>
-
         <attatchment name="unitAttatchment" attatchTo="Develop-Observation-Balloon" javaClass="games.strategy.triplea.attatchments.UnitAttachment" type="unitType">
             <option name="attack" value="1"/>
             <option name="defense" value="1"/>
@@ -17335,7 +17334,7 @@
             <unitPlacement unitType="Musketman" territory="Frisia" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Cannon" territory="Galindia" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Horseman" territory="Galindia" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Musketman" territory="Galindia" quantity="4" owner="Baltic"/>
+            <unitPlacement unitType="Musketman" territory="Galindia" quantity="3" owner="Baltic"/>
             <unitPlacement unitType="Musketman" territory="Gautigoth" quantity="2" owner="Brittonic"/>
             <unitPlacement unitType="Mortar" territory="Germania" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Halberdman" territory="Germania" quantity="1" owner="Germanic"/>
@@ -17354,7 +17353,7 @@
             <unitPlacement unitType="Mortar" territory="Hellas" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Castle" territory="Hellas" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Horseman" territory="Hellas" quantity="3" owner="Hellenic"/>
-            <unitPlacement unitType="Musketman" territory="Hellas" quantity="3" owner="Hellenic"/>
+            <unitPlacement unitType="Musketman" territory="Hellas" quantity="4" owner="Hellenic"/>
             <unitPlacement unitType="Cannon" territory="Helvetia" quantity="3" owner="Celtic"/>
             <unitPlacement unitType="Musketman" territory="Helvetia" quantity="5" owner="Celtic"/>
             <unitPlacement unitType="Musketman" territory="Iazyges" quantity="1" owner="Romanic"/>
@@ -17363,10 +17362,10 @@
             <unitPlacement unitType="Horseman" territory="Ilmenski" quantity="3" owner="Slavic"/>
             <unitPlacement unitType="Cannon" territory="Ladogaski" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Castle" territory="Ladogaski" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Musketman" territory="Ladogaski" quantity="3" owner="Slavic"/>
+            <unitPlacement unitType="Musketman" territory="Ladogaski" quantity="4" owner="Slavic"/>
             <unitPlacement unitType="Musketman" territory="Latgallia" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Fort" territory="Livonia" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Musketman" territory="Livonia" quantity="3" owner="Baltic"/>
+            <unitPlacement unitType="Musketman" territory="Livonia" quantity="2" owner="Baltic"/>
             <unitPlacement unitType="Horseman" territory="Lydia" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Fort" territory="Lydia" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Musketman" territory="Lydia" quantity="1" owner="Hellenic"/>
@@ -17685,7 +17684,7 @@
         <property name="Transport Restricted Unload" value="true" editable="false">
             <boolean/>
         </property>
-        <property name="Partial Amphibious Retreat" value="false" editable="false">
+        <property name="Partial Amphibious Retreat" value="true" editable="false">
             <boolean/>
         </property>
 
@@ -17721,7 +17720,7 @@
             <boolean/>
         </property>
 
-        <property name="mapName" value="Age_of_Tribes" editable="false">
+        <property name="mapName" value="age_of_tribes" editable="false">
             <string/>
         </property>
 

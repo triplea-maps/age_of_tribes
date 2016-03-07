@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Primeval" version="0.1.6"/>
+  <info name="Age of Tribes: Primeval" version="0.1.7"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="12"/>
@@ -1608,31 +1608,31 @@
 <!-- Repair rules -->
 <!-- if you use ww2v3 style factory damage, you need repair rules -->
         <repairRule name="repairFort">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Fort" quantity="1"/>
         </repairRule>
         <repairRule name="repairCastle">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Castle" quantity="1"/>
         </repairRule>
         <repairRule name="repairFortress">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Fortress" quantity="1"/>
         </repairRule>
         <repairRule name="repairCommand-Bunker">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Command-Bunker" quantity="1"/>
         </repairRule>
         <repairRule name="repairMissile-Silo">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Missile-Silo" quantity="1"/>
         </repairRule>
         <repairRule name="repairMissile-Shield">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Missile-Shield" quantity="1"/>
         </repairRule>
         <repairRule name="repairEnergy-Shield">
-            <cost resource="PUs" quantity="5" />
+            <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Energy-Shield" quantity="1"/>
         </repairRule>
 
@@ -20281,7 +20281,7 @@
         <property name="Transport Restricted Unload" value="true" editable="false">
             <boolean/>
         </property>
-        <property name="Partial Amphibious Retreat" value="false" editable="false">
+        <property name="Partial Amphibious Retreat" value="true" editable="false">
             <boolean/>
         </property>
 
@@ -20317,7 +20317,7 @@
             <boolean/>
         </property>
 
-        <property name="mapName" value="Age_of_Tribes" editable="false">
+        <property name="mapName" value="age_of_tribes" editable="false">
             <string/>
         </property>
 
