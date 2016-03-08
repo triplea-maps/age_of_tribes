@@ -1453,7 +1453,7 @@
             <result resourceOrUnit="Develop-Observation-Balloon" quantity="1"/>
         </productionRule>
         <productionRule name="buyObservation-Balloon">
-            <cost resource="PUs" quantity="17"/>
+            <cost resource="PUs" quantity="18"/>
             <result resourceOrUnit="Observation-Balloon" quantity="1"/>
         </productionRule>
 
@@ -2709,11 +2709,11 @@
             <option name="maxBuiltPerPlayer" value="1"/>
         </attatchment>
         <attatchment name="unitAttatchment" attatchTo="Barrage-Balloon" javaClass="games.strategy.triplea.attatchments.UnitAttachment" type="unitType">
-            <option name="attack" value="1"/>
-            <option name="defense" value="1"/>
+            <option name="attack" value="2"/>
+            <option name="defense" value="2"/>
             <option name="movement" value="1"/>
-            <option name="offensiveAttackAA" value="1"/>
-            <option name="attackAA" value="1"/>
+            <option name="offensiveAttackAA" value="2"/>
+            <option name="attackAA" value="2"/>
             <option name="offensiveAttackAAmaxDieSides" value="12"/>
             <option name="attackAAmaxDieSides" value="12"/>
             <option name="maxAAattacks" value="1"/>
@@ -2737,11 +2737,11 @@
             <option name="maxBuiltPerPlayer" value="1"/>
         </attatchment>
         <attatchment name="unitAttatchment" attatchTo="Anti-Air" javaClass="games.strategy.triplea.attatchments.UnitAttachment" type="unitType">
-            <option name="attack" value="2"/>
-            <option name="defense" value="2"/>
+            <option name="attack" value="3"/>
+            <option name="defense" value="3"/>
             <option name="movement" value="1"/>
-            <option name="offensiveAttackAA" value="2"/>
-            <option name="attackAA" value="2"/>
+            <option name="offensiveAttackAA" value="4"/>
+            <option name="attackAA" value="4"/>
             <option name="offensiveAttackAAmaxDieSides" value="12"/>
             <option name="attackAAmaxDieSides" value="12"/>
             <option name="maxAAattacks" value="1"/>
@@ -4203,7 +4203,7 @@
             <option name="faction" value="allied"/>
             <option name="side" value="offence:defence"/>
             <option name="dice" value="strength"/>
-            <option name="bonus" value="1"/>
+            <option name="bonus" value="2"/>
             <option name="number" value="3"/>
             <option name="bonusType" value="observation"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI-Barbarians"/>
@@ -20419,7 +20419,7 @@
 <br><b><span style="font-size:14px;color:0C0C0C;">Special Units:</span></b><br>
 <br><center><img src="Observation-Balloon.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Observation Balloons</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">These balloons assist artillery units in spotting enemies from afar. Afterward, they help guide artillery attacks against them. A total of up to three friendly artillery units may in this manner receive a +1 on their attack or defense dice.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">These balloons assist artillery units in spotting enemies from afar. Afterward, they help guide artillery attacks against them. A total of up to three friendly artillery units may in this manner receive a +2 on their attack or defense dice.</span><br>
 <br><center><img src="Submarine.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Submarines</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">Submarines are special naval units of the late ages. They have the special ability to perform instant killing first strikes, to submerge before or after battle start, and finally to move unnoticed into enemy waters during the non combat phase.</span><br>
@@ -20443,10 +20443,10 @@
 <br><span style="font-size:12px;color:0C0C0C;">War Robots and Attack Drones are deadly killing machines of the future. They have the special advantage of being immune to the deadly radiation effects of nuclear weapons and the hampering conditions of Radiation Zones.</span><br>
 <br><center><img src="Barrage-Balloon.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Barrage Balloons</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">These balloons are the first form of anti-air weapons available. For every Barrage-Balloon present during battle rounds, one aircraft, except bombers and paradropping air transports, has a 8.33% risk of colliding with balloon cables. The units are relative cheap and the crews will also fight against any enemy ground forces they encounter.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">These balloons are the first form of anti-air weapons available. For every Barrage-Balloon present during battle rounds, one aircraft, except bombers and paradropping air transports, has a 16.66% risk of colliding with balloon cables. The units are relative cheap and the crews will also fight against any enemy ground forces they encounter.</span><br>
 <br><center><img src="Anti-Air.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Anti-Air Units</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">This weapon system may fire at every type of enemy aircraft it encounters. For every Anti-Air unit present during battle rounds, one aircraft has a 16.66% risk of getting shot down. Furthermore, the Anti-Air crews will also fight against any enemy ground forces they encounter.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">This weapon system may fire at every type of enemy aircraft it encounters. For every Anti-Air unit present during battle rounds, one aircraft has a 33.33% risk of getting shot down. Furthermore, the Anti-Air crews will also fight against any enemy ground forces they encounter.</span><br>
 <br>
 <center><img src="Line6.png"/></center>
 <br><b><span style="font-size:14px;color:0C0C0C;">Nukes:</span></b>
