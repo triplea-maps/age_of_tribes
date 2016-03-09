@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Cold War" version="0.1.7"/>
+  <info name="Age of Tribes: Cold War" version="0.1.8"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="12"/>
@@ -5396,7 +5396,7 @@
             <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="3"/>
+            <option name="purchase" value="Fortress" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Celtic-Develop-Fortress" attatchTo="Celtic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5415,7 +5415,7 @@
             <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="3"/>
+            <option name="purchase" value="Fortress" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Germanic-Develop-Fortress" attatchTo="Germanic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5434,7 +5434,7 @@
             <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="3"/>
+            <option name="purchase" value="Fortress" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Romanic-Develop-Fortress" attatchTo="Romanic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5453,7 +5453,7 @@
             <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="3"/>
+            <option name="purchase" value="Fortress" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Baltic-Develop-Fortress" attatchTo="Baltic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5472,7 +5472,7 @@
             <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="3"/>
+            <option name="purchase" value="Fortress" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Hellenic-Develop-Fortress" attatchTo="Hellenic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5491,7 +5491,7 @@
             <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="3"/>
+            <option name="purchase" value="Fortress" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Slavic-Develop-Fortress" attatchTo="Slavic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5510,7 +5510,7 @@
             <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="3"/>
+            <option name="purchase" value="Fortress" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Hattic-Develop-Fortress" attatchTo="Hattic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5529,7 +5529,7 @@
             <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="3"/>
+            <option name="purchase" value="Fortress" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
 <!-- End Fortress development -->
@@ -5551,7 +5551,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="purchase" value="Command-Bunker" count="4"/>
+            <option name="purchase" value="Command-Bunker" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Celtic-Develop-Command-Bunker" attatchTo="Celtic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5571,7 +5571,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="purchase" value="Command-Bunker" count="4"/>
+            <option name="purchase" value="Command-Bunker" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Germanic-Develop-Command-Bunker" attatchTo="Germanic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5591,7 +5591,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="purchase" value="Command-Bunker" count="4"/>
+            <option name="purchase" value="Command-Bunker" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Romanic-Develop-Command-Bunker" attatchTo="Romanic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5611,7 +5611,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="purchase" value="Command-Bunker" count="4"/>
+            <option name="purchase" value="Command-Bunker" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Baltic-Develop-Command-Bunker" attatchTo="Baltic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5631,7 +5631,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="purchase" value="Command-Bunker" count="4"/>
+            <option name="purchase" value="Command-Bunker" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Hellenic-Develop-Command-Bunker" attatchTo="Hellenic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5651,7 +5651,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="purchase" value="Command-Bunker" count="4"/>
+            <option name="purchase" value="Command-Bunker" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Slavic-Develop-Command-Bunker" attatchTo="Slavic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5671,7 +5671,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="purchase" value="Command-Bunker" count="4"/>
+            <option name="purchase" value="Command-Bunker" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
         <attatchment name="conditionAttachment-Hattic-Develop-Command-Bunker" attatchTo="Hattic" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
@@ -5691,7 +5691,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="purchase" value="Command-Bunker" count="4"/>
+            <option name="purchase" value="Command-Bunker" count="2"/>
             <option name="uses" value="1"/>
         </attatchment>
 <!-- End Command-Bunker development -->
@@ -17288,7 +17288,7 @@
 <br><b><span style="font-size:14px;color:0C0C0C;">Buildings:</span></b><br>
 <br><center><img src="Command-Bunker.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Bases</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">Players can develop new, bigger and better bases throughout the game. Whenever a new base type is developed, an old base type becomes obsolete and is torn down. The Camp is the first base type. The Fort is the second base type. When the third base type is developed, the Castle, all camps are removed from the map. When the forth base type is developed, the Fortress, all Forts are removed, and so forth. This means that a player can only have and use the two latest base types. Missile Shields and Energy Shields also outdate any base type older than the Command Bunker.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">Players can develop bigger and more productive bases throughout the game. Old and obsolete base types are sometimes torn down. The Camp is the first base type. The Fort is the second base type. When the third base type is developed, the Castle, all camps are removed from the map. When the forth base type is developed, the Fortress, all Forts are removed, and so forth. This means that a player can only have and use the two latest base types. Missile Shields and Energy Shields also outdate any base type older than the Command Bunker. All bases can be bombarded, thereby getting damaged or destroyed. If a base is damaged, its production capacity is reduced.</span><br>
 <br><center><img src="Missile-Shield.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Missile Shields</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">These are the strongest anti-air unit available. Each building will fire at up to five enemy aircraft in every battle round. Each aircraft will have a 42% risk of getting hit. Only Stealth Bombers can lower this risk to 33%. These shields also fire during Strategic Bombardment attacks.</span><br>
