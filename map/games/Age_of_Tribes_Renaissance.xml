@@ -17423,6 +17423,7 @@
             <unitPlacement unitType="Castle" territory="Semigallia" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Musketman" territory="Semigallia" quantity="2" owner="Baltic"/>
             <unitPlacement unitType="Horseman" territory="Severia" quantity="3" owner="Slavic"/>
+            <unitPlacement unitType="Halberdman" territory="Sicilia" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Musketman" territory="Sicilia" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Musketman" territory="Sitones" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Cannon" territory="Skalvia" quantity="1" owner="Baltic"/>
