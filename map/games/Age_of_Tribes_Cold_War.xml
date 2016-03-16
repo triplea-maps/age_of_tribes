@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Cold War" version="0.1.8"/>
+  <info name="Age of Tribes: Cold War" version="0.2.0"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="12"/>
@@ -980,18 +980,14 @@
         <delegate name="radiationbattle6" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
         <delegate name="radiationbattle7" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
         <delegate name="radiationbattle8" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="radiationbattle9" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="radiationbattle10" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="radiationbattle11" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
+        <delegate name="PostColdWarbattle" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
         <delegate name="Fake1" javaClass="games.strategy.triplea.delegate.UserActionDelegate" display="User Actions"/>
-        <delegate name="Fake2" javaClass="games.strategy.triplea.delegate.UserActionDelegate" display="User Actions"/>
-        <delegate name="Fake3" javaClass="games.strategy.triplea.delegate.UserActionDelegate" display="User Actions"/>
-        <delegate name="Fake4" javaClass="games.strategy.triplea.delegate.UserActionDelegate" display="User Actions"/>
         <delegate name="endRound" javaClass="games.strategy.triplea.delegate.EndRoundDelegate" display="Round Complete"/>
 
             <sequence>
                 <step name="gameInitDelegate" delegate="initDelegate" display="Initializing Delegates" maxRunCount="1"/>
-                <step name="AIFakeStart" delegate="Fake4" player="AI" display="User Actions" maxRunCount="1"/>
+                <step name="AIFakeStart" delegate="Fake1" player="AI" display="User Actions" maxRunCount="1"/>
+                <step name="AIPostColdWarSeaTerritoryOwnershipBattle" delegate="PostColdWarbattle" player="AI" display="Ongoing Battle"/>
 
                 <step name="BrittonicCombatMove" delegate="move" player="Brittonic" display="Combat Move"/>
                 <step name="BrittonicBattle" delegate="battle" player="Brittonic" display="Combat"/>
@@ -1078,7 +1074,7 @@
             <result resourceOrUnit="Develop-Boat" quantity="1"/>
         </productionRule>
         <productionRule name="buyBoat">
-            <cost resource="PUs" quantity="18"/>
+            <cost resource="PUs" quantity="22"/>
             <result resourceOrUnit="Boat" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Galley">
@@ -1086,7 +1082,7 @@
             <result resourceOrUnit="Develop-Galley" quantity="1"/>
         </productionRule>
         <productionRule name="buyGalley">
-            <cost resource="PUs" quantity="21"/>
+            <cost resource="PUs" quantity="24"/>
             <result resourceOrUnit="Galley" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Sail-Ship">
@@ -1094,7 +1090,7 @@
             <result resourceOrUnit="Develop-Sail-Ship" quantity="1"/>
         </productionRule>
         <productionRule name="buySail-Ship">
-            <cost resource="PUs" quantity="24"/>
+            <cost resource="PUs" quantity="26"/>
             <result resourceOrUnit="Sail-Ship" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Ironclad">
@@ -1102,7 +1098,7 @@
             <result resourceOrUnit="Develop-Ironclad" quantity="1"/>
         </productionRule>
         <productionRule name="buyIronclad">
-            <cost resource="PUs" quantity="27"/>
+            <cost resource="PUs" quantity="28"/>
             <result resourceOrUnit="Ironclad" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Warship">
@@ -2164,7 +2160,7 @@
             <option name="bombard" value="2"/>
             <option name="isSea" value="true"/>
             <option name="movement" value="2"/>
-            <option name="transportCapacity" value="4"/>
+            <option name="transportCapacity" value="3"/>
             <option name="isCombatTransport" value="true"/>
         </attatchment>
         <attatchment name="unitAttatchment" attatchTo="Develop-Warship" javaClass="games.strategy.triplea.attatchments.UnitAttachment" type="unitType">
@@ -2185,7 +2181,7 @@
             <option name="bombard" value="3"/>
             <option name="isSea" value="true"/>
             <option name="movement" value="3"/>
-            <option name="transportCapacity" value="6"/>
+            <option name="transportCapacity" value="3"/>
             <option name="isCombatTransport" value="true"/>
         </attatchment>
         <attatchment name="unitAttatchment" attatchTo="Develop-Submarine" javaClass="games.strategy.triplea.attatchments.UnitAttachment" type="unitType">
@@ -3420,7 +3416,7 @@
             <option name="production" value="2"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Belgica" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="1"/>
+            <option name="production" value="2"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Bellovacia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
@@ -3488,7 +3484,7 @@
             <option name="production" value="2"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Cimbria" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="3"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Cimmeria" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
@@ -3539,7 +3535,7 @@
             <option name="production" value="1"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Frisia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
-            <option name="production" value="2"/>
+            <option name="production" value="3"/>
         </attatchment>
         <attatchment name="territoryAttatchment" attatchTo="Galindia" javaClass="games.strategy.triplea.attatchments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
@@ -4269,54 +4265,46 @@
         <attatchment name="triggerAttachment_Cold_War_Age_2" attatchTo="Brittonic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarAge"/>
             <option name="when" value="before:BrittonicCombatMove"/>
-            <option name="removeUnits" value="all:Sail-Ship" count="9999"/>
             <option name="removeUnits" value="all:Musketman" count="9999"/>
         </attatchment>
         <attatchment name="triggerAttachment_Cold_War_Age_3" attatchTo="Baltic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarAge"/>
             <option name="when" value="before:BalticCombatMove"/>
-            <option name="removeUnits" value="all:Sail-Ship" count="9999"/>
             <option name="removeUnits" value="all:Musketman" count="9999"/>
         </attatchment>
         <attatchment name="triggerAttachment_Cold_War_Age_4" attatchTo="Germanic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarAge"/>
             <option name="when" value="before:GermanicCombatMove"/>
-            <option name="removeUnits" value="all:Sail-Ship" count="9999"/>
             <option name="removeUnits" value="all:Musketman" count="9999"/>
         </attatchment>
         <attatchment name="triggerAttachment_Cold_War_Age_5" attatchTo="Celtic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarAge"/>
             <option name="when" value="before:CelticCombatMove"/>
-            <option name="removeUnits" value="all:Sail-Ship" count="9999"/>
             <option name="removeUnits" value="all:Musketman" count="9999"/>
         </attatchment>
         <attatchment name="triggerAttachment_Cold_War_Age_6" attatchTo="Romanic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarAge"/>
             <option name="when" value="before:RomanicCombatMove"/>
-            <option name="removeUnits" value="all:Sail-Ship" count="9999"/>
             <option name="removeUnits" value="all:Musketman" count="9999"/>
         </attatchment>
         <attatchment name="triggerAttachment_Cold_War_Age_7" attatchTo="Hellenic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarAge"/>
             <option name="when" value="before:HellenicCombatMove"/>
-            <option name="removeUnits" value="all:Sail-Ship" count="9999"/>
             <option name="removeUnits" value="all:Musketman" count="9999"/>
         </attatchment>
         <attatchment name="triggerAttachment_Cold_War_Age_8" attatchTo="Slavic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarAge"/>
             <option name="when" value="before:SlavicCombatMove"/>
-            <option name="removeUnits" value="all:Sail-Ship" count="9999"/>
             <option name="removeUnits" value="all:Musketman" count="9999"/>
         </attatchment>
         <attatchment name="triggerAttachment_Cold_War_Age_9" attatchTo="Hattic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarAge"/>
             <option name="when" value="before:HatticCombatMove"/>
-            <option name="removeUnits" value="all:Sail-Ship" count="9999"/>
             <option name="removeUnits" value="all:Musketman" count="9999"/>
         </attatchment>
 
         <attatchment name="conditionAttachmentWarmWar" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
-            <option name="turns" value="70"/>
+            <option name="turns" value="69"/>
         </attatchment>
         <attatchment name="triggerAttachment_The_Cold_War_has_now_turned_warm" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentWarmWar"/>
@@ -4324,6 +4312,100 @@
             <option name="when" value="before:BrittonicCombatMove"/>
             <option name="notification" value="Note81"/>
         </attatchment>
+
+<!-- Start special 'end of cold war' triggers that will prevent an error from happening if aircraft attacks an enemy ship in a friendly sea territory - The ship could have moved into the sea zone it during the cold war and not capture it - This only works in conjuntion with the step AIPostColdWarSeaTerritoryOwnershipBattle -->
+        <attatchment name="conditionAttachmentWarmWar" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
+            <option name="turns" value="68"/>
+        </attatchment>
+        <attatchment name="conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter1" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="Sea Zone 6" count="1"/>
+            <option name="unitPresence" value="ANY" count="1"/>
+            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic"/>
+        </attatchment>
+        <attatchment name="triggerAttachment_An_enemy_has_taken_over_a_trade_center_1" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentWarmWar:conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter1"/>
+            <option name="territories" value="Sea Zone 6"/>
+            <option name="changeOwnership" value="Sea Zone 6:any:AI:false"/>
+            <option name="when" value="after:endRoundStep"/>
+        </attatchment>
+        <attatchment name="conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter2" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="Sea Zone 8" count="1"/>
+            <option name="unitPresence" value="ANY" count="1"/>
+            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic"/>
+        </attatchment>
+        <attatchment name="triggerAttachment_An_enemy_has_taken_over_a_trade_center_2" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentWarmWar:conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter2"/>
+            <option name="territories" value="Sea Zone 8"/>
+            <option name="changeOwnership" value="Sea Zone 8:any:AI:false"/>
+            <option name="when" value="after:endRoundStep"/>
+        </attatchment>
+        <attatchment name="conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter3" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="Sea Zone 9" count="1"/>
+            <option name="unitPresence" value="ANY" count="1"/>
+            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic"/>
+        </attatchment>
+        <attatchment name="triggerAttachment_An_enemy_has_taken_over_a_trade_center_3" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentWarmWar:conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter3"/>
+            <option name="territories" value="Sea Zone 9"/>
+            <option name="changeOwnership" value="Sea Zone 9:any:AI:false"/>
+            <option name="when" value="after:endRoundStep"/>
+        </attatchment>
+        <attatchment name="conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter4" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="Sea Zone 15" count="1"/>
+            <option name="unitPresence" value="ANY" count="1"/>
+            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic"/>
+        </attatchment>
+        <attatchment name="triggerAttachment_An_enemy_has_taken_over_a_trade_center_4" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentWarmWar:conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter4"/>
+            <option name="territories" value="Sea Zone 15"/>
+            <option name="changeOwnership" value="Sea Zone 15:any:AI:false"/>
+            <option name="when" value="after:endRoundStep"/>
+        </attatchment>
+        <attatchment name="conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter5" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="Sea Zone 22" count="1"/>
+            <option name="unitPresence" value="ANY" count="1"/>
+            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic"/>
+        </attatchment>
+        <attatchment name="triggerAttachment_An_enemy_has_taken_over_a_trade_center_5" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentWarmWar:conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter5"/>
+            <option name="territories" value="Sea Zone 22"/>
+            <option name="changeOwnership" value="Sea Zone 22:any:AI:false"/>
+            <option name="when" value="after:endRoundStep"/>
+        </attatchment>
+        <attatchment name="conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter6" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="Sea Zone 24" count="1"/>
+            <option name="unitPresence" value="ANY" count="1"/>
+            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic"/>
+        </attatchment>
+        <attatchment name="triggerAttachment_An_enemy_has_taken_over_a_trade_center_6" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentWarmWar:conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter6"/>
+            <option name="territories" value="Sea Zone 24"/>
+            <option name="changeOwnership" value="Sea Zone 24:any:AI:false"/>
+            <option name="when" value="after:endRoundStep"/>
+        </attatchment>
+        <attatchment name="conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter7" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="Sea Zone 32" count="1"/>
+            <option name="unitPresence" value="ANY" count="1"/>
+            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic"/>
+        </attatchment>
+        <attatchment name="triggerAttachment_An_enemy_has_taken_over_a_trade_center_7" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentWarmWar:conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter7"/>
+            <option name="territories" value="Sea Zone 32"/>
+            <option name="changeOwnership" value="Sea Zone 32:any:AI:false"/>
+            <option name="when" value="after:endRoundStep"/>
+        </attatchment>
+        <attatchment name="conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter8" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
+            <option name="directPresenceTerritories" value="Sea Zone 34" count="1"/>
+            <option name="unitPresence" value="ANY" count="1"/>
+            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic"/>
+        </attatchment>
+        <attatchment name="triggerAttachment_An_enemy_has_taken_over_a_trade_center_8" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentWarmWar:conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter8"/>
+            <option name="territories" value="Sea Zone 34"/>
+            <option name="changeOwnership" value="Sea Zone 34:any:AI:false"/>
+            <option name="when" value="after:endRoundStep"/>
+        </attatchment>
+<!-- End special 'end of cold war' triggers that will prevent an error from happening if aircraft attacks an enemy ship in a friendly sea territory - The ship could have moved into the sea zone it during the cold war and not capture it - This only works in conjuntion with the step AIPostColdWarSeaTerritoryOwnershipBattle -->
 
         <attatchment name="conditionAttachmentFuturisticAge" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
             <option name="turns" value="71"/>
@@ -4337,7 +4419,6 @@
         <attatchment name="triggerAttachment_Futuristic_Age_2" attatchTo="Brittonic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFuturisticAge"/>
             <option name="when" value="before:BrittonicCombatMove"/>
-            <option name="removeUnits" value="all:Ironclad" count="9999"/>
             <option name="removeUnits" value="all:Rifleman" count="9999"/>
             <option name="removeUnits" value="all:Carabinier" count="9999"/>
         </attatchment>
@@ -4351,7 +4432,6 @@
         <attatchment name="triggerAttachment_Futuristic_Age_3" attatchTo="Baltic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFuturisticAge"/>
             <option name="when" value="before:BalticCombatMove"/>
-            <option name="removeUnits" value="all:Ironclad" count="9999"/>
             <option name="removeUnits" value="all:Rifleman" count="9999"/>
             <option name="removeUnits" value="all:Carabinier" count="9999"/>
         </attatchment>
@@ -4365,7 +4445,6 @@
         <attatchment name="triggerAttachment_Futuristic_Age_4" attatchTo="Germanic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFuturisticAge"/>
             <option name="when" value="before:GermanicCombatMove"/>
-            <option name="removeUnits" value="all:Ironclad" count="9999"/>
             <option name="removeUnits" value="all:Rifleman" count="9999"/>
             <option name="removeUnits" value="all:Carabinier" count="9999"/>
         </attatchment>
@@ -4379,7 +4458,6 @@
         <attatchment name="triggerAttachment_Futuristic_Age_5" attatchTo="Celtic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFuturisticAge"/>
             <option name="when" value="before:CelticCombatMove"/>
-            <option name="removeUnits" value="all:Ironclad" count="9999"/>
             <option name="removeUnits" value="all:Rifleman" count="9999"/>
             <option name="removeUnits" value="all:Carabinier" count="9999"/>
         </attatchment>
@@ -4393,7 +4471,6 @@
         <attatchment name="triggerAttachment_Futuristic_Age_6" attatchTo="Romanic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFuturisticAge"/>
             <option name="when" value="before:RomanicCombatMove"/>
-            <option name="removeUnits" value="all:Ironclad" count="9999"/>
             <option name="removeUnits" value="all:Rifleman" count="9999"/>
             <option name="removeUnits" value="all:Carabinier" count="9999"/>
         </attatchment>
@@ -4407,7 +4484,6 @@
         <attatchment name="triggerAttachment_Futuristic_Age_7" attatchTo="Hellenic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFuturisticAge"/>
             <option name="when" value="before:HellenicCombatMove"/>
-            <option name="removeUnits" value="all:Ironclad" count="9999"/>
             <option name="removeUnits" value="all:Rifleman" count="9999"/>
             <option name="removeUnits" value="all:Carabinier" count="9999"/>
         </attatchment>
@@ -4421,7 +4497,6 @@
         <attatchment name="triggerAttachment_Futuristic_Age_8" attatchTo="Slavic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFuturisticAge"/>
             <option name="when" value="before:SlavicCombatMove"/>
-            <option name="removeUnits" value="all:Ironclad" count="9999"/>
             <option name="removeUnits" value="all:Rifleman" count="9999"/>
             <option name="removeUnits" value="all:Carabinier" count="9999"/>
         </attatchment>
@@ -4435,7 +4510,6 @@
         <attatchment name="triggerAttachment_Futuristic_Age_9" attatchTo="Hattic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFuturisticAge"/>
             <option name="when" value="before:HatticCombatMove"/>
-            <option name="removeUnits" value="all:Ironclad" count="9999"/>
             <option name="removeUnits" value="all:Rifleman" count="9999"/>
             <option name="removeUnits" value="all:Carabinier" count="9999"/>
         </attatchment>
@@ -4611,7 +4685,7 @@
             <option name="when" value="before:BrittonicCombatMove"/>
         </attatchment>
         <attatchment name="conditionAttachmentGreatTribalWar" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
-            <option name="turns" value="70"/>
+            <option name="turns" value="69"/>
         </attatchment>
         <attatchment name="triggerAttachment_The_eastern_and_western_tribes_start_the_Great_Tribal_War" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentGreatTribalWar"/>
@@ -15596,7 +15670,7 @@
 
 <!-- Start No move during the Cold War. This works by removing movement before combat and adding it back again after combat -->
         <attatchment name="conditionAttachmentNoCombatMoves" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
-            <option name="turns" value="66-69"/>
+            <option name="turns" value="66-68"/>
         </attatchment>
         <attatchment name="triggerAttachment_No_combat_during_the_cold_war_1" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
 	<option name="conditions" value="conditionAttachmentNoCombatMoves"/>
@@ -16425,7 +16499,7 @@
 
 <!-- Start No move during the Cold War. Mortar-Bombardment and Rockets seem to give players the unwanted Combat Move -->
         <attatchment name="conditionAttachmentColdWarNoAmmo" attatchTo="AI" javaClass="games.strategy.triplea.attatchments.RulesAttachment" type="player">
-            <option name="turns" value="65-68"/>
+            <option name="turns" value="65-67"/>
         </attatchment>
         <attatchment name="triggerAttachment_Cold_War_Ammo_1" attatchTo="Brittonic" javaClass="games.strategy.triplea.attatchments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarNoAmmo"/>
@@ -17264,25 +17338,25 @@
 <br><b><span style="font-size:12px;color:0C0C0C;">Round 36-45</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">Age gives +50 Tech and +25 PUs per turn, besides territory income.</span>
 <br><span style="font-size:12px;color:0C0C0C;">New 10 PU sea zone trade centers spawn in the beginning of this age.</span>
-<br><span style="font-size:12px;color:0C0C0C;">All Spearmen, Slingers, Chariots, Catapults and Boats are now outdated.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">All Spearmen, Slingers, Chariots and Catapults are now outdated.</span><br>
 <br><b><span style="font-size:12px;color:0C0C0C;">Industrial Age</span></b>
 <br><b><span style="font-size:12px;color:0C0C0C;">Round 46-55</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">Age gives +100 Tech and +30 PUs per turn, besides territory income.</span>
-<br><span style="font-size:12px;color:0C0C0C;">All Swordsmen, Bowmen, Horsemen, Ballistae and Galleys are now outdated.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">All Swordsmen, Bowmen, Horsemen and Ballistae are now outdated.</span><br>
 <br><b><span style="font-size:12px;color:0C0C0C;">Modern Age</span></b>
 <br><b><span style="font-size:12px;color:0C0C0C;">Round 56-65</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">Age gives +200 Tech and +35 PUs per turn, besides territory income.</span>
 <br><span style="font-size:12px;color:0C0C0C;">All Halberdmen, Crossbowmen, Knights and Trebuchets are now outdated.</span><br>
 <br><b><span style="font-size:12px;color:0C0C0C;">Cold War Age</span></b>
-<br><b><span style="font-size:12px;color:0C0C0C;">Round 66-70</span></b>
+<br><b><span style="font-size:12px;color:0C0C0C;">Round 66-68/69-70</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">Age gives +200 Tech and +35 PUs per turn, besides territory income.</span>
 <br><span style="font-size:12px;color:0C0C0C;">Non combat naval moves through enemy channels are possible.</span>
-<br><span style="font-size:12px;color:0C0C0C;">The Cold War turns warm in round 70.</span>
-<br><span style="font-size:12px;color:0C0C0C;">All Musketmen and Sail-Ships are now outdated.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">The Cold War turns warm in the start of round 69.</span>
+<br><span style="font-size:12px;color:0C0C0C;">All Musketmen are now outdated.</span><br>
 <br><b><span style="font-size:12px;color:0C0C0C;">Futuristic Age</span></b>
 <br><b><span style="font-size:12px;color:0C0C0C;">Round 71+</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">Age gives +400 Tech and +40 PUs per turn, besides territory income.</span>
-<br><span style="font-size:12px;color:0C0C0C;">All Ironclads, Riflemen, Carabiniers, Cannons, Mortars and Observation-Balloons are now outdated.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">All Riflemen, Carabiniers, Cannons, Mortars and Observation-Balloons are now outdated.</span><br>
 <br>
 <center><img src="Line4.png"/></center>
 <br><b><span style="font-size:14px;color:0C0C0C;">Buildings:</span></b><br>
