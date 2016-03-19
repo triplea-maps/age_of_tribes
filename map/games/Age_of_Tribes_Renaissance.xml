@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Renaissance" version="0.2.0"/>
+  <info name="Age of Tribes: Renaissance" version="0.2.1"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="12"/>
@@ -17263,7 +17263,7 @@
             <territoryOwner territory="Mannea" owner="Hattic"/>
             <territoryOwner territory="Marcomanni" owner="Germanic"/>
             <territoryOwner territory="Mari" owner="Slavic"/>
-            <territoryOwner territory="Massaesylia" owner="Celtic"/>
+            <territoryOwner territory="Massaesylia" owner="Hattic"/>
             <territoryOwner territory="Massylia" owner="Hattic"/>
             <territoryOwner territory="Mauria" owner="Celtic"/>
             <territoryOwner territory="Maxyes" owner="Hattic"/>
@@ -17333,7 +17333,7 @@
             <territoryOwner territory="Thrace" owner="Hellenic"/>
             <territoryOwner territory="Thyssagetae" owner="Slavic"/>
             <territoryOwner territory="Tiveria" owner="Slavic"/>
-            <territoryOwner territory="Turdetania" owner="Celtic"/>
+            <territoryOwner territory="Turdetania" owner="Brittonic"/>
             <territoryOwner territory="Ugarit" owner="Hattic"/>
             <territoryOwner territory="Ulaidia" owner="Brittonic"/>
             <territoryOwner territory="Ulich" owner="Slavic"/>
@@ -17352,40 +17352,39 @@
             <territoryOwner territory="Zaueces" owner="Hattic"/>
         </ownerInitialize>
         <unitInitialize>
-            <unitPlacement unitType="Musketman" territory="Anglia" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Fort" territory="Anglia" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Musketman" territory="Anglia" quantity="2" owner="Brittonic"/>
             <unitPlacement unitType="Mortar" territory="Balticum" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Halberdman" territory="Balticum" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Knight" territory="Balticum" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Castle" territory="Balticum" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Musketman" territory="Balticum" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Horseman" territory="Bellovacia" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Musketman" territory="Bellovacia" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Musketman" territory="Bergio" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Mortar" territory="Britannia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Halberdman" territory="Britannia" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Halberdman" territory="Britannia" quantity="2" owner="Brittonic"/>
             <unitPlacement unitType="Castle" territory="Britannia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Musketman" territory="Britannia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Horseman" territory="Canaan" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Musketman" territory="Britannia" quantity="2" owner="Brittonic"/>
+            <unitPlacement unitType="Bowman" territory="Canaan" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Mortar" territory="Celtiberia" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Halberdman" territory="Celtiberia" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Knight" territory="Celtiberia" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Castle" territory="Celtiberia" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Horseman" territory="Celtiberia" quantity="5" owner="Celtic"/>
             <unitPlacement unitType="Musketman" territory="Celtiberia" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Mortar" territory="Celtica" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Halberdman" territory="Celtica" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Knight" territory="Celtica" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Knight" territory="Celtica" quantity="2" owner="Celtic"/>
             <unitPlacement unitType="Castle" territory="Celtica" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Musketman" territory="Celtica" quantity="5" owner="Celtic"/>
-            <unitPlacement unitType="Horseman" territory="Cilicia" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Musketman" territory="Cimbria" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Bowman" territory="Cilicia" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Musketman" territory="Cimbria" quantity="2" owner="Brittonic"/>
             <unitPlacement unitType="Cannon" territory="Cimmeria" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Fort" territory="Cimmeria" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Musketman" territory="Cimmeria" quantity="3" owner="Slavic"/>
             <unitPlacement unitType="Musketman" territory="Dacia" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Cannon" territory="Dalmatia" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Musketman" territory="Dalmatia" quantity="2" owner="Romanic"/>
-            <unitPlacement unitType="Cannon" territory="Dania" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Mortar" territory="Dania" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Castle" territory="Dania" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Musketman" territory="Dania" quantity="2" owner="Brittonic"/>
             <unitPlacement unitType="Musketman" territory="Etruria" quantity="1" owner="Romanic"/>
@@ -17400,20 +17399,21 @@
             <unitPlacement unitType="Castle" territory="Germania" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Musketman" territory="Germania" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Cannon" territory="Gothia" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Musketman" territory="Gothia" quantity="3" owner="Germanic"/>
+            <unitPlacement unitType="Musketman" territory="Gothia" quantity="4" owner="Germanic"/>
             <unitPlacement unitType="Cannon" territory="Gotini" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Musketman" territory="Gotini" quantity="3" owner="Germanic"/>
             <unitPlacement unitType="Horseman" territory="Gyzantes" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Mortar" territory="Hatti" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Bowman" territory="Hatti" quantity="3" owner="Hattic"/>
+            <unitPlacement unitType="Bowman" territory="Hatti" quantity="2" owner="Hattic"/>
             <unitPlacement unitType="Castle" territory="Hatti" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Musketman" territory="Hatti" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Musketman" territory="Hatti" quantity="2" owner="Hattic"/>
             <unitPlacement unitType="Crossbowman" territory="Hatti" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Mortar" territory="Hellas" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Castle" territory="Hellas" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Horseman" territory="Hellas" quantity="3" owner="Hellenic"/>
             <unitPlacement unitType="Musketman" territory="Hellas" quantity="4" owner="Hellenic"/>
-            <unitPlacement unitType="Cannon" territory="Helvetia" quantity="3" owner="Celtic"/>
+            <unitPlacement unitType="Cannon" territory="Helvetia" quantity="2" owner="Celtic"/>
+            <unitPlacement unitType="Fort" territory="Helvetia" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Musketman" territory="Helvetia" quantity="5" owner="Celtic"/>
             <unitPlacement unitType="Musketman" territory="Iazyges" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Cannon" territory="Illyria" quantity="1" owner="Hellenic"/>
@@ -17421,11 +17421,14 @@
             <unitPlacement unitType="Horseman" territory="Ilmenski" quantity="3" owner="Slavic"/>
             <unitPlacement unitType="Cannon" territory="Ladogaski" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Castle" territory="Ladogaski" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Musketman" territory="Ladogaski" quantity="4" owner="Slavic"/>
+            <unitPlacement unitType="Musketman" territory="Ladogaski" quantity="3" owner="Slavic"/>
             <unitPlacement unitType="Musketman" territory="Latgallia" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Fort" territory="Livonia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Halberdman" territory="Liguria" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Fort" territory="Liguria" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Halberdman" territory="Livonia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Castle" territory="Livonia" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Musketman" territory="Livonia" quantity="2" owner="Baltic"/>
-            <unitPlacement unitType="Horseman" territory="Lydia" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Halberdman" territory="Lydia" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Fort" territory="Lydia" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Musketman" territory="Lydia" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Cannon" territory="Macedonia" quantity="1" owner="Hellenic"/>
@@ -17435,12 +17438,16 @@
             <unitPlacement unitType="Castle" territory="Marcomanni" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Musketman" territory="Marcomanni" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Bowman" territory="Massylia" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Fort" territory="Massylia" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Cannon" territory="Mauria" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Halberdman" territory="Mauria" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Fort" territory="Mauria" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Musketman" territory="Mauria" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Horseman" territory="Maxyes" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Musketman" territory="Moesia" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Horseman" territory="Morum" quantity="3" owner="Slavic"/>
+            <unitPlacement unitType="Cannon" territory="Narbonensis" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Halberdman" territory="Narbonensis" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Fort" territory="Narbonensis" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Cannon" territory="Navari" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Horseman" territory="Navari" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Musketman" territory="Navari" quantity="3" owner="Baltic"/>
@@ -17453,17 +17460,16 @@
             <unitPlacement unitType="Musketman" territory="Peloponnesus" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Cannon" territory="Polan" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Fort" territory="Polan" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Musketman" territory="Polan" quantity="4" owner="Slavic"/>
+            <unitPlacement unitType="Musketman" territory="Polan" quantity="3" owner="Slavic"/>
             <unitPlacement unitType="Fort" territory="Pomerania" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Musketman" territory="Pomerania" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Halberdman" territory="Ragnarici" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Fort" territory="Ragnarici" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Halberdman" territory="Roma" quantity="2" owner="Romanic"/>
+            <unitPlacement unitType="Halberdman" territory="Roma" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Knight" territory="Roma" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Castle" territory="Roma" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Musketman" territory="Roma" quantity="2" owner="Romanic"/>
             <unitPlacement unitType="Horseman" territory="Roxalania" quantity="3" owner="Slavic"/>
-            <unitPlacement unitType="Fort" territory="Salluvia" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Musketman" territory="Salluvia" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Halberdman" territory="Samnium" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Musketman" territory="Samnium" quantity="1" owner="Romanic"/>
@@ -17478,12 +17484,12 @@
             <unitPlacement unitType="Sail-Ship" territory="Sea Zone 24" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Sail-Ship" territory="Sea Zone 32" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Sail-Ship" territory="Sea Zone 34" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Halberdman" territory="Semigallia" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Castle" territory="Semigallia" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Musketman" territory="Semigallia" quantity="2" owner="Baltic"/>
             <unitPlacement unitType="Horseman" territory="Severia" quantity="3" owner="Slavic"/>
             <unitPlacement unitType="Halberdman" territory="Sicilia" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Musketman" territory="Sicilia" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Horseman" territory="Sindica" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Fort" territory="Sindica" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Musketman" territory="Sitones" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Cannon" territory="Skalvia" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Horseman" territory="Skalvia" quantity="1" owner="Baltic"/>
@@ -17492,7 +17498,7 @@
             <unitPlacement unitType="Halberdman" territory="Slavoicum" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Knight" territory="Slavoicum" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Castle" territory="Slavoicum" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Musketman" territory="Slavoicum" quantity="5" owner="Slavic"/>
+            <unitPlacement unitType="Musketman" territory="Slavoicum" quantity="4" owner="Slavic"/>
             <unitPlacement unitType="Halberdman" territory="Suiones" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Fort" territory="Suiones" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Musketman" territory="Suiones" quantity="3" owner="Baltic"/>
@@ -17501,15 +17507,15 @@
             <unitPlacement unitType="Halberdman" territory="Thrace" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Castle" territory="Thrace" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Musketman" territory="Thrace" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Cannon" territory="Turdetania" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Halberdman" territory="Turdetania" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Fort" territory="Turdetania" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Musketman" territory="Turdetania" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Cannon" territory="Turdetania" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Halberdman" territory="Turdetania" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Fort" territory="Turdetania" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Musketman" territory="Turdetania" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Cannon" territory="Ugarit" quantity="3" owner="Hattic"/>
             <unitPlacement unitType="Mortar" territory="Ugarit" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Halberdman" territory="Ugarit" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Castle" territory="Ugarit" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Musketman" territory="Ugarit" quantity="3" owner="Hattic"/>
+            <unitPlacement unitType="Musketman" territory="Ugarit" quantity="2" owner="Hattic"/>
             <unitPlacement unitType="Cannon" territory="Venedi" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Musketman" territory="Venedi" quantity="4" owner="Germanic"/>
             <unitPlacement unitType="Mortar" territory="Yotvingia" quantity="1" owner="Baltic"/>
