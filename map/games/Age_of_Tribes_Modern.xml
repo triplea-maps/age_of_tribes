@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Cold War" version="0.2.6"/>
+  <info name="Age of Tribes: Modern" version="0.2.6"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="12"/>
@@ -992,7 +992,6 @@
                 <step name="BrittonicCombatMove" delegate="move" player="Brittonic" display="Combat Move"/>
                 <step name="BrittonicBattle" delegate="battle" player="Brittonic" display="Combat"/>
                 <step name="BrittonicNonCombatMove" delegate="move" player="Brittonic" display="Non Combat Move"/>
-                <step name="BrittonicUserActions" delegate="userActions" player="Brittonic" display="Military Aid"/>
                 <step name="BrittonicPurchase" delegate="purchase" player="Brittonic" display="Purchase Units"/>
                 <step name="BrittonicPlace" delegate="place" player="Brittonic" display="Place Units"/>
                 <step name="BrittonicEndTurn" delegate="endTurn" player="Brittonic" display="Turn Complete"/>
@@ -1011,6 +1010,7 @@
                 <step name="GermanicCombatMove" delegate="move" player="Germanic" display="Combat Move"/>
                 <step name="GermanicBattle" delegate="battle" player="Germanic" display="Combat"/>
                 <step name="GermanicNonCombatMove" delegate="move" player="Germanic" display="Non Combat Move"/>
+                <step name="GermanicUserActions" delegate="userActions" player="Germanic" display="Military Aid"/>
                 <step name="GermanicPurchase" delegate="purchase" player="Germanic" display="Purchase Units"/>
                 <step name="GermanicPlace" delegate="place" player="Germanic" display="Place Units"/>
                 <step name="GermanicEndTurn" delegate="endTurn" player="Germanic" display="Turn Complete"/>
@@ -1020,7 +1020,6 @@
                 <step name="SlavicCombatMove" delegate="move" player="Slavic" display="Combat Move"/>
                 <step name="SlavicBattle" delegate="battle" player="Slavic" display="Combat"/>
                 <step name="SlavicNonCombatMove" delegate="move" player="Slavic" display="Non Combat Move"/>
-                <step name="SlavicUserActions" delegate="userActions" player="Slavic" display="Military Aid"/>
                 <step name="SlavicPurchase" delegate="purchase" player="Slavic" display="Purchase Units"/>
                 <step name="SlavicPlace" delegate="place" player="Slavic" display="Place Units"/>
                 <step name="SlavicEndTurn" delegate="endTurn" player="Slavic" display="Turn Complete"/>
@@ -1057,6 +1056,7 @@
                 <step name="HatticCombatMove" delegate="move" player="Hattic" display="Combat Move"/>
                 <step name="HatticBattle" delegate="battle" player="Hattic" display="Combat"/>
                 <step name="HatticNonCombatMove" delegate="move" player="Hattic" display="Non Combat Move"/>
+                <step name="HatticUserActions" delegate="userActions" player="Hattic" display="Military Aid"/>
                 <step name="HatticPurchase" delegate="purchase" player="Hattic" display="Purchase Units"/>
                 <step name="HatticPlace" delegate="place" player="Hattic" display="Place Units"/>
                 <step name="HatticEndTurn" delegate="endTurn" player="Hattic" display="Turn Complete"/>
@@ -1065,7 +1065,7 @@
 
                 <step name="endRoundStep" delegate="endRound" display="Round Complete"/>
             </sequence>
-        <offset round="65"/>
+        <offset round="55"/>
     </gamePlay>
 
     <production>
@@ -1577,276 +1577,220 @@
 
         <productionFrontier name="production_Brittonic_Combat">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
             <frontierRules name="buyInfantry"/>
             <frontierRules name="buyTruck"/>
             <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyWarplane"/>
             <frontierRules name="buyCommand-Bunker"/>
         </productionFrontier>
 
         <productionFrontier name="production_Baltic_Combat">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
             <frontierRules name="buyInfantry"/>
             <frontierRules name="buyTruck"/>
             <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyWarplane"/>
             <frontierRules name="buyCommand-Bunker"/>
         </productionFrontier>
 
         <productionFrontier name="production_Germanic_Combat">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
             <frontierRules name="buyInfantry"/>
             <frontierRules name="buyTruck"/>
             <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyWarplane"/>
             <frontierRules name="buyCommand-Bunker"/>
         </productionFrontier>
 
         <productionFrontier name="production_Slavic_Combat">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
             <frontierRules name="buyInfantry"/>
             <frontierRules name="buyTruck"/>
             <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyWarplane"/>
             <frontierRules name="buyCommand-Bunker"/>
         </productionFrontier>
 
         <productionFrontier name="production_Celtic_Combat">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
             <frontierRules name="buyInfantry"/>
             <frontierRules name="buyTruck"/>
             <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyWarplane"/>
             <frontierRules name="buyCommand-Bunker"/>
         </productionFrontier>
 
         <productionFrontier name="production_Hellenic_Combat">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
             <frontierRules name="buyInfantry"/>
             <frontierRules name="buyTruck"/>
             <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyWarplane"/>
             <frontierRules name="buyCommand-Bunker"/>
         </productionFrontier>
 
         <productionFrontier name="production_Romanic_Combat">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
             <frontierRules name="buyInfantry"/>
             <frontierRules name="buyTruck"/>
             <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyWarplane"/>
             <frontierRules name="buyCommand-Bunker"/>
         </productionFrontier>
 
         <productionFrontier name="production_Hattic_Combat">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
             <frontierRules name="buyInfantry"/>
             <frontierRules name="buyTruck"/>
             <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyWarplane"/>
             <frontierRules name="buyCommand-Bunker"/>
         </productionFrontier>
 
         <productionFrontier name="production_Hattic">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
+            <frontierRules name="buyDevelop-Submarine"/>
             <frontierRules name="buyInfantry"/>
-            <frontierRules name="buyTruck"/>
-            <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
-            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Shock-Trooper"/>
-            <frontierRules name="buyDevelop-Battle-Tank"/>
-            <frontierRules name="buyDevelop-Rocket-Launcher"/>
+            <frontierRules name="buyTruck"/>
             <frontierRules name="buyDevelop-Attack-Helicopter"/>
-            <frontierRules name="buyDevelop-Jet-Fighter"/>
-            <frontierRules name="buyDevelop-Fleet-Carrier"/>
-            <frontierRules name="buyDevelop-Nuke"/>
+            <frontierRules name="buyTank"/>
+            <frontierRules name="buyDevelop-Battle-Tank"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyDevelop-Anti-Air"/>
+            <frontierRules name="buyWarplane"/>
+            <frontierRules name="buyDevelop-Fighter"/>
+            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Missile-Shield"/>
         </productionFrontier>
 
         <productionFrontier name="production_Brittonic">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
+            <frontierRules name="buyDevelop-Submarine"/>
             <frontierRules name="buyInfantry"/>
-            <frontierRules name="buyTruck"/>
-            <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
-            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Shock-Trooper"/>
-            <frontierRules name="buyDevelop-Battle-Tank"/>
-            <frontierRules name="buyDevelop-Rocket-Launcher"/>
+            <frontierRules name="buyTruck"/>
             <frontierRules name="buyDevelop-Attack-Helicopter"/>
-            <frontierRules name="buyDevelop-Jet-Fighter"/>
-            <frontierRules name="buyDevelop-Fleet-Carrier"/>
-            <frontierRules name="buyDevelop-Nuke"/>
+            <frontierRules name="buyTank"/>
+            <frontierRules name="buyDevelop-Battle-Tank"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyDevelop-Anti-Air"/>
+            <frontierRules name="buyWarplane"/>
+            <frontierRules name="buyDevelop-Fighter"/>
+            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Missile-Shield"/>
         </productionFrontier>
 
         <productionFrontier name="production_Romanic">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
+            <frontierRules name="buyDevelop-Submarine"/>
             <frontierRules name="buyInfantry"/>
-            <frontierRules name="buyTruck"/>
-            <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
-            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Shock-Trooper"/>
-            <frontierRules name="buyDevelop-Battle-Tank"/>
-            <frontierRules name="buyDevelop-Rocket-Launcher"/>
+            <frontierRules name="buyTruck"/>
             <frontierRules name="buyDevelop-Attack-Helicopter"/>
-            <frontierRules name="buyDevelop-Jet-Fighter"/>
-            <frontierRules name="buyDevelop-Fleet-Carrier"/>
-            <frontierRules name="buyDevelop-Nuke"/>
+            <frontierRules name="buyTank"/>
+            <frontierRules name="buyDevelop-Battle-Tank"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyDevelop-Anti-Air"/>
+            <frontierRules name="buyWarplane"/>
+            <frontierRules name="buyDevelop-Fighter"/>
+            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Missile-Shield"/>
         </productionFrontier>
 
         <productionFrontier name="production_Hellenic">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
+            <frontierRules name="buyDevelop-Submarine"/>
             <frontierRules name="buyInfantry"/>
-            <frontierRules name="buyTruck"/>
-            <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
-            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Shock-Trooper"/>
-            <frontierRules name="buyDevelop-Battle-Tank"/>
-            <frontierRules name="buyDevelop-Rocket-Launcher"/>
+            <frontierRules name="buyTruck"/>
             <frontierRules name="buyDevelop-Attack-Helicopter"/>
-            <frontierRules name="buyDevelop-Jet-Fighter"/>
-            <frontierRules name="buyDevelop-Fleet-Carrier"/>
-            <frontierRules name="buyDevelop-Nuke"/>
+            <frontierRules name="buyTank"/>
+            <frontierRules name="buyDevelop-Battle-Tank"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyDevelop-Anti-Air"/>
+            <frontierRules name="buyWarplane"/>
+            <frontierRules name="buyDevelop-Fighter"/>
+            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Missile-Shield"/>
         </productionFrontier>
 
         <productionFrontier name="production_Germanic">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
+            <frontierRules name="buyDevelop-Submarine"/>
             <frontierRules name="buyInfantry"/>
-            <frontierRules name="buyTruck"/>
-            <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
-            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Shock-Trooper"/>
-            <frontierRules name="buyDevelop-Battle-Tank"/>
-            <frontierRules name="buyDevelop-Rocket-Launcher"/>
+            <frontierRules name="buyTruck"/>
             <frontierRules name="buyDevelop-Attack-Helicopter"/>
-            <frontierRules name="buyDevelop-Jet-Fighter"/>
-            <frontierRules name="buyDevelop-Fleet-Carrier"/>
-            <frontierRules name="buyDevelop-Nuke"/>
+            <frontierRules name="buyTank"/>
+            <frontierRules name="buyDevelop-Battle-Tank"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyDevelop-Anti-Air"/>
+            <frontierRules name="buyWarplane"/>
+            <frontierRules name="buyDevelop-Fighter"/>
+            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Missile-Shield"/>
         </productionFrontier>
 
         <productionFrontier name="production_Slavic">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
+            <frontierRules name="buyDevelop-Submarine"/>
             <frontierRules name="buyInfantry"/>
-            <frontierRules name="buyTruck"/>
-            <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
-            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Shock-Trooper"/>
-            <frontierRules name="buyDevelop-Battle-Tank"/>
-            <frontierRules name="buyDevelop-Rocket-Launcher"/>
+            <frontierRules name="buyTruck"/>
             <frontierRules name="buyDevelop-Attack-Helicopter"/>
-            <frontierRules name="buyDevelop-Jet-Fighter"/>
-            <frontierRules name="buyDevelop-Fleet-Carrier"/>
-            <frontierRules name="buyDevelop-Nuke"/>
+            <frontierRules name="buyTank"/>
+            <frontierRules name="buyDevelop-Battle-Tank"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyDevelop-Anti-Air"/>
+            <frontierRules name="buyWarplane"/>
+            <frontierRules name="buyDevelop-Fighter"/>
+            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Missile-Shield"/>
         </productionFrontier>
 
         <productionFrontier name="production_Celtic">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
+            <frontierRules name="buyDevelop-Submarine"/>
             <frontierRules name="buyInfantry"/>
-            <frontierRules name="buyTruck"/>
-            <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
-            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Shock-Trooper"/>
-            <frontierRules name="buyDevelop-Battle-Tank"/>
-            <frontierRules name="buyDevelop-Rocket-Launcher"/>
+            <frontierRules name="buyTruck"/>
             <frontierRules name="buyDevelop-Attack-Helicopter"/>
-            <frontierRules name="buyDevelop-Jet-Fighter"/>
-            <frontierRules name="buyDevelop-Fleet-Carrier"/>
-            <frontierRules name="buyDevelop-Nuke"/>
+            <frontierRules name="buyTank"/>
+            <frontierRules name="buyDevelop-Battle-Tank"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyDevelop-Anti-Air"/>
+            <frontierRules name="buyWarplane"/>
+            <frontierRules name="buyDevelop-Fighter"/>
+            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Missile-Shield"/>
         </productionFrontier>
 
         <productionFrontier name="production_Baltic">
             <frontierRules name="buyWarship"/>
-            <frontierRules name="buySubmarine"/>
+            <frontierRules name="buyDevelop-Submarine"/>
             <frontierRules name="buyInfantry"/>
-            <frontierRules name="buyTruck"/>
-            <frontierRules name="buyTank"/>
-            <frontierRules name="buyAnti-Air"/>
-            <frontierRules name="buyFighter"/>
-            <frontierRules name="buyBomber"/>
-            <frontierRules name="buyAir-Transport"/>
-            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Shock-Trooper"/>
-            <frontierRules name="buyDevelop-Battle-Tank"/>
-            <frontierRules name="buyDevelop-Rocket-Launcher"/>
+            <frontierRules name="buyTruck"/>
             <frontierRules name="buyDevelop-Attack-Helicopter"/>
-            <frontierRules name="buyDevelop-Jet-Fighter"/>
-            <frontierRules name="buyDevelop-Fleet-Carrier"/>
-            <frontierRules name="buyDevelop-Nuke"/>
+            <frontierRules name="buyTank"/>
+            <frontierRules name="buyDevelop-Battle-Tank"/>
+            <frontierRules name="buyBarrage-Balloon"/>
+            <frontierRules name="buyDevelop-Anti-Air"/>
+            <frontierRules name="buyWarplane"/>
+            <frontierRules name="buyDevelop-Fighter"/>
+            <frontierRules name="buyCommand-Bunker"/>
             <frontierRules name="buyDevelop-Missile-Shield"/>
         </productionFrontier>
-        
+
         <productionFrontier name="production_AI">
             <frontierRules name="buyRadiation"/>
         </productionFrontier>
@@ -3347,7 +3291,6 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Sea Zone 33" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="0"/>
-            <option name="originalOwner" value="AI"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Sea Zone 34" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="10"/>
@@ -3357,7 +3300,7 @@
             <option name="production" value="0"/>
             <option name="originalOwner" value="AI"/>
         </attachment>
-        
+
         <attachment name="territoryAttachment" attachTo="Aeduia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="2"/>
         </attachment>
@@ -4257,6 +4200,112 @@
 <!-- End Battle-Calculator Cleaning-->
 
 <!-- Start Age notification popup -->
+        <attachment name="conditionAttachmentModernAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="turns" value="56"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic"/>
+            <option name="when" value="before:BrittonicCombatMove"/>
+            <option name="notification" value="Note7"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_2" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:BrittonicCombatMove"/>
+            <option name="removeUnits" value="all:Knight" count="9999"/>
+            <option name="removeUnits" value="all:Halberdman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_2A" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:BrittonicCombatMove"/>
+            <option name="removeUnits" value="all:Trebuchet" count="9999"/>
+            <option name="removeUnits" value="all:Crossbowman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_3" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:BalticCombatMove"/>
+            <option name="removeUnits" value="all:Knight" count="9999"/>
+            <option name="removeUnits" value="all:Halberdman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_3A" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:BalticCombatMove"/>
+            <option name="removeUnits" value="all:Trebuchet" count="9999"/>
+            <option name="removeUnits" value="all:Crossbowman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_4" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:GermanicCombatMove"/>
+            <option name="removeUnits" value="all:Knight" count="9999"/>
+            <option name="removeUnits" value="all:Halberdman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_4A" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:GermanicCombatMove"/>
+            <option name="removeUnits" value="all:Trebuchet" count="9999"/>
+            <option name="removeUnits" value="all:Crossbowman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_5" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:CelticCombatMove"/>
+            <option name="removeUnits" value="all:Knight" count="9999"/>
+            <option name="removeUnits" value="all:Halberdman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_5A" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:CelticCombatMove"/>
+            <option name="removeUnits" value="all:Trebuchet" count="9999"/>
+            <option name="removeUnits" value="all:Crossbowman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_6" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:RomanicCombatMove"/>
+            <option name="removeUnits" value="all:Knight" count="9999"/>
+            <option name="removeUnits" value="all:Halberdman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_6A" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:RomanicCombatMove"/>
+            <option name="removeUnits" value="all:Trebuchet" count="9999"/>
+            <option name="removeUnits" value="all:Crossbowman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_7" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:HellenicCombatMove"/>
+            <option name="removeUnits" value="all:Knight" count="9999"/>
+            <option name="removeUnits" value="all:Halberdman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_7A" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:HellenicCombatMove"/>
+            <option name="removeUnits" value="all:Trebuchet" count="9999"/>
+            <option name="removeUnits" value="all:Crossbowman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_8" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:SlavicCombatMove"/>
+            <option name="removeUnits" value="all:Knight" count="9999"/>
+            <option name="removeUnits" value="all:Halberdman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_8A" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:SlavicCombatMove"/>
+            <option name="removeUnits" value="all:Trebuchet" count="9999"/>
+            <option name="removeUnits" value="all:Crossbowman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_9" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:HatticCombatMove"/>
+            <option name="removeUnits" value="all:Knight" count="9999"/>
+            <option name="removeUnits" value="all:Halberdman" count="9999"/>
+        </attachment>
+        <attachment name="triggerAttachment_Modern_Age_9A" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentModernAge"/>
+            <option name="when" value="before:HatticCombatMove"/>
+            <option name="removeUnits" value="all:Trebuchet" count="9999"/>
+            <option name="removeUnits" value="all:Crossbowman" count="9999"/>
+        </attachment>
+
         <attachment name="conditionAttachmentColdWarAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="turns" value="66"/>
         </attachment>
@@ -4526,6 +4575,108 @@
         </attachment>
 <!-- End Age notification popup -->
 
+<!-- Start open op for Convoy Centers and their PU income -->
+        <attachment name="conditionAttachmentNew-Convoy-Center" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="turns" value="36"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Baltic_Convoy_Center_available_near_Balticum" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="when" value="before:BalticBattle"/>
+            <option name="territories" value="Sea Zone 34"/>
+            <option name="territoryProperty" value="production" count="10"/>
+            <option name="changeOwnership" value="Sea Zone 34:any:Baltic:false"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Baltic_Sail-Ships" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="placement" value="Sea Zone 34:Sail-Ship" count="1"/>
+            <option name="when" value="before:BalticBattle"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Germanic_Convoy_Center_available_near_Teutonia" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="when" value="before:GermanicBattle"/>
+            <option name="territories" value="Sea Zone 32"/>
+            <option name="territoryProperty" value="production" count="10"/>
+            <option name="changeOwnership" value="Sea Zone 32:any:Germanic:false"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Germanic_Sail-Ships" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="placement" value="Sea Zone 32:Sail-Ship" count="1"/>
+            <option name="when" value="before:GermanicBattle"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Brittonic_Convoy_Center_available_near_Brittania" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="when" value="before:BrittonicBattle"/>
+            <option name="territories" value="Sea Zone 24"/>
+            <option name="territoryProperty" value="production" count="10"/>
+            <option name="changeOwnership" value="Sea Zone 24:any:Brittonic:false"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Brittonic_Sail-Ships" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="placement" value="Sea Zone 24:Sail-Ship" count="1"/>
+            <option name="when" value="before:BrittonicBattle"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Celtic_Convoy_Center_available_near_Celtica" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="when" value="before:CelticBattle"/>
+            <option name="territories" value="Sea Zone 22"/>
+            <option name="territoryProperty" value="production" count="10"/>
+            <option name="changeOwnership" value="Sea Zone 22:any:Celtic:false"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Celtic_Sail-Ships" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="placement" value="Sea Zone 22:Sail-Ship" count="1"/>
+            <option name="when" value="before:CelticBattle"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Romanic_Convoy_Center_available_near_Roma" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="when" value="before:RomanicBattle"/>
+            <option name="territories" value="Sea Zone 15"/>
+            <option name="territoryProperty" value="production" count="10"/>
+            <option name="changeOwnership" value="Sea Zone 15:any:Romanic:false"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Romanic_Sail-Ships" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="placement" value="Sea Zone 15:Sail-Ship" count="1"/>
+            <option name="when" value="before:RomanicBattle"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Hellenic_Convoy_Center_available_near_Hellas" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="when" value="before:HellenicBattle"/>
+            <option name="territories" value="Sea Zone 8"/>
+            <option name="territoryProperty" value="production" count="10"/>
+            <option name="changeOwnership" value="Sea Zone 8:any:Hellenic:false"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Hellenic_Sail-Ships" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="placement" value="Sea Zone 8:Sail-Ship" count="1"/>
+            <option name="when" value="before:HellenicBattle"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Slavic_Convoy_Center_available_near_Cimmeria" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="when" value="before:SlavicBattle"/>
+            <option name="territories" value="Sea Zone 6"/>
+            <option name="territoryProperty" value="production" count="10"/>
+            <option name="changeOwnership" value="Sea Zone 6:any:Slavic:false"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Slavic_Sail-Ships" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="placement" value="Sea Zone 6:Sail-Ship" count="1"/>
+            <option name="when" value="before:SlavicBattle"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Hattic_Convoy_Center_available_near_Ugarit" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="when" value="before:HatticBattle"/>
+            <option name="territories" value="Sea Zone 9"/>
+            <option name="territoryProperty" value="production" count="10"/>
+            <option name="changeOwnership" value="Sea Zone 9:any:Hattic:false"/>
+        </attachment>
+        <attachment name="triggerAttachment_New_Hattic_Sail-Ships" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
+            <option name="placement" value="Sea Zone 9:Sail-Ship" count="1"/>
+            <option name="when" value="before:HatticBattle"/>
+        </attachment>
+<!-- End open op for Convoy Centers and their PU income -->
+
 <!-- Start remove all unused rockets before non-combat move -->
         <attachment name="conditionAttachmentRemove-Rockets" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="turns" value="1-+"/>
@@ -4571,7 +4722,7 @@
             <option name="removeUnits" value="9999:all:Rocket"/>
         </attachment>
 <!-- End remove all unused rockets before non-combat move -->
-
+        
 <!-- Start remove all unused Mortar-Bombardments before non-combat move -->
         <attachment name="conditionAttachmentRemove-Mortar-Bombardments" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="turns" value="1-+"/>
@@ -4858,7 +5009,7 @@
             <option name="when" value="after:HatticEndTurn"/>
             <option name="when" value="after:AIEndTurn"/>
         </attachment>
-
+        
         <attachment name="conditionAttachmentRemoveAI-Nuke-Explosion" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="1:map"/>
             <option name="unitPresence" value="1:Nuke-Explosion"/>
@@ -4888,7 +5039,7 @@
         <attachment name="triggerAttachment_Nuke_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentNukesMove8"/>
             <option name="unitType" value="Nuke"/>
-            <option name="unitProperty" value="movement" count="8"/>
+            <option name="unitProperty" value="8:movement"/>
             <option name="when" value="after:BrittonicCombatMove"/>
             <option name="when" value="after:BalticCombatMove"/>
             <option name="when" value="after:GermanicCombatMove"/>
@@ -4905,7 +5056,7 @@
         <attachment name="triggerAttachment_Nuke_2" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentNukesMove4again"/>
             <option name="unitType" value="Nuke"/>
-            <option name="unitProperty" value="movement" count="4"/>
+            <option name="unitProperty" value="4:movement"/>
             <option name="when" value="after:BrittonicEndTurn"/>
             <option name="when" value="after:BalticEndTurn"/>
             <option name="when" value="after:GermanicEndTurn"/>
@@ -4919,6 +5070,404 @@
 <!-- End Make nuke-planes able to return to base if not used in combat -->
 
 <!-- Start give players Tech resources during the game -->
+        <attachment name="conditionAttachment10TechPerTurn" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="turns" value="16-25"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_10_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="10"/>
+            <option name="when" value="before:BrittonicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_10_Tech_per_turn_to_Celtic" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="10"/>
+            <option name="when" value="before:CelticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_10_Tech_per_turn_to_Germanic" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="10"/>
+            <option name="when" value="before:GermanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_10_Tech_per_turn_to_Romanic" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="10"/>
+            <option name="when" value="before:RomanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_10_Tech_per_turn_to_Baltic" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="10"/>
+            <option name="when" value="before:BalticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_10_Tech_per_turn_to_Hellenic" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="10"/>
+            <option name="when" value="before:HellenicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_10_Tech_per_turn_to_Slavic" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="10"/>
+            <option name="when" value="before:SlavicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_10_Tech_per_turn_to_Hattic" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="10"/>
+            <option name="when" value="before:HatticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_15_PUs_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="15"/>
+            <option name="when" value="before:BrittonicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_15_PUs_per_turn_to_Celtic" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="15"/>
+            <option name="when" value="before:CelticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_15_PUs_per_turn_to_Germanic" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="15"/>
+            <option name="when" value="before:GermanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_15_PUs_per_turn_to_Romanic" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="15"/>
+            <option name="when" value="before:RomanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_15_PUs_per_turn_to_Baltic" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="15"/>
+            <option name="when" value="before:BalticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_15_PUs_per_turn_to_Hellenic" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="15"/>
+            <option name="when" value="before:HellenicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_15_PUs_per_turn_to_Slavic" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="15"/>
+            <option name="when" value="before:SlavicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Classical_age_gives_15_PUs_per_turn_to_Hattic" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment10TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="15"/>
+            <option name="when" value="before:HatticPurchase"/>
+        </attachment>
+
+        <attachment name="conditionAttachment20TechPerTurn" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="turns" value="26-35"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:BrittonicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_Tech_per_turn_to_Celtic" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:CelticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_Tech_per_turn_to_Germanic" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:GermanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_Tech_per_turn_to_Romanic" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:RomanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_Tech_per_turn_to_Baltic" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:BalticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_Tech_per_turn_to_Hellenic" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:HellenicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_Tech_per_turn_to_Slavic" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:SlavicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_Tech_per_turn_to_Hattic" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:HatticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_PUs_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:BrittonicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_PUs_per_turn_to_Celtic" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:CelticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_PUs_per_turn_to_Germanic" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:GermanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_PUs_per_turn_to_Romanic" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:RomanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_PUs_per_turn_to_Baltic" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:BalticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_PUs_per_turn_to_Hellenic" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:HellenicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_PUs_per_turn_to_Slavic" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:SlavicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Medieval_age_gives_20_PUs_per_turn_to_Hattic" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment20TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="20"/>
+            <option name="when" value="before:HatticPurchase"/>
+        </attachment>
+
+        <attachment name="conditionAttachment50TechPerTurn" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="turns" value="36-45"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_50_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="50"/>
+            <option name="when" value="before:BrittonicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_50_Tech_per_turn_to_Celtic" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="50"/>
+            <option name="when" value="before:CelticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_50_Tech_per_turn_to_Germanic" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="50"/>
+            <option name="when" value="before:GermanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_50_Tech_per_turn_to_Romanic" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="50"/>
+            <option name="when" value="before:RomanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_50_Tech_per_turn_to_Baltic" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="50"/>
+            <option name="when" value="before:BalticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_50_Tech_per_turn_to_Hellenic" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="50"/>
+            <option name="when" value="before:HellenicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_50_Tech_per_turn_to_Slavic" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="50"/>
+            <option name="when" value="before:SlavicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_50_Tech_per_turn_to_Hattic" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="50"/>
+            <option name="when" value="before:HatticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_25_PUs_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="25"/>
+            <option name="when" value="before:BrittonicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_25_PUs_per_turn_to_Celtic" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="25"/>
+            <option name="when" value="before:CelticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_25_PUs_per_turn_to_Germanic" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="25"/>
+            <option name="when" value="before:GermanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_25_PUs_per_turn_to_Romanic" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="25"/>
+            <option name="when" value="before:RomanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_25_PUs_per_turn_to_Baltic" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="25"/>
+            <option name="when" value="before:BalticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_25_PUs_per_turn_to_Hellenic" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="25"/>
+            <option name="when" value="before:HellenicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_25_PUs_per_turn_to_Slavic" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="25"/>
+            <option name="when" value="before:SlavicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Renaissance_age_gives_25_PUs_per_turn_to_Hattic" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment50TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="25"/>
+            <option name="when" value="before:HatticPurchase"/>
+        </attachment>
+        <attachment name="conditionAttachment100TechPerTurn" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="turns" value="46-55"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_100_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="100"/>
+            <option name="when" value="before:BrittonicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_100_Tech_per_turn_to_Celtic" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="100"/>
+            <option name="when" value="before:CelticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_100_Tech_per_turn_to_Germanic" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="100"/>
+            <option name="when" value="before:GermanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_100_Tech_per_turn_to_Romanic" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="100"/>
+            <option name="when" value="before:RomanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_100_Tech_per_turn_to_Baltic" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="100"/>
+            <option name="when" value="before:BalticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_100_Tech_per_turn_to_Hellenic" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="100"/>
+            <option name="when" value="before:HellenicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_100_Tech_per_turn_to_Slavic" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="100"/>
+            <option name="when" value="before:SlavicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_100_Tech_per_turn_to_Hattic" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="Tech"/>
+            <option name="resourceCount" value="100"/>
+            <option name="when" value="before:HatticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_30_PUs_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="30"/>
+            <option name="when" value="before:BrittonicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_30_PUs_per_turn_to_Celtic" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="30"/>
+            <option name="when" value="before:CelticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_30_PUs_per_turn_to_Germanic" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="30"/>
+            <option name="when" value="before:GermanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_30_PUs_per_turn_to_Romanic" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="30"/>
+            <option name="when" value="before:RomanicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_30_PUs_per_turn_to_Baltic" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="30"/>
+            <option name="when" value="before:BalticPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_30_PUs_per_turn_to_Hellenic" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="30"/>
+            <option name="when" value="before:HellenicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_30_PUs_per_turn_to_Slavic" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="30"/>
+            <option name="when" value="before:SlavicPurchase"/>
+        </attachment>
+        <attachment name="triggerAttachment_Industrial_age_gives_30_PUs_per_turn_to_Hattic" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment100TechPerTurn"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="30"/>
+            <option name="when" value="before:HatticPurchase"/>
+        </attachment>
         <attachment name="conditionAttachment200TechPerTurn" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="turns" value="56-70"/>
         </attachment>
@@ -5019,7 +5568,7 @@
             <option name="when" value="before:HatticPurchase"/>
         </attachment>
         <attachment name="conditionAttachment400TechPerTurn" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="71-84"/>
+            <option name="turns" value="71-83"/>
         </attachment>
         <attachment name="triggerAttachment_Futuristic_age_gives_400_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment400TechPerTurn"/>
@@ -5120,55 +5669,55 @@
             <option name="resourceCount" value="40"/>
             <option name="when" value="before:HatticPurchase"/>
         </attachment>
-        <attachment name="conditionAttachment145TechPerTurn" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="85"/>
+        <attachment name="conditionAttachment15TechPerTurn" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="turns" value="84"/>
         </attachment>
-        <attachment name="triggerAttachment_Futuristic_age_gives_145_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment145TechPerTurn"/>
+        <attachment name="triggerAttachment_Futuristic_age_gives_15_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment15TechPerTurn"/>
             <option name="resource" value="Tech"/>
-            <option name="resourceCount" value="145"/>
+            <option name="resourceCount" value="15"/>
             <option name="when" value="before:BrittonicPurchase"/>
         </attachment>
-        <attachment name="triggerAttachment_Futuristic_age_gives_145_Tech_per_turn_to_Celtic" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment145TechPerTurn"/>
+        <attachment name="triggerAttachment_Futuristic_age_gives_15_Tech_per_turn_to_Celtic" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment15TechPerTurn"/>
             <option name="resource" value="Tech"/>
-            <option name="resourceCount" value="145"/>
+            <option name="resourceCount" value="15"/>
             <option name="when" value="before:CelticPurchase"/>
         </attachment>
-        <attachment name="triggerAttachment_Futuristic_age_gives_145_Tech_per_turn_to_Germanic" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment145TechPerTurn"/>
+        <attachment name="triggerAttachment_Futuristic_age_gives_15_Tech_per_turn_to_Germanic" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment15TechPerTurn"/>
             <option name="resource" value="Tech"/>
-            <option name="resourceCount" value="145"/>
+            <option name="resourceCount" value="15"/>
             <option name="when" value="before:GermanicPurchase"/>
         </attachment>
-        <attachment name="triggerAttachment_Futuristic_age_gives_145_Tech_per_turn_to_Romanic" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment145TechPerTurn"/>
+        <attachment name="triggerAttachment_Futuristic_age_gives_15_Tech_per_turn_to_Romanic" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment15TechPerTurn"/>
             <option name="resource" value="Tech"/>
-            <option name="resourceCount" value="145"/>
+            <option name="resourceCount" value="15"/>
             <option name="when" value="before:RomanicPurchase"/>
         </attachment>
-        <attachment name="triggerAttachment_Futuristic_age_gives_145_Tech_per_turn_to_Baltic" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment145TechPerTurn"/>
+        <attachment name="triggerAttachment_Futuristic_age_gives_15_Tech_per_turn_to_Baltic" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment15TechPerTurn"/>
             <option name="resource" value="Tech"/>
-            <option name="resourceCount" value="145"/>
+            <option name="resourceCount" value="15"/>
             <option name="when" value="before:BalticPurchase"/>
         </attachment>
-        <attachment name="triggerAttachment_Futuristic_age_gives_145_Tech_per_turn_to_Hellenic" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment145TechPerTurn"/>
+        <attachment name="triggerAttachment_Futuristic_age_gives_15_Tech_per_turn_to_Hellenic" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment15TechPerTurn"/>
             <option name="resource" value="Tech"/>
-            <option name="resourceCount" value="145"/>
+            <option name="resourceCount" value="15"/>
             <option name="when" value="before:HellenicPurchase"/>
         </attachment>
-        <attachment name="triggerAttachment_Futuristic_age_gives_145_Tech_per_turn_to_Slavic" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment145TechPerTurn"/>
+        <attachment name="triggerAttachment_Futuristic_age_gives_15_Tech_per_turn_to_Slavic" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment15TechPerTurn"/>
             <option name="resource" value="Tech"/>
-            <option name="resourceCount" value="145"/>
+            <option name="resourceCount" value="15"/>
             <option name="when" value="before:SlavicPurchase"/>
         </attachment>
-        <attachment name="triggerAttachment_Futuristic_age_gives_145_Tech_per_turn_to_Hattic" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment145TechPerTurn"/>
+        <attachment name="triggerAttachment_Futuristic_age_gives_15_Tech_per_turn_to_Hattic" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment15TechPerTurn"/>
             <option name="resource" value="Tech"/>
-            <option name="resourceCount" value="145"/>
+            <option name="resourceCount" value="15"/>
             <option name="when" value="before:HatticPurchase"/>
         </attachment>
 <!-- End give players Tech resources during the game -->
@@ -15040,14 +15589,15 @@
             <option name="when" value="after:HatticBattle"/>
             <option name="when" value="after:AIBattle"/>
         </attachment>
+
         <attachment name="conditionAttachment-Atomic-Sea Zone 1" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 1"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 1" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 1"/>
-            <option name="placement" value="1:Sea Zone 1:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 1:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15059,13 +15609,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 2" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 2"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 2" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 2" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 2"/>
-            <option name="placement" value="1:Sea Zone 2:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 2:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15077,13 +15627,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 3" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 3"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 3" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 3" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 3"/>
-            <option name="placement" value="1:Sea Zone 3:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 3:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15095,13 +15645,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 4" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 4"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 4" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 4" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 4"/>
-            <option name="placement" value="1:Sea Zone 4:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 4:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15113,13 +15663,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 5" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 5"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 5" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 5" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 5"/>
-            <option name="placement" value="1:Sea Zone 5:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 5:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15131,13 +15681,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 6" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 6"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 6" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 6" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 6"/>
-            <option name="placement" value="1:Sea Zone 6:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 6:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15149,13 +15699,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 7" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 7"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 7" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 7" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 7"/>
-            <option name="placement" value="1:Sea Zone 7:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 7:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15167,13 +15717,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 8" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 8"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 8" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 8" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 8"/>
-            <option name="placement" value="1:Sea Zone 8:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 8:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15185,13 +15735,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 9" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 9"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 9" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 9" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 9"/>
-            <option name="placement" value="1:Sea Zone 9:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 9:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15203,13 +15753,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 10" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 10"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 10" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 10" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 10"/>
-            <option name="placement" value="1:Sea Zone 10:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 10:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15221,13 +15771,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 11" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 11"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 11" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 11" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 11"/>
-            <option name="placement" value="1:Sea Zone 11:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 11:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15239,13 +15789,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 12" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 12"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 12" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 12" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 12"/>
-            <option name="placement" value="1:Sea Zone 12:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 12:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15257,13 +15807,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 13" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 13"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 13" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 13" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 13"/>
-            <option name="placement" value="1:Sea Zone 13:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 13:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15275,13 +15825,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 14" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 14"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 14" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 14" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 14"/>
-            <option name="placement" value="1:Sea Zone 14:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 14:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15293,13 +15843,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 15" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 15"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 15" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 15" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 15"/>
-            <option name="placement" value="1:Sea Zone 15:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 15:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15311,13 +15861,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 16" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 16"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 16" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 16" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 16"/>
-            <option name="placement" value="1:Sea Zone 16:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 16:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15329,13 +15879,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 17" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 17"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 17" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 17" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 17"/>
-            <option name="placement" value="1:Sea Zone 17:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 17:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15347,13 +15897,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 18" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 18"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 18" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 18" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 18"/>
-            <option name="placement" value="1:Sea Zone 18:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 18:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15365,13 +15915,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 19" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 19"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 19" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 19" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 19"/>
-            <option name="placement" value="1:Sea Zone 19:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 19:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15383,13 +15933,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 20" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 20"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 20" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 20" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 20"/>
-            <option name="placement" value="1:Sea Zone 20:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 20:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15401,13 +15951,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 21" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 21"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 21" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 21" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 21"/>
-            <option name="placement" value="1:Sea Zone 21:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 21:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15419,13 +15969,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 22" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 22"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 22" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 22" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 22"/>
-            <option name="placement" value="1:Sea Zone 22:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 22:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15437,13 +15987,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 23" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 23"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 23" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 23" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 23"/>
-            <option name="placement" value="1:Sea Zone 23:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 23:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15455,13 +16005,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 24" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 24"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 24" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 24" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 24"/>
-            <option name="placement" value="1:Sea Zone 24:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 24:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15473,13 +16023,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 25" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 25"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 25" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 25" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 25"/>
-            <option name="placement" value="1:Sea Zone 25:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 25:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15491,13 +16041,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 26" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 26"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 26" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 26" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 26"/>
-            <option name="placement" value="1:Sea Zone 26:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 26:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15509,13 +16059,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 27" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 27"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 27" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 27" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 27"/>
-            <option name="placement" value="1:Sea Zone 27:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 27:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15527,13 +16077,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 28" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 28"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 28" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 28" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 28"/>
-            <option name="placement" value="1:Sea Zone 28:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 28:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15545,13 +16095,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 29" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 29"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 29" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 29" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 29"/>
-            <option name="placement" value="1:Sea Zone 29:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 29:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15563,13 +16113,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 30" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 30"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 30" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 30" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 30"/>
-            <option name="placement" value="1:Sea Zone 30:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 30:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15581,13 +16131,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 31" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 31"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 31" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 31" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 31"/>
-            <option name="placement" value="1:Sea Zone 31:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 31:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15599,13 +16149,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 32" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 32"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 32" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 32" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 32"/>
-            <option name="placement" value="1:Sea Zone 32:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 32:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15617,13 +16167,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 33" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 33"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 33" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 33" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 33"/>
-            <option name="placement" value="1:Sea Zone 33:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 33:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15635,13 +16185,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 34" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 34"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 34" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 34" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 34"/>
-            <option name="placement" value="1:Sea Zone 34:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 34:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -15653,13 +16203,13 @@
             <option name="when" value="after:AIBattle"/>
         </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 35" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="directPresenceTerritories" value="1:Sea Zone 35"/>
-            <option name="unitPresence" value="1:Nuke-Explosion"/>
+            <option name="directPresenceTerritories" value="Sea Zone 35" count="1"/>
+            <option name="unitPresence" value="Nuke-Explosion" count="1"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Sea Zone 35" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Sea Zone 35"/>
-            <option name="placement" value="1:Sea Zone 35:Sea-Radiation"/>
+            <option name="placement" value="Sea Zone 35:Sea-Radiation" count="1"/>
             <option name="when" value="after:BalticBattle"/>
             <option name="when" value="after:GermanicBattle"/>
             <option name="when" value="after:BrittonicBattle"/>
@@ -16556,122 +17106,122 @@
 <!-- End No move during the Cold War. Mortar-Bombardment and Rockets seem to give players the unwanted Combat Move -->
 
 <!-- Start The Western and Eastern leaders transfer PUs to the minor nations -->
-        <attachment name="conditionAttachment_Slavics_Aid_Baltics_30_PU" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachment_Hattics_Aid_Slavics_10_PU" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="switch" value="true"/>
         </attachment>
-        <attachment name="triggerAttachment_Slavics_Aid_Baltics_30_PU" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Hattics_Aid_Slavics_10_PU" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="30"/>
+            <option name="resourceCount" value="10"/>
+            <option name="players" value="Slavic"/>
+        </attachment>
+        <attachment name="triggerAttachment_Hattics_Aid_Slavics_10_PU-2" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="Aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_Hattics_Aid_Slavics_10_PU" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Hattics_Aid_Slavics_10_PU"/>
+            <option name="activateTrigger" value="triggerAttachment_Hattics_Aid_Slavics_10_PU:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Hattics_Aid_Slavics_10_PU-2:1:false:false:false:false"/>
+            <option name="text" value="HATTIC_SLAVIC_10"/>
+            <option name="costPU" value="10"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_Hattics_Aid_Baltics_15_PU" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+        </attachment>
+        <attachment name="triggerAttachment_Hattics_Aid_Baltics_15_PU" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="15"/>
             <option name="players" value="Baltic"/>
         </attachment>
-        <attachment name="triggerAttachment_Slavics_Aid_Baltics_30_PU-2" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Hattics_Aid_Baltics_15_PU-2" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="notification" value="Aid"/>
         </attachment>
-        <attachment name="userActionAttachment_Slavics_Aid_Baltics_30_PU" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_Slavics_Aid_Baltics_30_PU"/>
-            <option name="activateTrigger" value="triggerAttachment_Slavics_Aid_Baltics_30_PU:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_Slavics_Aid_Baltics_30_PU-2:1:false:false:false:false"/>
-            <option name="text" value="SLAVIC_BALTIC_30"/>
-            <option name="costPU" value="30"/>
+        <attachment name="userActionAttachment_Hattics_Aid_Baltics_15_PU" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Hattics_Aid_Baltics_15_PU"/>
+            <option name="activateTrigger" value="triggerAttachment_Hattics_Aid_Baltics_15_PU:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Hattics_Aid_Baltics_15_PU-2:1:false:false:false:false"/>
+            <option name="text" value="HATTIC_BALTIC_15"/>
+            <option name="costPU" value="15"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
-        <attachment name="conditionAttachment_Slavics_Aid_Hellenics_30_PU" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachment_Hattics_Aid_Hellenics_20_PU" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="switch" value="true"/>
         </attachment>
-        <attachment name="triggerAttachment_Slavics_Aid_Hellenics_30_PU" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="30"/>
-            <option name="players" value="Hellenic"/>
-        </attachment>
-        <attachment name="triggerAttachment_Slavics_Aid_Hellenics_30_PU-2" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="notification" value="Aid"/>
-        </attachment>
-        <attachment name="userActionAttachment_Slavics_Aid_Hellenics_30_PU" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_Slavics_Aid_Hellenics_30_PU"/>
-            <option name="activateTrigger" value="triggerAttachment_Slavics_Aid_Hellenics_30_PU:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_Slavics_Aid_Hellenics_30_PU-2:1:false:false:false:false"/>
-            <option name="text" value="SLAVIC_HELLENIC_30"/>
-            <option name="costPU" value="30"/>
-            <option name="attemptsPerTurn" value="1"/>
-        </attachment>
-
-        <attachment name="conditionAttachment_Slavics_Aid_Hattics_20_PU" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="switch" value="true"/>
-        </attachment>
-        <attachment name="triggerAttachment_Slavics_Aid_Hattics_20_PU" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Hattics_Aid_Hellenics_20_PU" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="resource" value="PUs"/>
             <option name="resourceCount" value="20"/>
-            <option name="players" value="Hattic"/>
+            <option name="players" value="Hellenic"/>
         </attachment>
-        <attachment name="triggerAttachment_Slavics_Aid_Hattics_20_PU-2" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Hattics_Aid_Hellenics_20_PU-2" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="notification" value="Aid"/>
         </attachment>
-        <attachment name="userActionAttachment_Slavics_Aid_Hattics_20_PU" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_Slavics_Aid_Hattics_20_PU"/>
-            <option name="activateTrigger" value="triggerAttachment_Slavics_Aid_Hattics_20_PU:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_Slavics_Aid_Hattics_20_PU-2:1:false:false:false:false"/>
-            <option name="text" value="SLAVIC_HATTIC_20"/>
+        <attachment name="userActionAttachment_Hattics_Aid_Hellenic_20_PU" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Hattics_Aid_Hellenics_20_PU"/>
+            <option name="activateTrigger" value="triggerAttachment_Hattics_Aid_Hellenics_20_PU:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Hattics_Aid_Hellenics_20_PU-2:1:false:false:false:false"/>
+            <option name="text" value="HATTIC_HELLENIC_20"/>
             <option name="costPU" value="20"/>
+            <option name="attemptsPerTurn" value="1"/>
+        </attachment>
+
+        <attachment name="conditionAttachment_Germanics_Aid_Brittonics_10_PU" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="switch" value="true"/>
+        </attachment>
+        <attachment name="triggerAttachment_Germanics_Aid_Brittonics_10_PU" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="10"/>
+            <option name="players" value="Brittonic"/>
+        </attachment>
+        <attachment name="triggerAttachment_Germanics_Aid_Brittonics_10_PU-2" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="notification" value="Aid"/>
+        </attachment>
+        <attachment name="userActionAttachment_Germanics_Aid_Brittonics_10_PU" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Germanics_Aid_Brittonics_10_PU"/>
+            <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Brittonics_10_PU:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Brittonics_10_PU-2:1:false:false:false:false"/>
+            <option name="text" value="GERMANIC_BRITTONIC_10"/>
+            <option name="costPU" value="10"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
         
-        <attachment name="conditionAttachment_Brittonics_Aid_Germanics_20_PU" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachment_Germanics_Aid_Romanics_15_PU" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="switch" value="true"/>
         </attachment>
-        <attachment name="triggerAttachment_Brittonics_Aid_Germanics_20_PU" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Germanics_Aid_Romanics_15_PU" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="20"/>
-            <option name="players" value="Germanic"/>
+            <option name="resourceCount" value="15"/>
+            <option name="players" value="Romanic"/>
         </attachment>
-        <attachment name="triggerAttachment_Brittonics_Aid_Germanics_20_PU-2" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Germanics_Aid_Romanics_15_PU-2" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="notification" value="Aid"/>
         </attachment>
-        <attachment name="userActionAttachment_Brittonics_Aid_Germanics_20_PU" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_Brittonics_Aid_Germanics_20_PU"/>
-            <option name="activateTrigger" value="triggerAttachment_Brittonics_Aid_Germanics_20_PU:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_Brittonics_Aid_Germanics_20_PU-2:1:false:false:false:false"/>
-            <option name="text" value="BRITTONIC_GERMANIC_20"/>
-            <option name="costPU" value="20"/>
+        <attachment name="userActionAttachment_Germanics_Aid_Romanics_15_PU" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Germanics_Aid_Romanics_15_PU"/>
+            <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Romanics_15_PU:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Romanics_15_PU-2:1:false:false:false:false"/>
+            <option name="text" value="GERMANIC_ROMANIC_15"/>
+            <option name="costPU" value="15"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
-        <attachment name="conditionAttachment_Brittonics_Aid_Celtics_20_PU" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachment_Germanics_Aid_Celtics_20_PU" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="switch" value="true"/>
         </attachment>
-        <attachment name="triggerAttachment_Brittonics_Aid_Celtics_20_PU" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Germanics_Aid_Celtics_20_PU" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="resource" value="PUs"/>
             <option name="resourceCount" value="20"/>
             <option name="players" value="Celtic"/>
         </attachment>
-        <attachment name="triggerAttachment_Brittonics_Aid_Celtics_20_PU-2" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+        <attachment name="triggerAttachment_Germanics_Aid_Celtics_20_PU-2" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="notification" value="Aid"/>
         </attachment>
-        <attachment name="userActionAttachment_Brittonics_Aid_Celtics_20_PU" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_Brittonics_Aid_Celtics_20_PU"/>
-            <option name="activateTrigger" value="triggerAttachment_Brittonics_Aid_Celtics_20_PU:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_Brittonics_Aid_Celtics_20_PU-2:1:false:false:false:false"/>
-            <option name="text" value="BRITTONIC_CELTIC_20"/>
-            <option name="costPU" value="20"/>
-            <option name="attemptsPerTurn" value="1"/>
-        </attachment>
-
-        <attachment name="conditionAttachment_Brittonics_Aid_Romanics_20_PU" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="switch" value="true"/>
-        </attachment>
-        <attachment name="triggerAttachment_Brittonics_Aid_Romanics_20_PU" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="20"/>
-            <option name="players" value="Romanic"/>
-        </attachment>
-        <attachment name="triggerAttachment_Brittonics_Aid_Romanics_20_PU-2" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="notification" value="Aid"/>
-        </attachment>
-        <attachment name="userActionAttachment_Brittonics_Aid_Romanics_20_PU" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
-            <option name="conditions" value="conditionAttachment_Brittonics_Aid_Romanics_20_PU"/>
-            <option name="activateTrigger" value="triggerAttachment_Brittonics_Aid_Romanics_20_PU:1:false:false:false:false"/>
-            <option name="activateTrigger" value="triggerAttachment_Brittonics_Aid_Romanics_20_PU-2:1:false:false:false:false"/>
-            <option name="text" value="BRITTONIC_ROMANIC_20"/>
+        <attachment name="userActionAttachment_Germanics_Aid_Celtics_20_PU" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.UserActionAttachment" type="player">
+            <option name="conditions" value="conditionAttachment_Germanics_Aid_Celtics_20_PU"/>
+            <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Celtics_20_PU:1:false:false:false:false"/>
+            <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Celtics_20_PU-2:1:false:false:false:false"/>
+            <option name="text" value="GERMANIC_CELTIC_20"/>
             <option name="costPU" value="20"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
@@ -16715,319 +17265,380 @@
 
     <initialize>
         <ownerInitialize>
-            <territoryOwner territory="Aeduia" owner="Celtic"/>
+            <territoryOwner territory="Aeduia" owner="Germanic"/>
             <territoryOwner territory="Akkad" owner="Hattic"/>
             <territoryOwner territory="Alemannia" owner="Germanic"/>
-            <territoryOwner territory="Anglia" owner="Brittonic"/>
-            <territoryOwner territory="Aorsi" owner="Slavic"/>
+            <territoryOwner territory="Anglia" owner="Germanic"/>
+            <territoryOwner territory="Aorsi" owner="Hattic"/>
             <territoryOwner territory="Aquitania" owner="Celtic"/>
             <territoryOwner territory="Aram" owner="Hattic"/>
-            <territoryOwner territory="Ardhan" owner="Slavic"/>
+            <territoryOwner territory="Ardhan" owner="Hattic"/>
             <territoryOwner territory="Aremorica" owner="Celtic"/>
             <territoryOwner territory="Armenia" owner="Hattic"/>
             <territoryOwner territory="Arothi" owner="Brittonic"/>
             <territoryOwner territory="Arvernia" owner="Celtic"/>
             <territoryOwner territory="Assur" owner="Hattic"/>
-            <territoryOwner territory="Aukstaitia" owner="Slavic"/>
-            <territoryOwner territory="Baku" owner="Slavic"/>
+            <territoryOwner territory="Aukstaitia" owner="Baltic"/>
+            <territoryOwner territory="Baku" owner="Hattic"/>
             <territoryOwner territory="Balticum" owner="Baltic"/>
             <territoryOwner territory="Bastarnae" owner="Slavic"/>
-            <territoryOwner territory="Bastetania" owner="Brittonic"/>
-            <territoryOwner territory="Belgica" owner="Brittonic"/>
-            <territoryOwner territory="Bellovacia" owner="Celtic"/>
+            <territoryOwner territory="Bastetania" owner="Celtic"/>
+            <territoryOwner territory="Belgica" owner="Germanic"/>
+            <territoryOwner territory="Bellovacia" owner="Germanic"/>
             <territoryOwner territory="Bergio" owner="Brittonic"/>
             <territoryOwner territory="Brigantes" owner="Brittonic"/>
             <territoryOwner territory="Britannia" owner="Brittonic"/>
-            <territoryOwner territory="Budini" owner="Slavic"/>
-            <territoryOwner territory="Buri" owner="Slavic"/>
+            <territoryOwner territory="Budini" owner="Hattic"/>
+            <territoryOwner territory="Buri" owner="Germanic"/>
             <territoryOwner territory="Caledonia" owner="Brittonic"/>
             <territoryOwner territory="Canaan" owner="Hattic"/>
             <territoryOwner territory="Caria" owner="Hattic"/>
-            <territoryOwner territory="Caspian Steppe" owner="Slavic"/>
-            <territoryOwner territory="Celtiberia" owner="Brittonic"/>
+            <territoryOwner territory="Caspian Steppe" owner="Hattic"/>
+            <territoryOwner territory="Celtiberia" owner="Celtic"/>
             <territoryOwner territory="Celtica" owner="Celtic"/>
-            <territoryOwner territory="Celticia" owner="Brittonic"/>
+            <territoryOwner territory="Celticia" owner="Celtic"/>
             <territoryOwner territory="Chattia" owner="Germanic"/>
             <territoryOwner territory="Chud" owner="Slavic"/>
-            <territoryOwner territory="Chunni" owner="Slavic"/>
+            <territoryOwner territory="Chunni" owner="Hattic"/>
             <territoryOwner territory="Cilicia" owner="Hattic"/>
-            <territoryOwner territory="Cimbria" owner="Brittonic"/>
+            <territoryOwner territory="Cimbria" owner="Germanic"/>
             <territoryOwner territory="Cimmeria" owner="Slavic"/>
-            <territoryOwner territory="Civitatica" owner="Celtic"/>
-            <territoryOwner territory="Colchia" owner="Slavic"/>
+            <territoryOwner territory="Civitatica" owner="Germanic"/>
+            <territoryOwner territory="Colchia" owner="Hattic"/>
             <territoryOwner territory="Corsica" owner="Celtic"/>
-            <territoryOwner territory="Creta" owner="Brittonic"/>
-            <territoryOwner territory="Cyprus" owner="Brittonic"/>
-            <territoryOwner territory="Dacia" owner="Slavic"/>
-            <territoryOwner territory="Dahae" owner="Slavic"/>
-            <territoryOwner territory="Dalmatia" owner="Slavic"/>
-            <territoryOwner territory="Dania" owner="Brittonic"/>
-            <territoryOwner territory="Dregovich" owner="Slavic"/>
-            <territoryOwner territory="Drevlyan" owner="Slavic"/>
+            <territoryOwner territory="Creta" owner="Hattic"/>
+            <territoryOwner territory="Cyprus" owner="Hattic"/>
+            <territoryOwner territory="Dacia" owner="Hellenic"/>
+            <territoryOwner territory="Dahae" owner="Hattic"/>
+            <territoryOwner territory="Dalmatia" owner="Germanic"/>
+            <territoryOwner territory="Dania" owner="Germanic"/>
+            <territoryOwner territory="Dregovich" owner="Baltic"/>
+            <territoryOwner territory="Drevlyan" owner="Baltic"/>
             <territoryOwner territory="Oiorpata" owner="Slavic"/>
             <territoryOwner territory="Dumnonia" owner="Brittonic"/>
-            <territoryOwner territory="Emi" owner="Brittonic"/>
+            <territoryOwner territory="Emi" owner="Slavic"/>
             <territoryOwner territory="Etruria" owner="Romanic"/>
             <territoryOwner territory="Finni" owner="Brittonic"/>
-            <territoryOwner territory="Frisia" owner="Brittonic"/>
-            <territoryOwner territory="Galindia" owner="Slavic"/>
-            <territoryOwner territory="Gallaecia" owner="Brittonic"/>
+            <territoryOwner territory="Frisia" owner="Germanic"/>
+            <territoryOwner territory="Galindia" owner="Germanic"/>
+            <territoryOwner territory="Gallaecia" owner="Celtic"/>
             <territoryOwner territory="Gautigoth" owner="Brittonic"/>
             <territoryOwner territory="Germania" owner="Germanic"/>
             <territoryOwner territory="Goliad" owner="Slavic"/>
-            <territoryOwner territory="Gothia" owner="Slavic"/>
-            <territoryOwner territory="Gotini" owner="Slavic"/>
+            <territoryOwner territory="Gothia" owner="Germanic"/>
+            <territoryOwner territory="Gotini" owner="Germanic"/>
             <territoryOwner territory="Gurgjan" owner="Hattic"/>
-            <territoryOwner territory="Gyzantes" owner="Brittonic"/>
+            <territoryOwner territory="Gyzantes" owner="Hattic"/>
             <territoryOwner territory="Haemodae" owner="Brittonic"/>
             <territoryOwner territory="Hallin" owner="Brittonic"/>
             <territoryOwner territory="Halogi" owner="Brittonic"/>
             <territoryOwner territory="Hatti" owner="Hattic"/>
             <territoryOwner territory="Hellas" owner="Hellenic"/>
-            <territoryOwner territory="Helvetia" owner="Celtic"/>
+            <territoryOwner territory="Helvetia" owner="Germanic"/>
             <territoryOwner territory="Hermunduria" owner="Germanic"/>
             <territoryOwner territory="Hibernia" owner="Brittonic"/>
             <territoryOwner territory="Hyperborea" owner="Brittonic"/>
-            <territoryOwner territory="Iazyges" owner="Slavic"/>
-            <territoryOwner territory="Iberia" owner="Slavic"/>
-            <territoryOwner territory="Ilercavonia" owner="Brittonic"/>
-            <territoryOwner territory="Illyria" owner="Slavic"/>
+            <territoryOwner territory="Iazyges" owner="Hellenic"/>
+            <territoryOwner territory="Iberia" owner="Hattic"/>
+            <territoryOwner territory="Ilercavonia" owner="Celtic"/>
+            <territoryOwner territory="Illyria" owner="Hellenic"/>
             <territoryOwner territory="Ilmenski" owner="Slavic"/>
-            <territoryOwner territory="Issedones" owner="Slavic"/>
-            <territoryOwner territory="Jyrcae" owner="Slavic"/>
+            <territoryOwner territory="Issedones" owner="Hattic"/>
+            <territoryOwner territory="Jyrcae" owner="Hattic"/>
             <territoryOwner territory="Karelia" owner="Slavic"/>
             <territoryOwner territory="Ladogaski" owner="Slavic"/>
             <territoryOwner territory="Latgallia" owner="Baltic"/>
             <territoryOwner territory="Liguria" owner="Romanic"/>
-            <territoryOwner territory="Lingonia" owner="Brittonic"/>
+            <territoryOwner territory="Lingonia" owner="Germanic"/>
             <territoryOwner territory="Livonia" owner="Baltic"/>
-            <territoryOwner territory="Lusitania" owner="Brittonic"/>
+            <territoryOwner territory="Lusitania" owner="Celtic"/>
             <territoryOwner territory="Lydia" owner="Hattic"/>
             <territoryOwner territory="Macedonia" owner="Hellenic"/>
-            <territoryOwner territory="Maeotia" owner="Slavic"/>
-            <territoryOwner territory="Mallorca" owner="Brittonic"/>
+            <territoryOwner territory="Maeotia" owner="Hattic"/>
+            <territoryOwner territory="Mallorca" owner="Celtic"/>
             <territoryOwner territory="Mannea" owner="Hattic"/>
             <territoryOwner territory="Marcomanni" owner="Germanic"/>
             <territoryOwner territory="Mari" owner="Slavic"/>
-            <territoryOwner territory="Massaesylia" owner="Brittonic"/>
-            <territoryOwner territory="Massylia" owner="Brittonic"/>
-            <territoryOwner territory="Mauria" owner="Brittonic"/>
-            <territoryOwner territory="Maxyes" owner="Brittonic"/>
+            <territoryOwner territory="Massaesylia" owner="Hattic"/>
+            <territoryOwner territory="Massylia" owner="Hattic"/>
+            <territoryOwner territory="Mauria" owner="Hattic"/>
+            <territoryOwner territory="Maxyes" owner="Hattic"/>
             <territoryOwner territory="Media" owner="Hattic"/>
             <territoryOwner territory="Merya" owner="Slavic"/>
             <territoryOwner territory="Meshchera" owner="Slavic"/>
-            <territoryOwner territory="Moesia" owner="Slavic"/>
+            <territoryOwner territory="Moesia" owner="Hellenic"/>
             <territoryOwner territory="Mordvia" owner="Slavic"/>
             <territoryOwner territory="Morum" owner="Slavic"/>
             <territoryOwner territory="Muroma" owner="Slavic"/>
             <territoryOwner territory="Mysia" owner="Hattic"/>
             <territoryOwner territory="Narbonensis" owner="Celtic"/>
             <territoryOwner territory="Naristi" owner="Germanic"/>
-            <territoryOwner territory="Navari" owner="Slavic"/>
+            <territoryOwner territory="Navari" owner="Germanic"/>
             <territoryOwner territory="Neuri" owner="Slavic"/>
-            <territoryOwner territory="Norici" owner="Slavic"/>
+            <territoryOwner territory="Norici" owner="Germanic"/>
             <territoryOwner territory="Orcades" owner="Brittonic"/>
             <territoryOwner territory="Ostrogoth" owner="Brittonic"/>
             <territoryOwner territory="Otadinia" owner="Brittonic"/>
             <territoryOwner territory="Pamphylia" owner="Hattic"/>
-            <territoryOwner territory="Pannonia" owner="Slavic"/>
+            <territoryOwner territory="Pannonia" owner="Germanic"/>
             <territoryOwner territory="Paphlagonia" owner="Hattic"/>
-            <territoryOwner territory="Parnia" owner="Slavic"/>
+            <territoryOwner territory="Parnia" owner="Hattic"/>
             <territoryOwner territory="Parthia" owner="Hattic"/>
             <territoryOwner territory="Peloponnesus" owner="Hellenic"/>
-            <territoryOwner territory="Peucini" owner="Slavic"/>
+            <territoryOwner territory="Peucini" owner="Baltic"/>
             <territoryOwner territory="Phrygia" owner="Hattic"/>
             <territoryOwner territory="Piroski" owner="Slavic"/>
             <territoryOwner territory="Polan" owner="Slavic"/>
-            <territoryOwner territory="Pomerania" owner="Slavic"/>
-            <territoryOwner territory="Pontic Steppe" owner="Slavic"/>
+            <territoryOwner territory="Pomerania" owner="Germanic"/>
+            <territoryOwner territory="Pontic Steppe" owner="Hattic"/>
             <territoryOwner territory="Pontus" owner="Hattic"/>
             <territoryOwner territory="Radimich" owner="Slavic"/>
             <territoryOwner territory="Ragnarici" owner="Brittonic"/>
             <territoryOwner territory="Roma" owner="Romanic"/>
             <territoryOwner territory="Roxalania" owner="Slavic"/>
             <territoryOwner territory="Rugi" owner="Brittonic"/>
-            <territoryOwner territory="Saka" owner="Slavic"/>
-            <territoryOwner territory="Salluvia" owner="Celtic"/>
+            <territoryOwner territory="Saka" owner="Hattic"/>
+            <territoryOwner territory="Salluvia" owner="Romanic"/>
             <territoryOwner territory="Samnium" owner="Romanic"/>
             <territoryOwner territory="Sardinia" owner="Romanic"/>
             <territoryOwner territory="Sarmatia" owner="Slavic"/>
             <territoryOwner territory="Saxonia" owner="Germanic"/>
-            <territoryOwner territory="Scordisci" owner="Slavic"/>
-            <territoryOwner territory="Scythia" owner="Slavic"/>
+            <territoryOwner territory="Scordisci" owner="Hellenic"/>
+            <territoryOwner territory="Scythia" owner="Hattic"/>
+            <territoryOwner territory="Sea Zone 4" owner="Slavic"/>
             <territoryOwner territory="Sea Zone 6" owner="Slavic"/>
             <territoryOwner territory="Sea Zone 8" owner="Hellenic"/>
             <territoryOwner territory="Sea Zone 9" owner="Hattic"/>
+            <territoryOwner territory="Sea Zone 10" owner="Hellenic"/>
+            <territoryOwner territory="Sea Zone 11" owner="Hattic"/>
+            <territoryOwner territory="Sea Zone 13" owner="Germanic"/>
+            <territoryOwner territory="Sea Zone 14" owner="Hattic"/>
             <territoryOwner territory="Sea Zone 15" owner="Romanic"/>
-            <territoryOwner territory="Sea Zone 18" owner="Brittonic"/>
+            <territoryOwner territory="Sea Zone 16" owner="Romanic"/>
+            <territoryOwner territory="Sea Zone 18" owner="Celtic"/>
             <territoryOwner territory="Sea Zone 22" owner="Celtic"/>
             <territoryOwner territory="Sea Zone 24" owner="Brittonic"/>
-            <territoryOwner territory="Sea Zone 29" owner="Brittonic"/>
+            <territoryOwner territory="Sea Zone 30" owner="Germanic"/>
             <territoryOwner territory="Sea Zone 32" owner="Germanic"/>
+            <territoryOwner territory="Sea Zone 33" owner="Baltic"/>
             <territoryOwner territory="Sea Zone 34" owner="Baltic"/>
-            <territoryOwner territory="Selonia" owner="Slavic"/>
+            <territoryOwner territory="Sea Zone 35" owner="Brittonic"/>
+            <territoryOwner territory="Selonia" owner="Baltic"/>
             <territoryOwner territory="Semigallia" owner="Baltic"/>
             <territoryOwner territory="Severia" owner="Slavic"/>
             <territoryOwner territory="Sicilia" owner="Romanic"/>
-            <territoryOwner territory="Sindica" owner="Slavic"/>
-            <territoryOwner territory="Siracena" owner="Slavic"/>
+            <territoryOwner territory="Sindica" owner="Hattic"/>
+            <territoryOwner territory="Siracena" owner="Hattic"/>
             <territoryOwner territory="Sitones" owner="Brittonic"/>
-            <territoryOwner territory="Skalvia" owner="Slavic"/>
+            <territoryOwner territory="Skalvia" owner="Baltic"/>
             <territoryOwner territory="Slavoicum" owner="Slavic"/>
             <territoryOwner territory="Suiones" owner="Brittonic"/>
             <territoryOwner territory="Sumi" owner="Brittonic"/>
-            <territoryOwner territory="Taurisci" owner="Slavic"/>
+            <territoryOwner territory="Taurisci" owner="Hellenic"/>
             <territoryOwner territory="Teutonia" owner="Germanic"/>
             <territoryOwner territory="Thrace" owner="Hellenic"/>
-            <territoryOwner territory="Thyssagetae" owner="Slavic"/>
+            <territoryOwner territory="Thyssagetae" owner="Hattic"/>
             <territoryOwner territory="Tiveria" owner="Slavic"/>
-            <territoryOwner territory="Turdetania" owner="Brittonic"/>
+            <territoryOwner territory="Turdetania" owner="Celtic"/>
             <territoryOwner territory="Ugarit" owner="Hattic"/>
             <territoryOwner territory="Ulaidia" owner="Brittonic"/>
             <territoryOwner territory="Ulich" owner="Slavic"/>
             <territoryOwner territory="Uruatri" owner="Hattic"/>
-            <territoryOwner territory="Vagoth" owner="Brittonic"/>
-            <territoryOwner territory="Vandalia" owner="Slavic"/>
-            <territoryOwner territory="Vasconia" owner="Brittonic"/>
-            <territoryOwner territory="Venedi" owner="Slavic"/>
+            <territoryOwner territory="Vagoth" owner="Baltic"/>
+            <territoryOwner territory="Vandalia" owner="Germanic"/>
+            <territoryOwner territory="Vasconia" owner="Celtic"/>
+            <territoryOwner territory="Venedi" owner="Germanic"/>
             <territoryOwner territory="Venethae" owner="Slavic"/>
             <territoryOwner territory="Venetia" owner="Romanic"/>
             <territoryOwner territory="Vepsia" owner="Slavic"/>
-            <territoryOwner territory="Vironia" owner="Slavic"/>
+            <territoryOwner territory="Vironia" owner="Baltic"/>
             <territoryOwner territory="Vyatichi" owner="Slavic"/>
             <territoryOwner territory="Walha" owner="Brittonic"/>
-            <territoryOwner territory="Yotvingia" owner="Slavic"/>
-            <territoryOwner territory="Zaueces" owner="Brittonic"/>
+            <territoryOwner territory="Yotvingia" owner="Baltic"/>
+            <territoryOwner territory="Zaueces" owner="Hattic"/>
         </ownerInitialize>
         <unitInitialize>
-            <unitPlacement unitType="Fighter" territory="Alemannia" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Command-Bunker" territory="Alemannia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Arvernia" quantity="2" owner="Celtic"/>
+            <unitPlacement unitType="Truck" territory="Arvernia" quantity="2" owner="Celtic"/>
+            <unitPlacement unitType="Warplane" territory="Arvernia" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Tank" territory="Arvernia" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Infantry" territory="Aukstaitia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Carabinier" territory="Aukstaitia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Command-Bunker" territory="Aukstaitia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Truck" territory="Aukstaitia" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Infantry" territory="Balticum" quantity="2" owner="Baltic"/>
+            <unitPlacement unitType="Cannon" territory="Balticum" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Command-Bunker" territory="Balticum" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Anti-Air" territory="Balticum" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Barrage-Balloon" territory="Balticum" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Warplane" territory="Balticum" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Tank" territory="Balticum" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Bomber" territory="Britannia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Britannia" quantity="5" owner="Brittonic"/>
+            <unitPlacement unitType="Carabinier" territory="Bastarnae" quantity="2" owner="Slavic"/>
+            <unitPlacement unitType="Infantry" territory="Bergio" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Barrage-Balloon" territory="Bergio" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Infantry" territory="Brigantes" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Infantry" territory="Britannia" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Command-Bunker" territory="Britannia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Anti-Air" territory="Britannia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Truck" territory="Britannia" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Barrage-Balloon" territory="Britannia" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Tank" territory="Britannia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Buri" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Fighter" territory="Celtica" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Infantry" territory="Celtica" quantity="3" owner="Celtic"/>
+            <unitPlacement unitType="Infantry" territory="Celtica" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Command-Bunker" territory="Celtica" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Truck" territory="Celtica" quantity="3" owner="Celtic"/>
+            <unitPlacement unitType="Barrage-Balloon" territory="Celtica" quantity="1" owner="Celtic"/>
             <unitPlacement unitType="Infantry" territory="Cimmeria" quantity="3" owner="Slavic"/>
             <unitPlacement unitType="Command-Bunker" territory="Cimmeria" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Tank" territory="Cimmeria" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Creta" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Cyprus" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Dalmatia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Germania" quantity="3" owner="Germanic"/>
-            <unitPlacement unitType="Anti-Air" territory="Germania" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Truck" territory="Cimmeria" quantity="1" owner="Slavic"/>
+            <unitPlacement unitType="Barrage-Balloon" territory="Cimmeria" quantity="1" owner="Slavic"/>
+            <unitPlacement unitType="Infantry" territory="Dalmatia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Cannon" territory="Dalmatia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Command-Bunker" territory="Dalmatia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Barrage-Balloon" territory="Dalmatia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Dania" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Emi" quantity="2" owner="Slavic"/>
+            <unitPlacement unitType="Tank" territory="Emi" quantity="1" owner="Slavic"/>
+            <unitPlacement unitType="Infantry" territory="Etruria" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Infantry" territory="Finni" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Infantry" territory="Frisia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Command-Bunker" territory="Frisia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Galindia" quantity="2" owner="Germanic"/>
+            <unitPlacement unitType="Cannon" territory="Galindia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Germania" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Command-Bunker" territory="Germania" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Truck" territory="Germania" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Warplane" territory="Germania" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Tank" territory="Germania" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Infantry" territory="Gothia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Fighter" territory="Gotini" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Gotini" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Anti-Air" territory="Gotini" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Tank" territory="Gotini" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Hatti" quantity="3" owner="Hattic"/>
+            <unitPlacement unitType="Infantry" territory="Gothia" quantity="2" owner="Germanic"/>
+            <unitPlacement unitType="Cannon" territory="Gothia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Barrage-Balloon" territory="Gothia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Gotini" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Carabinier" territory="Gyzantes" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Infantry" territory="Hatti" quantity="5" owner="Hattic"/>
             <unitPlacement unitType="Command-Bunker" territory="Hatti" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Truck" territory="Hatti" quantity="3" owner="Hattic"/>
+            <unitPlacement unitType="Truck" territory="Hatti" quantity="5" owner="Hattic"/>
             <unitPlacement unitType="Warplane" territory="Hatti" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Infantry" territory="Hellas" quantity="3" owner="Hellenic"/>
+            <unitPlacement unitType="Infantry" territory="Hellas" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Cannon" territory="Hellas" quantity="1" owner="Hellenic"/>
             <unitPlacement unitType="Command-Bunker" territory="Hellas" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Anti-Air" territory="Hellas" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Tank" territory="Hellas" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Infantry" territory="Hermunduria" quantity="3" owner="Germanic"/>
-            <unitPlacement unitType="Anti-Air" territory="Hermunduria" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Tank" territory="Hermunduria" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Infantry" territory="Illyria" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Fighter" territory="Ladogaski" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Ladogaski" quantity="1" owner="Slavic"/>
+            <unitPlacement unitType="Truck" territory="Hellas" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Warplane" territory="Hellas" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Infantry" territory="Iazyges" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Infantry" territory="Ilercavonia" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Cannon" territory="Ilercavonia" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Command-Bunker" territory="Ilercavonia" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Infantry" territory="Illyria" quantity="2" owner="Hellenic"/>
+            <unitPlacement unitType="Infantry" territory="Ladogaski" quantity="3" owner="Slavic"/>
+            <unitPlacement unitType="Cannon" territory="Ladogaski" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Command-Bunker" territory="Ladogaski" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Livonia" quantity="2" owner="Baltic"/>
-            <unitPlacement unitType="Anti-Air" territory="Livonia" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Truck" territory="Livonia" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Infantry" territory="Marcomanni" quantity="3" owner="Germanic"/>
-            <unitPlacement unitType="Anti-Air" territory="Marcomanni" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Tank" territory="Marcomanni" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Infantry" territory="Norici" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Command-Bunker" territory="Otadinia" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Fighter" territory="Pannonia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Pannonia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Anti-Air" territory="Pannonia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Tank" territory="Pannonia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Peloponnesus" quantity="3" owner="Hellenic"/>
-            <unitPlacement unitType="Anti-Air" territory="Peloponnesus" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Truck" territory="Peloponnesus" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Infantry" territory="Pomerania" quantity="1" owner="Slavic"/>
+            <unitPlacement unitType="Truck" territory="Ladogaski" quantity="1" owner="Slavic"/>
+            <unitPlacement unitType="Warplane" territory="Ladogaski" quantity="1" owner="Slavic"/>
+            <unitPlacement unitType="Infantry" territory="Latgallia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Infantry" territory="Liguria" quantity="2" owner="Romanic"/>
+            <unitPlacement unitType="Command-Bunker" territory="Liguria" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Truck" territory="Liguria" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Infantry" territory="Livonia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Infantry" territory="Maeotia" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Command-Bunker" territory="Maeotia" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Carabinier" territory="Maeotia" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Truck" territory="Maeotia" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Carabinier" territory="Massaesylia" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Carabinier" territory="Massylia" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Carabinier" territory="Mauria" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Carabinier" territory="Maxyes" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Infantry" territory="Navari" quantity="2" owner="Germanic"/>
+            <unitPlacement unitType="Cannon" territory="Navari" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Carabinier" territory="Neuri" quantity="2" owner="Slavic"/>
+            <unitPlacement unitType="Infantry" territory="Norici" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Truck" territory="Norici" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Tank" territory="Norici" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Ostrogoth" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Barrage-Balloon" territory="Ostrogoth" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Infantry" territory="Pannonia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Carabinier" territory="Peucini" quantity="2" owner="Baltic"/>
+            <unitPlacement unitType="Infantry" territory="Pomerania" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Barrage-Balloon" territory="Pomerania" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Infantry" territory="Ragnarici" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Command-Bunker" territory="Ragnarici" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Warplane" territory="Ragnarici" quantity="1" owner="Brittonic"/>
             <unitPlacement unitType="Infantry" territory="Roma" quantity="2" owner="Romanic"/>
             <unitPlacement unitType="Command-Bunker" territory="Roma" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Anti-Air" territory="Roma" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Fighter" territory="Salluvia" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Infantry" territory="Salluvia" quantity="3" owner="Celtic"/>
-            <unitPlacement unitType="Command-Bunker" territory="Salluvia" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Tank" territory="Salluvia" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Infantry" territory="Samnium" quantity="2" owner="Romanic"/>
-            <unitPlacement unitType="Anti-Air" territory="Samnium" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Carabinier" territory="Roma" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Warplane" territory="Roma" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Infantry" territory="Salluvia" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Infantry" territory="Samnium" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Cannon" territory="Samnium" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Truck" territory="Samnium" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Infantry" territory="Sardinia" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Infantry" territory="Scordisci" quantity="2" owner="Hellenic"/>
+            <unitPlacement unitType="Truck" territory="Scordisci" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 4" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Warship" territory="Sea Zone 6" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 6" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Warship" territory="Sea Zone 8" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 8" quantity="1" owner="Hellenic"/>
-            <unitPlacement unitType="Warship" territory="Sea Zone 9" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 9" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Warship" territory="Sea Zone 15" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 15" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Warship" territory="Sea Zone 18" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 18" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Warship" territory="Sea Zone 22" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 22" quantity="1" owner="Celtic"/>
-            <unitPlacement unitType="Warship" territory="Sea Zone 24" quantity="2" owner="Brittonic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 29" quantity="2" owner="Brittonic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 8" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Sail-Ship" territory="Sea Zone 9" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 9" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 10" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Sail-Ship" territory="Sea Zone 11" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 13" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 14" quantity="1" owner="Hattic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 15" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 16" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 18" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 22" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 24" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Warship" territory="Sea Zone 30" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Warship" territory="Sea Zone 32" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 32" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Warship" territory="Sea Zone 34" quantity="1" owner="Baltic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 34" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 32" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 33" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 34" quantity="1" owner="Baltic"/>
             <unitPlacement unitType="Warship" territory="Sea Zone 34" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Submarine" territory="Sea Zone 34" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Skalvia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Slavoicum" quantity="5" owner="Slavic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 34" quantity="1" owner="Slavic"/>
+            <unitPlacement unitType="Ironclad" territory="Sea Zone 35" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Infantry" territory="Semigallia" quantity="5" owner="Baltic"/>
+            <unitPlacement unitType="Infantry" territory="Sicilia" quantity="3" owner="Romanic"/>
+            <unitPlacement unitType="Cannon" territory="Sicilia" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Infantry" territory="Sitones" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Infantry" territory="Skalvia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Carabinier" territory="Skalvia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Barrage-Balloon" territory="Skalvia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Infantry" territory="Slavoicum" quantity="2" owner="Slavic"/>
             <unitPlacement unitType="Command-Bunker" territory="Slavoicum" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Truck" territory="Slavoicum" quantity="5" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Teutonia" quantity="3" owner="Germanic"/>
-            <unitPlacement unitType="Tank" territory="Teutonia" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Command-Bunker" territory="Teutonia" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Anti-Air" territory="Teutonia" quantity="1" owner="Germanic"/>
-            <unitPlacement unitType="Infantry" territory="Turdetania" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Command-Bunker" territory="Turdetania" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Infantry" territory="Ugarit" quantity="3" owner="Hattic"/>
+            <unitPlacement unitType="Truck" territory="Slavoicum" quantity="2" owner="Slavic"/>
+            <unitPlacement unitType="Warplane" territory="Slavoicum" quantity="1" owner="Slavic"/>
+            <unitPlacement unitType="Infantry" territory="Suiones" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Cannon" territory="Suiones" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Barrage-Balloon" territory="Suiones" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Infantry" territory="Sumi" quantity="2" owner="Brittonic"/>
+            <unitPlacement unitType="Infantry" territory="Taurisci" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Infantry" territory="Teutonia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Barrage-Balloon" territory="Teutonia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Thrace" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Command-Bunker" territory="Thrace" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Truck" territory="Thrace" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Tank" territory="Thrace" quantity="1" owner="Hellenic"/>
+            <unitPlacement unitType="Infantry" territory="Turdetania" quantity="2" owner="Celtic"/>
+            <unitPlacement unitType="Cannon" territory="Turdetania" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Command-Bunker" territory="Turdetania" quantity="1" owner="Celtic"/>
+            <unitPlacement unitType="Infantry" territory="Ugarit" quantity="4" owner="Hattic"/>
+            <unitPlacement unitType="Cannon" territory="Ugarit" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Command-Bunker" territory="Ugarit" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Warplane" territory="Ugarit" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Tank" territory="Ugarit" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Fighter" territory="Vandalia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Vandalia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Anti-Air" territory="Vandalia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Tank" territory="Vandalia" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Venetia" quantity="2" owner="Romanic"/>
-            <unitPlacement unitType="Anti-Air" territory="Venetia" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Warplane" territory="Venetia" quantity="1" owner="Romanic"/>
+            <unitPlacement unitType="Infantry" territory="Venedi" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Command-Bunker" territory="Venedi" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Truck" territory="Venedi" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Warplane" territory="Venedi" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Tank" territory="Venedi" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Carabinier" territory="Venethae" quantity="4" owner="Slavic"/>
+            <unitPlacement unitType="Infantry" territory="Venetia" quantity="1" owner="Romanic"/>
             <unitPlacement unitType="Tank" territory="Venetia" quantity="1" owner="Romanic"/>
-            <unitPlacement unitType="Infantry" territory="Zaueces" quantity="1" owner="Brittonic"/>
-            <unitPlacement unitType="Truck" territory="Zaueces" quantity="1" owner="Brittonic"/>
+            <unitPlacement unitType="Infantry" territory="Yotvingia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Carabinier" territory="Yotvingia" quantity="1" owner="Baltic"/>
+            <unitPlacement unitType="Infantry" territory="Zaueces" quantity="9" owner="Hattic"/>
+            <unitPlacement unitType="Command-Bunker" territory="Zaueces" quantity="1" owner="Hattic"/>
         </unitInitialize>
         <resourceInitialize>
-            <resourceGiven player="Brittonic" resource="PUs" quantity="65"/>
-            <resourceGiven player="Celtic" resource="PUs" quantity="15"/>
-            <resourceGiven player="Germanic" resource="PUs" quantity="15"/>
-            <resourceGiven player="Romanic" resource="PUs" quantity="15"/>
-            <resourceGiven player="Baltic" resource="PUs" quantity="15"/>
-            <resourceGiven player="Hellenic" resource="PUs" quantity="15"/>
-            <resourceGiven player="Slavic" resource="PUs" quantity="85"/>
-            <resourceGiven player="Hattic" resource="PUs" quantity="15"/>
+            <resourceGiven player="Brittonic" resource="PUs" quantity="50"/>
+            <resourceGiven player="Celtic" resource="PUs" quantity="50"/>
+            <resourceGiven player="Germanic" resource="PUs" quantity="85"/>
+            <resourceGiven player="Romanic" resource="PUs" quantity="50"/>
+            <resourceGiven player="Baltic" resource="PUs" quantity="50"/>
+            <resourceGiven player="Hellenic" resource="PUs" quantity="50"/>
+            <resourceGiven player="Slavic" resource="PUs" quantity="50"/>
+            <resourceGiven player="Hattic" resource="PUs" quantity="85"/>
         </resourceInitialize>
         <relationshipInitialize>
             <relationship type="Alliance" player1="Brittonic" player2="Celtic" roundValue="1"/>
@@ -17265,7 +17876,7 @@
             <boolean/>
         </property>
 
-        <property name="AI Bonus Income Flat Rate" value="30" editable="true">
+        <property name="AI Bonus Income Flat Rate" value="25" editable="true">
             <number min="0" max="100"/>
         </property>
         <property name="AI Bonus Income Percentage" value="0" editable="true">

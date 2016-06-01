@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Primeval" version="0.2.1"/>
+  <info name="Age of Tribes: Primeval" version="0.2.6"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8.0.9"/>
   <diceSides value="12"/>
@@ -812,12 +812,12 @@
     <playerList>
         <!-- player list in turn order -->
         <player name="Brittonic" optional="true" canBeDisabled="false"/>
-        <player name="Celtic" optional="true" canBeDisabled="false"/>
         <player name="Germanic" optional="true" canBeDisabled="false"/>
+        <player name="Celtic" optional="true" canBeDisabled="false"/>
         <player name="Romanic" optional="true" canBeDisabled="false"/>
         <player name="Baltic" optional="true" canBeDisabled="false"/>
-        <player name="Hellenic" optional="true" canBeDisabled="false"/>
         <player name="Slavic" optional="true" canBeDisabled="false"/>
+        <player name="Hellenic" optional="true" canBeDisabled="false"/>
         <player name="Hattic" optional="true" canBeDisabled="false"/>
         <player name="AI-Barbarians" optional="true" canBeDisabled="false"/>
         <player name="AI-Nature" optional="true" canBeDisabled="false"/>
@@ -943,8 +943,8 @@
 	<unit name="Fort"/>
 	<unit name="Develop-Castle"/>
 	<unit name="Castle"/>
-	<unit name="Develop-Fortress"/>
-	<unit name="Fortress"/>
+	<unit name="Develop-Citadel"/>
+	<unit name="Citadel"/>
 	<unit name="Develop-Command-Bunker"/>
 	<unit name="Command-Bunker"/>
 	<unit name="Develop-Missile-Shield"/>
@@ -1147,7 +1147,7 @@
             <result resourceOrUnit="Develop-Boat" quantity="1"/>
         </productionRule>
         <productionRule name="buyBoat">
-            <cost resource="PUs" quantity="22"/>
+            <cost resource="PUs" quantity="24"/>
             <result resourceOrUnit="Boat" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Galley">
@@ -1155,7 +1155,7 @@
             <result resourceOrUnit="Develop-Galley" quantity="1"/>
         </productionRule>
         <productionRule name="buyGalley">
-            <cost resource="PUs" quantity="24"/>
+            <cost resource="PUs" quantity="25"/>
             <result resourceOrUnit="Galley" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Sail-Ship">
@@ -1171,7 +1171,7 @@
             <result resourceOrUnit="Develop-Ironclad" quantity="1"/>
         </productionRule>
         <productionRule name="buyIronclad">
-            <cost resource="PUs" quantity="28"/>
+            <cost resource="PUs" quantity="27"/>
             <result resourceOrUnit="Ironclad" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Warship">
@@ -1179,7 +1179,7 @@
             <result resourceOrUnit="Develop-Warship" quantity="1"/>
         </productionRule>
         <productionRule name="buyWarship">
-            <cost resource="PUs" quantity="30"/>
+            <cost resource="PUs" quantity="28"/>
             <result resourceOrUnit="Warship" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Submarine">
@@ -1187,11 +1187,11 @@
             <result resourceOrUnit="Develop-Submarine" quantity="1"/>
         </productionRule>
         <productionRule name="buySubmarine">
-            <cost resource="PUs" quantity="25"/>
+            <cost resource="PUs" quantity="29"/>
             <result resourceOrUnit="Submarine" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Fleet-Carrier">
-            <cost resource="Tech" quantity="325"/>
+            <cost resource="Tech" quantity="335"/>
             <result resourceOrUnit="Develop-Fleet-Carrier" quantity="1"/>
         </productionRule>
         <productionRule name="buyFleet-Carrier">
@@ -1207,12 +1207,13 @@
             <cost resource="PUs" quantity="17"/>
             <result resourceOrUnit="Mammoth" quantity="1"/>
         </productionRule>
+
         <productionRule name="buyDevelop-Axeman">
             <cost resource="Tech" quantity="3"/>
             <result resourceOrUnit="Develop-Axeman" quantity="1"/>
         </productionRule>
         <productionRule name="buyAxeman">
-            <cost resource="PUs" quantity="16"/>
+            <cost resource="PUs" quantity="15"/>
             <result resourceOrUnit="Axeman" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Spearman">
@@ -1220,7 +1221,7 @@
             <result resourceOrUnit="Develop-Spearman" quantity="1"/>
         </productionRule>
         <productionRule name="buySpearman">
-            <cost resource="PUs" quantity="17"/>
+            <cost resource="PUs" quantity="16"/>
             <result resourceOrUnit="Spearman" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Swordsman">
@@ -1228,23 +1229,23 @@
             <result resourceOrUnit="Develop-Swordsman" quantity="1"/>
         </productionRule>
         <productionRule name="buySwordsman">
-            <cost resource="PUs" quantity="19"/>
+            <cost resource="PUs" quantity="17"/>
             <result resourceOrUnit="Swordsman" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Halberdman">
-            <cost resource="Tech" quantity="25"/>
+            <cost resource="Tech" quantity="26"/>
             <result resourceOrUnit="Develop-Halberdman" quantity="1"/>
         </productionRule>
         <productionRule name="buyHalberdman">
-            <cost resource="PUs" quantity="21"/>
+            <cost resource="PUs" quantity="18"/>
             <result resourceOrUnit="Halberdman" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Musketman">
-            <cost resource="Tech" quantity="55"/>
+            <cost resource="Tech" quantity="53"/>
             <result resourceOrUnit="Develop-Musketman" quantity="1"/>
         </productionRule>
         <productionRule name="buyMusketman">
-            <cost resource="PUs" quantity="23"/>
+            <cost resource="PUs" quantity="19"/>
             <result resourceOrUnit="Musketman" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Rifleman">
@@ -1252,7 +1253,7 @@
             <result resourceOrUnit="Develop-Rifleman" quantity="1"/>
         </productionRule>
         <productionRule name="buyRifleman">
-            <cost resource="PUs" quantity="25"/>
+            <cost resource="PUs" quantity="20"/>
             <result resourceOrUnit="Rifleman" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Infantry">
@@ -1260,7 +1261,7 @@
             <result resourceOrUnit="Develop-Infantry" quantity="1"/>
         </productionRule>
         <productionRule name="buyInfantry">
-            <cost resource="PUs" quantity="27"/>
+            <cost resource="PUs" quantity="21"/>
             <result resourceOrUnit="Infantry" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Shock-Trooper">
@@ -1268,7 +1269,7 @@
             <result resourceOrUnit="Develop-Shock-Trooper" quantity="1"/>
         </productionRule>
         <productionRule name="buyShock-Trooper">
-            <cost resource="PUs" quantity="29"/>
+            <cost resource="PUs" quantity="22"/>
             <result resourceOrUnit="Shock-Trooper" quantity="1"/>
         </productionRule>
 
@@ -1277,7 +1278,7 @@
             <result resourceOrUnit="Develop-Chariot" quantity="1"/>
         </productionRule>
         <productionRule name="buyChariot">
-            <cost resource="PUs" quantity="19"/>
+            <cost resource="PUs" quantity="17"/>
             <result resourceOrUnit="Chariot" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Horseman">
@@ -1285,7 +1286,7 @@
             <result resourceOrUnit="Develop-Horseman" quantity="1"/>
         </productionRule>
         <productionRule name="buyHorseman">
-            <cost resource="PUs" quantity="21"/>
+            <cost resource="PUs" quantity="18"/>
             <result resourceOrUnit="Horseman" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Knight">
@@ -1293,7 +1294,7 @@
             <result resourceOrUnit="Develop-Knight" quantity="1"/>
         </productionRule>
         <productionRule name="buyKnight">
-            <cost resource="PUs" quantity="23"/>
+            <cost resource="PUs" quantity="19"/>
             <result resourceOrUnit="Knight" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Carabinier">
@@ -1301,7 +1302,7 @@
             <result resourceOrUnit="Develop-Carabinier" quantity="1"/>
         </productionRule>
         <productionRule name="buyCarabinier">
-            <cost resource="PUs" quantity="25"/>
+            <cost resource="PUs" quantity="20"/>
             <result resourceOrUnit="Carabinier" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Truck">
@@ -1309,23 +1310,23 @@
             <result resourceOrUnit="Develop-Truck" quantity="1"/>
         </productionRule>
         <productionRule name="buyTruck">
-            <cost resource="PUs" quantity="27"/>
+            <cost resource="PUs" quantity="20"/>
             <result resourceOrUnit="Truck" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Attack-Helicopter">
-            <cost resource="Tech" quantity="375"/>
+            <cost resource="Tech" quantity="365"/>
             <result resourceOrUnit="Develop-Attack-Helicopter" quantity="1"/>
         </productionRule>
         <productionRule name="buyAttack-Helicopter">
-            <cost resource="PUs" quantity="34"/>
+            <cost resource="PUs" quantity="26"/>
             <result resourceOrUnit="Attack-Helicopter" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-War-Robot">
-            <cost resource="Tech" quantity="600"/>
+            <cost resource="Tech" quantity="620"/>
             <result resourceOrUnit="Develop-War-Robot" quantity="1"/>
         </productionRule>
         <productionRule name="buyWar-Robot">
-            <cost resource="PUs" quantity="19"/>
+            <cost resource="PUs" quantity="18"/>
             <result resourceOrUnit="War-Robot" quantity="1"/>
         </productionRule>
 
@@ -1334,7 +1335,7 @@
             <result resourceOrUnit="Develop-Catapult" quantity="1"/>
         </productionRule>
         <productionRule name="buyCatapult">
-            <cost resource="PUs" quantity="19"/>
+            <cost resource="PUs" quantity="17"/>
             <result resourceOrUnit="Catapult" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Ballista">
@@ -1342,7 +1343,7 @@
             <result resourceOrUnit="Develop-Ballista" quantity="1"/>
         </productionRule>
         <productionRule name="buyBallista">
-            <cost resource="PUs" quantity="21"/>
+            <cost resource="PUs" quantity="18"/>
             <result resourceOrUnit="Ballista" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Trebuchet">
@@ -1350,7 +1351,7 @@
             <result resourceOrUnit="Develop-Trebuchet" quantity="1"/>
         </productionRule>
         <productionRule name="buyTrebuchet">
-            <cost resource="PUs" quantity="23"/>
+            <cost resource="PUs" quantity="19"/>
             <result resourceOrUnit="Trebuchet" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Cannon">
@@ -1358,15 +1359,15 @@
             <result resourceOrUnit="Develop-Cannon" quantity="1"/>
         </productionRule>
         <productionRule name="buyCannon">
-            <cost resource="PUs" quantity="24"/>
+            <cost resource="PUs" quantity="21"/>
             <result resourceOrUnit="Cannon" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Tank">
-            <cost resource="Tech" quantity="250"/>
+            <cost resource="Tech" quantity="260"/>
             <result resourceOrUnit="Develop-Tank" quantity="1"/>
         </productionRule>
         <productionRule name="buyTank">
-            <cost resource="PUs" quantity="29"/>
+            <cost resource="PUs" quantity="23"/>
             <result resourceOrUnit="Tank" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Battle-Tank">
@@ -1374,7 +1375,7 @@
             <result resourceOrUnit="Develop-Battle-Tank" quantity="1"/>
         </productionRule>
         <productionRule name="buyBattle-Tank">
-            <cost resource="PUs" quantity="31"/>
+            <cost resource="PUs" quantity="24"/>
             <result resourceOrUnit="Battle-Tank" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Battle-Mech">
@@ -1382,7 +1383,7 @@
             <result resourceOrUnit="Develop-Battle-Mech" quantity="1"/>
         </productionRule>
         <productionRule name="buyBattle-Mech">
-            <cost resource="PUs" quantity="33"/>
+            <cost resource="PUs" quantity="25"/>
             <result resourceOrUnit="Battle-Mech" quantity="1"/>
         </productionRule>
 
@@ -1391,7 +1392,7 @@
             <result resourceOrUnit="Develop-Slinger" quantity="1"/>
         </productionRule>
         <productionRule name="buySlinger">
-            <cost resource="PUs" quantity="16"/>
+            <cost resource="PUs" quantity="15"/>
             <result resourceOrUnit="Slinger" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Bowman">
@@ -1399,7 +1400,7 @@
             <result resourceOrUnit="Develop-Bowman" quantity="1"/>
         </productionRule>
         <productionRule name="buyBowman">
-            <cost resource="PUs" quantity="18"/>
+            <cost resource="PUs" quantity="16"/>
             <result resourceOrUnit="Bowman" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Crossbowman">
@@ -1407,7 +1408,7 @@
             <result resourceOrUnit="Develop-Crossbowman" quantity="1"/>
         </productionRule>
         <productionRule name="buyCrossbowman">
-            <cost resource="PUs" quantity="20"/>
+            <cost resource="PUs" quantity="17"/>
             <result resourceOrUnit="Crossbowman" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Mortar">
@@ -1415,7 +1416,7 @@
             <result resourceOrUnit="Develop-Mortar" quantity="1"/>
         </productionRule>
         <productionRule name="buyMortar">
-            <cost resource="PUs" quantity="24"/>
+            <cost resource="PUs" quantity="20"/>
             <result resourceOrUnit="Mortar" quantity="1"/>
         </productionRule>
         <productionRule name="buyMortar-Bombardment">
@@ -1423,19 +1424,19 @@
             <result resourceOrUnit="Mortar-Bombardment" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Barrage-Balloon">
-            <cost resource="Tech" quantity="250"/>
+            <cost resource="Tech" quantity="240"/>
             <result resourceOrUnit="Develop-Barrage-Balloon" quantity="1"/>
         </productionRule>
         <productionRule name="buyBarrage-Balloon">
-            <cost resource="PUs" quantity="18"/>
+            <cost resource="PUs" quantity="14"/>
             <result resourceOrUnit="Barrage-Balloon" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Anti-Air">
-            <cost resource="Tech" quantity="300"/>
+            <cost resource="Tech" quantity="310"/>
             <result resourceOrUnit="Develop-Anti-Air" quantity="1"/>
         </productionRule>
         <productionRule name="buyAnti-Air">
-            <cost resource="PUs" quantity="20"/>
+            <cost resource="PUs" quantity="15"/>
             <result resourceOrUnit="Anti-Air" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Rocket-Launcher">
@@ -1443,7 +1444,7 @@
             <result resourceOrUnit="Develop-Rocket-Launcher" quantity="1"/>
         </productionRule>
         <productionRule name="buyRocket-Launcher">
-            <cost resource="PUs" quantity="25"/>
+            <cost resource="PUs" quantity="30"/>
             <result resourceOrUnit="Rocket-Launcher" quantity="1"/>
         </productionRule>
         <productionRule name="buyRocket">
@@ -1455,7 +1456,7 @@
             <result resourceOrUnit="Develop-Observation-Balloon" quantity="1"/>
         </productionRule>
         <productionRule name="buyObservation-Balloon">
-            <cost resource="PUs" quantity="18"/>
+            <cost resource="PUs" quantity="14"/>
             <result resourceOrUnit="Observation-Balloon" quantity="1"/>
         </productionRule>
 
@@ -1464,7 +1465,7 @@
             <result resourceOrUnit="Develop-Warplane" quantity="1"/>
         </productionRule>
         <productionRule name="buyWarplane">
-            <cost resource="PUs" quantity="35"/>
+            <cost resource="PUs" quantity="25"/>
             <result resourceOrUnit="Warplane" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Fighter">
@@ -1472,15 +1473,15 @@
             <result resourceOrUnit="Develop-Fighter" quantity="1"/>
         </productionRule>
         <productionRule name="buyFighter">
-            <cost resource="PUs" quantity="37"/>
+            <cost resource="PUs" quantity="26"/>
             <result resourceOrUnit="Fighter" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Bomber">
-            <cost resource="Tech" quantity="325"/>
+            <cost resource="Tech" quantity="315"/>
             <result resourceOrUnit="Develop-Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyBomber">
-            <cost resource="PUs" quantity="49"/>
+            <cost resource="PUs" quantity="43"/>
             <result resourceOrUnit="Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Air-Transport">
@@ -1488,23 +1489,23 @@
             <result resourceOrUnit="Develop-Air-Transport" quantity="1"/>
         </productionRule>
         <productionRule name="buyAir-Transport">
-            <cost resource="PUs" quantity="40"/>
+            <cost resource="PUs" quantity="37"/>
             <result resourceOrUnit="Air-Transport" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Jet-Fighter">
-            <cost resource="Tech" quantity="350"/>
+            <cost resource="Tech" quantity="355"/>
             <result resourceOrUnit="Develop-Jet-Fighter" quantity="1"/>
         </productionRule>
         <productionRule name="buyJet-Fighter">
-            <cost resource="PUs" quantity="39"/>
+            <cost resource="PUs" quantity="28"/>
             <result resourceOrUnit="Jet-Fighter" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Stealth-Bomber">
-            <cost resource="Tech" quantity="375"/>
+            <cost resource="Tech" quantity="385"/>
             <result resourceOrUnit="Develop-Stealth-Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyStealth-Bomber">
-            <cost resource="PUs" quantity="52"/>
+            <cost resource="PUs" quantity="45"/>
             <result resourceOrUnit="Stealth-Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Attack-Drone">
@@ -1529,23 +1530,23 @@
             <result resourceOrUnit="Fort" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Castle">
-            <cost resource="Tech" quantity="25"/>
+            <cost resource="Tech" quantity="24"/>
             <result resourceOrUnit="Develop-Castle" quantity="1"/>
         </productionRule>
         <productionRule name="buyCastle">
             <cost resource="PUs" quantity="40"/>
             <result resourceOrUnit="Castle" quantity="1"/>
         </productionRule>
-        <productionRule name="buyDevelop-Fortress">
-            <cost resource="Tech" quantity="55"/>
-            <result resourceOrUnit="Develop-Fortress" quantity="1"/>
+        <productionRule name="buyDevelop-Citadel">
+            <cost resource="Tech" quantity="57"/>
+            <result resourceOrUnit="Develop-Citadel" quantity="1"/>
         </productionRule>
-        <productionRule name="buyFortress">
+        <productionRule name="buyCitadel">
             <cost resource="PUs" quantity="50"/>
-            <result resourceOrUnit="Fortress" quantity="1"/>
+            <result resourceOrUnit="Citadel" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Command-Bunker">
-            <cost resource="Tech" quantity="300"/>
+            <cost resource="Tech" quantity="290"/>
             <result resourceOrUnit="Develop-Command-Bunker" quantity="1"/>
         </productionRule>
         <productionRule name="buyCommand-Bunker">
@@ -1561,7 +1562,7 @@
             <result resourceOrUnit="Missile-Shield" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Energy-Shield">
-            <cost resource="Tech" quantity="600"/>
+            <cost resource="Tech" quantity="580"/>
             <result resourceOrUnit="Develop-Energy-Shield" quantity="1"/>
         </productionRule>
         <productionRule name="buyEnergy-Shield">
@@ -1570,11 +1571,11 @@
         </productionRule>
 
         <productionRule name="buyDevelop-Nuke">
-            <cost resource="Tech" quantity="350"/>
+            <cost resource="Tech" quantity="345"/>
             <result resourceOrUnit="Develop-Nuke" quantity="1"/>
         </productionRule>
         <productionRule name="buyNuke">
-            <cost resource="PUs" quantity="25"/>
+            <cost resource="PUs" quantity="30"/>
             <result resourceOrUnit="Nuke" quantity="1"/>
         </productionRule>
         <productionRule name="buyNuke-Explosion">
@@ -1617,9 +1618,9 @@
             <cost resource="PUs" quantity="10" />
             <result resourceOrUnit="Castle" quantity="1"/>
         </repairRule>
-        <repairRule name="repairFortress">
+        <repairRule name="repairCitadel">
             <cost resource="PUs" quantity="10" />
-            <result resourceOrUnit="Fortress" quantity="1"/>
+            <result resourceOrUnit="Citadel" quantity="1"/>
         </repairRule>
         <repairRule name="repairCommand-Bunker">
             <cost resource="PUs" quantity="10" />
@@ -1641,7 +1642,7 @@
         <repairFrontier name="repair">
             <repairRules name="repairFort"/>
             <repairRules name="repairCastle"/>
-            <repairRules name="repairFortress"/>
+            <repairRules name="repairCitadel"/>
             <repairRules name="repairCommand-Bunker"/>
             <repairRules name="repairMissile-Silo"/>
             <repairRules name="repairMissile-Shield"/>
@@ -2028,7 +2029,7 @@
             <option name="defense" value="2"/>
             <option name="movement" value="1"/>
             <option name="createsUnitsList" value="1:Plague"/>
-        </attachment>       
+        </attachment>
 
         <attachment name="unitAttachment" attachTo="Caves" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="isFactory" value="true"/>
@@ -2077,13 +2078,13 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Boat" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-            <option name="attack" value="2"/>
-            <option name="defense" value="3"/>
+            <option name="attack" value="3"/>
+            <option name="defense" value="4"/>
             <option name="isSea" value="true"/>
             <option name="movement" value="1"/>
             <option name="transportCapacity" value="1"/>
@@ -2096,13 +2097,13 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Galley" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-            <option name="attack" value="4"/>
-            <option name="defense" value="3"/>
+            <option name="attack" value="5"/>
+            <option name="defense" value="4"/>
             <option name="isSea" value="true"/>
             <option name="movement" value="1"/>
             <option name="transportCapacity" value="2"/>
@@ -2115,13 +2116,13 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Sail-Ship" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-            <option name="attack" value="5"/>
-            <option name="defense" value="5"/>
+            <option name="attack" value="6"/>
+            <option name="defense" value="6"/>
             <option name="canBombard" value="true"/>
             <option name="bombard" value="1"/>
             <option name="isSea" value="true"/>
@@ -2136,13 +2137,13 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Ironclad" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-            <option name="attack" value="6"/>
-            <option name="defense" value="7"/>
+            <option name="attack" value="7"/>
+            <option name="defense" value="8"/>
             <option name="canBombard" value="true"/>
             <option name="bombard" value="2"/>
             <option name="isSea" value="true"/>
@@ -2157,13 +2158,13 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Warship" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-            <option name="attack" value="8"/>
-            <option name="defense" value="8"/>
+            <option name="attack" value="9"/>
+            <option name="defense" value="9"/>
             <option name="canBombard" value="true"/>
             <option name="bombard" value="3"/>
             <option name="isSea" value="true"/>
@@ -2178,7 +2179,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2188,6 +2189,7 @@
             <option name="movement" value="3"/>
             <option name="isSea" value="true"/>
             <option name="isSub" value="true"/>
+            <option name="isDestroyer" value="true"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Develop-Fleet-Carrier" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="attack" value="1"/>
@@ -2196,13 +2198,13 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Fleet-Carrier" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-            <option name="attack" value="6"/>
-            <option name="defense" value="6"/>
+            <option name="attack" value="7"/>
+            <option name="defense" value="7"/>
             <option name="movement" value="3"/>
             <option name="isSea" value="true"/>
             <option name="carrierCapacity" value="10"/>
@@ -2215,7 +2217,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2234,7 +2236,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2253,7 +2255,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2272,7 +2274,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2291,7 +2293,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2310,7 +2312,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2329,7 +2331,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2349,7 +2351,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2370,7 +2372,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2387,7 +2389,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2404,7 +2406,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2421,7 +2423,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2438,13 +2440,13 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Truck" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-            <option name="attack" value="6"/>
-            <option name="defense" value="6"/>
+            <option name="attack" value="5"/>
+            <option name="defense" value="5"/>
             <option name="movement" value="2"/>
             <option name="canBlitz" value="true"/>
             <option name="isLandTransport" value="true"/>
@@ -2457,7 +2459,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2480,7 +2482,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2501,7 +2503,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2518,7 +2520,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2535,7 +2537,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2552,13 +2554,13 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Cannon" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
-            <option name="attack" value="5"/>
-            <option name="defense" value="5"/>
+            <option name="attack" value="6"/>
+            <option name="defense" value="6"/>
             <option name="movement" value="1"/>
             <option name="transportCost" value="2"/>
         </attachment>
@@ -2569,7 +2571,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2587,13 +2589,13 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Battle-Tank" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="attack" value="9"/>
-            <option name="defense" value="5"/>
+            <option name="defense" value="6"/>
             <option name="movement" value="2"/>
             <option name="canBlitz" value="true"/>
             <option name="transportCost" value="3"/>
@@ -2605,13 +2607,13 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Battle-Mech" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="attack" value="10"/>
-            <option name="defense" value="6"/>
+            <option name="defense" value="8"/>
             <option name="movement" value="2"/>
             <option name="canBlitz" value="true"/>
             <option name="transportCost" value="3"/>
@@ -2624,7 +2626,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2642,7 +2644,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2660,7 +2662,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2678,7 +2680,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2706,7 +2708,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2714,8 +2716,8 @@
             <option name="attack" value="2"/>
             <option name="defense" value="2"/>
             <option name="movement" value="1"/>
-            <option name="offensiveAttackAA" value="2"/>
-            <option name="attackAA" value="2"/>
+            <option name="offensiveAttackAA" value="3"/>
+            <option name="attackAA" value="3"/>
             <option name="offensiveAttackAAmaxDieSides" value="12"/>
             <option name="attackAAmaxDieSides" value="12"/>
             <option name="maxAAattacks" value="1"/>
@@ -2734,7 +2736,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2750,7 +2752,7 @@
             <option name="maxRoundsAA" value="-1"/>
             <option name="isAAforCombatOnly" value="true"/>
             <option name="isAAforBombingThisUnitOnly" value="true"/>
-            <option name="isAAforFlyOverOnly" value="false"/>
+            <option name="isAAforFlyOverOnly" value="true"/>
             <option name="transportCost" value="1"/>
             <option name="typeAA" value="anti-air gun"/>
             <option name="targetsAA" value="Attack-Helicopter:Warplane:Fighter:Bomber:Air-Transport:Jet-Fighter:Stealth-Bomber:Attack-Drone"/>
@@ -2762,7 +2764,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2791,7 +2793,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2849,7 +2851,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2865,7 +2867,7 @@
             <option name="constructionType" value="Missile-Silo"/>
             <option name="maxConstructionsPerTypePerTerr" value="1"/>
             <option name="constructionsPerTerrPerTypePerTurn" value="1"/>
-            <option name="destroyedWhenCapturedBy" value="AI-Nature:AI-Plague"/>
+            <option name="destroyedWhenCapturedBy" value="AI-Nature:AI-Plague:AI"/>
             <option name="maxBuiltPerPlayer" value="1"/>
             <option name="createsUnitsList" value="1:Ballistic-Missile"/>
         </attachment>
@@ -2885,7 +2887,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2902,7 +2904,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2925,7 +2927,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2948,7 +2950,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2972,7 +2974,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -2996,7 +2998,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -3019,7 +3021,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -3043,7 +3045,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -3087,10 +3089,10 @@
             <option name="maxDamage" value="3"/>
             <option name="canDieFromReachingMaxDamage" value="true"/>
         </attachment>
-        <attachment name="unitAttachment" attachTo="Fortress" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+        <attachment name="unitAttachment" attachTo="Citadel" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="isFactory" value="true"/>
             <option name="canProduceXUnits" value="4"/>
-            <option name="constructionType" value="Fortress"/>
+            <option name="constructionType" value="Citadel"/>
             <option name="destroyedWhenCapturedBy" value="AI-Nature"/>
             <option name="canBeDamaged" value="true"/>
             <option name="maxDamage" value="4"/>
@@ -3148,7 +3150,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -3159,18 +3161,18 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
-        <attachment name="unitAttachment" attachTo="Develop-Fortress" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
+        <attachment name="unitAttachment" attachTo="Develop-Citadel" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="attack" value="1"/>
             <option name="defense" value="1"/>
             <option name="movement" value="1"/>
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -3181,7 +3183,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -3192,7 +3194,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -3203,7 +3205,7 @@
             <option name="requiresUnits" value="Camp"/>
             <option name="requiresUnits" value="Fort"/>
             <option name="requiresUnits" value="Castle"/>
-            <option name="requiresUnits" value="Fortress"/>
+            <option name="requiresUnits" value="Citadel"/>
             <option name="requiresUnits" value="Command-Bunker"/>
             <option name="maxBuiltPerPlayer" value="1"/>
         </attachment>
@@ -4044,7 +4046,7 @@
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI-Barbarians"/>
             <option name="impArtTech" value="false"/>
         </attachment>
-        <attachment name="supportAttachmentFortress" attachTo="Fortress" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
+        <attachment name="supportAttachmentCitadel" attachTo="Citadel" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
             <option name="unitType" value="Anti-Air:Observation-Balloon:Barrage-Balloon:Caveman:Axeman:Spearman:Swordsman:Halberdman:Musketman:Rifleman:Infantry:Shock-Trooper:Chariot:Horseman:Knight:Carabinier:Truck:Attack-Helicopter:War-Robot:Slinger:Bowman:Crossbowman:Mortar:Rocket-Launcher:Catapult:Ballista:Trebuchet:Cannon:Tank:Battle-Tank:Battle-Mech:Warplane:Fighter:Bomber:Air-Transport:Jet-Fighter:Stealth-Bomber:Attack-Drone"/>
             <option name="faction" value="allied"/>
             <option name="side" value="defence"/>
@@ -5239,6 +5241,18 @@
         </attachment>
 <!-- End Remove Black-Death in the end of the Medieval Age -->
 
+<!-- Start Plague is in decline trigger -->
+        <attachment name="conditionAttachmentAI-PlagueIsNoMore" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="turns" value="35-+"/>
+        </attachment>
+        <attachment name="triggerAttachment_The_plague_seems_to_be_in_decline" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentAI-PlagueIsNoMore"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="-9999"/>
+            <option name="when" value="after:AI-PlagueEndTurn"/>
+        </attachment>
+<!-- End Plague is in decline trigger -->
+
 <!-- Start open op for Convoy Centers and their PU income -->
         <attachment name="conditionAttachmentNew-Convoy-Center" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="turns" value="36"/>
@@ -5617,66 +5631,84 @@
 
 <!-- Start Barbarians are weakened every turn by removing PUs -->
         <attachment name="conditionAttachmentBarbariansAreWeakened1" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-2"/>
+            <option name="turns" value="1"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_1" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened1"/>
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="-110"/>
+            <option name="resourceCount" value="-120"/>
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened2" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="3-4"/>
+            <option name="turns" value="2"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_2" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened2"/>
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="-90"/>
+            <option name="resourceCount" value="-110"/>
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened3" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="5-6"/>
+            <option name="turns" value="3"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_3" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened3"/>
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="-70"/>
+            <option name="resourceCount" value="-100"/>
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened4" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="7-8"/>
+            <option name="turns" value="4"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_4" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened4"/>
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="-50"/>
+            <option name="resourceCount" value="-90"/>
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened5" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="9-10"/>
+            <option name="turns" value="5"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_5" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened5"/>
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="-40"/>
+            <option name="resourceCount" value="-80"/>
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened6" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="11-12"/>
+            <option name="turns" value="6"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_6" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened6"/>
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="-30"/>
+            <option name="resourceCount" value="-70"/>
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened7" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="13-+"/>
+            <option name="turns" value="7"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_7" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened7"/>
             <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="-20"/>
+            <option name="resourceCount" value="-60"/>
+            <option name="when" value="after:AI-BarbariansEndTurn"/>
+        </attachment>
+        <attachment name="conditionAttachmentBarbariansAreWeakened8" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="turns" value="8"/>
+        </attachment>
+        <attachment name="triggerAttachment_Barbarians_have_a_low_income_8" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentBarbariansAreWeakened8"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="-50"/>
+            <option name="when" value="after:AI-BarbariansEndTurn"/>
+        </attachment>
+        <attachment name="conditionAttachmentBarbariansAreWeakened9" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+            <option name="turns" value="9-+"/>
+        </attachment>
+        <attachment name="triggerAttachment_Barbarians_have_a_low_income_9" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachmentBarbariansAreWeakened9"/>
+            <option name="resource" value="PUs"/>
+            <option name="resourceCount" value="-40"/>
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
 <!-- End Barbarians are weakened every turn by removing PUs -->
@@ -5700,18 +5732,6 @@
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
 <!-- End Barbarians no longer have units and looses all income trigger -->
-
-<!-- Start Plague is in decline trigger -->
-        <attachment name="conditionAttachmentAI-PlagueIsNoMore" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="35-+"/>
-        </attachment>
-        <attachment name="triggerAttachment_The_plague_seems_to_be_in_decline" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachmentAI-PlagueIsNoMore"/>
-            <option name="resource" value="PUs"/>
-            <option name="resourceCount" value="-9999"/>
-            <option name="when" value="after:AI-PlagueEndTurn"/>
-        </attachment>
-<!-- End Plague is in decline trigger -->
 
 <!-- Start Remove Nuke-Explosions on the map all the time -->
         <attachment name="conditionAttachmentRemoveBrittonic-Nuke-Explosion" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
@@ -7084,7 +7104,7 @@
             <option name="when" value="after:BrittonicPlace"/>
             <option name="productionRule" value="production_Brittonic:buyCastle"/>
 	    <option name="productionRule" value="production_Brittonic_Combat:buyCastle"/>
-            <option name="productionRule" value="production_Brittonic:buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Brittonic:buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Brittonic:-buyDevelop-Castle"/>
             <option name="productionRule" value="production_Brittonic:-buyFort"/>
 	    <option name="productionRule" value="production_Brittonic_Combat:-buyFort"/>
@@ -7102,7 +7122,7 @@
             <option name="when" value="after:CelticPlace"/>
             <option name="productionRule" value="production_Celtic:buyCastle"/>
 	    <option name="productionRule" value="production_Celtic_Combat:buyCastle"/>
-            <option name="productionRule" value="production_Celtic:buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Celtic:buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Celtic:-buyDevelop-Castle"/>
             <option name="productionRule" value="production_Celtic:-buyFort"/>
 	    <option name="productionRule" value="production_Celtic_Combat:-buyFort"/>
@@ -7120,7 +7140,7 @@
             <option name="when" value="after:GermanicPlace"/>
             <option name="productionRule" value="production_Germanic:buyCastle"/>
 	    <option name="productionRule" value="production_Germanic_Combat:buyCastle"/>
-            <option name="productionRule" value="production_Germanic:buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Germanic:buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Germanic:-buyDevelop-Castle"/>
             <option name="productionRule" value="production_Germanic:-buyFort"/>
 	    <option name="productionRule" value="production_Germanic_Combat:-buyFort"/>
@@ -7138,7 +7158,7 @@
             <option name="when" value="after:RomanicPlace"/>
             <option name="productionRule" value="production_Romanic:buyCastle"/>
 	    <option name="productionRule" value="production_Romanic_Combat:buyCastle"/>
-            <option name="productionRule" value="production_Romanic:buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Romanic:buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Romanic:-buyDevelop-Castle"/>
             <option name="productionRule" value="production_Romanic:-buyFort"/>
 	    <option name="productionRule" value="production_Romanic_Combat:-buyFort"/>
@@ -7156,7 +7176,7 @@
             <option name="when" value="after:BalticPlace"/>
             <option name="productionRule" value="production_Baltic:buyCastle"/>
 	    <option name="productionRule" value="production_Baltic_Combat:buyCastle"/>
-            <option name="productionRule" value="production_Baltic:buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Baltic:buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Baltic:-buyDevelop-Castle"/>
             <option name="productionRule" value="production_Baltic:-buyFort"/>
 	    <option name="productionRule" value="production_Baltic_Combat:-buyFort"/>
@@ -7174,7 +7194,7 @@
             <option name="when" value="after:HellenicPlace"/>
             <option name="productionRule" value="production_Hellenic:buyCastle"/>
 	    <option name="productionRule" value="production_Hellenic_Combat:buyCastle"/>
-            <option name="productionRule" value="production_Hellenic:buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Hellenic:buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Hellenic:-buyDevelop-Castle"/>
             <option name="productionRule" value="production_Hellenic:-buyFort"/>
 	    <option name="productionRule" value="production_Hellenic_Combat:-buyFort"/>
@@ -7192,7 +7212,7 @@
             <option name="when" value="after:SlavicPlace"/>
             <option name="productionRule" value="production_Slavic:buyCastle"/>
 	    <option name="productionRule" value="production_Slavic_Combat:buyCastle"/>
-            <option name="productionRule" value="production_Slavic:buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Slavic:buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Slavic:-buyDevelop-Castle"/>
             <option name="productionRule" value="production_Slavic:-buyFort"/>
 	    <option name="productionRule" value="production_Slavic_Combat:-buyFort"/>
@@ -7210,7 +7230,7 @@
             <option name="when" value="after:HatticPlace"/>
             <option name="productionRule" value="production_Hattic:buyCastle"/>
 	    <option name="productionRule" value="production_Hattic_Combat:buyCastle"/>
-            <option name="productionRule" value="production_Hattic:buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Hattic:buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Hattic:-buyDevelop-Castle"/>
             <option name="productionRule" value="production_Hattic:-buyFort"/>
 	    <option name="productionRule" value="production_Hattic_Combat:-buyFort"/>
@@ -7228,7 +7248,7 @@
             <option name="when" value="after:AI-BarbariansPlace"/>
             <option name="productionRule" value="production_AI-Barbarians:buyCastle"/>
 	    <option name="productionRule" value="production_AI-Barbarians_Combat:buyCastle"/>
-            <option name="productionRule" value="production_AI-Barbarians:buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_AI-Barbarians:buyDevelop-Citadel"/>
             <option name="productionRule" value="production_AI-Barbarians:-buyDevelop-Castle"/>
             <option name="productionRule" value="production_AI-Barbarians:-buyFort"/>
 	    <option name="productionRule" value="production_AI-Barbarians_Combat:-buyFort"/>
@@ -7238,179 +7258,179 @@
             <option name="uses" value="1"/>
         </attachment>
 <!-- End Castle development -->
-<!-- Start Fortress development -->
-        <attachment name="conditionAttachment-Brittonic-Develop-Fortress" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+<!-- Start Citadel development -->
+        <attachment name="conditionAttachment-Brittonic-Develop-Citadel" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Develop-Fortress" count="1"/>
+            <option name="unitPresence" value="Develop-Citadel" count="1"/>
         </attachment>
-        <attachment name="triggerAttachment_Brittonic_Develop_Fortress" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Brittonic-Develop-Fortress"/>
+        <attachment name="triggerAttachment_Brittonic_Develop_Citadel" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Brittonic-Develop-Citadel"/>
             <option name="when" value="after:BrittonicPlace"/>
-            <option name="productionRule" value="production_Brittonic:buyFortress"/>
-	    <option name="productionRule" value="production_Brittonic_Combat:buyFortress"/>
+            <option name="productionRule" value="production_Brittonic:buyCitadel"/>
+	    <option name="productionRule" value="production_Brittonic_Combat:buyCitadel"/>
             <option name="productionRule" value="production_Brittonic:buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Brittonic:-buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Brittonic:-buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Brittonic:-buyCastle"/>
 	    <option name="productionRule" value="production_Brittonic_Combat:-buyCastle"/>
-            <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
+            <option name="removeUnits" value="all:Develop-Citadel" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="2"/>
+            <option name="purchase" value="Citadel" count="2"/>
             <option name="uses" value="1"/>
         </attachment>
-        <attachment name="conditionAttachment-Celtic-Develop-Fortress" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachment-Celtic-Develop-Citadel" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Develop-Fortress" count="1"/>
+            <option name="unitPresence" value="Develop-Citadel" count="1"/>
         </attachment>
-        <attachment name="triggerAttachment_Celtic_Develop_Fortress" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Celtic-Develop-Fortress"/>
+        <attachment name="triggerAttachment_Celtic_Develop_Citadel" attachTo="Celtic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Celtic-Develop-Citadel"/>
             <option name="when" value="after:CelticPlace"/>
-            <option name="productionRule" value="production_Celtic:buyFortress"/>
-	    <option name="productionRule" value="production_Celtic_Combat:buyFortress"/>
+            <option name="productionRule" value="production_Celtic:buyCitadel"/>
+	    <option name="productionRule" value="production_Celtic_Combat:buyCitadel"/>
             <option name="productionRule" value="production_Celtic:buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Celtic:-buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Celtic:-buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Celtic:-buyCastle"/>
 	    <option name="productionRule" value="production_Celtic_Combat:-buyCastle"/>
-            <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
+            <option name="removeUnits" value="all:Develop-Citadel" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="2"/>
+            <option name="purchase" value="Citadel" count="2"/>
             <option name="uses" value="1"/>
         </attachment>
-        <attachment name="conditionAttachment-Germanic-Develop-Fortress" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachment-Germanic-Develop-Citadel" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Develop-Fortress" count="1"/>
+            <option name="unitPresence" value="Develop-Citadel" count="1"/>
         </attachment>
-        <attachment name="triggerAttachment_Germanic_Develop_Fortress" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Germanic-Develop-Fortress"/>
+        <attachment name="triggerAttachment_Germanic_Develop_Citadel" attachTo="Germanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Germanic-Develop-Citadel"/>
             <option name="when" value="after:GermanicPlace"/>
-            <option name="productionRule" value="production_Germanic:buyFortress"/>
-	    <option name="productionRule" value="production_Germanic_Combat:buyFortress"/>
+            <option name="productionRule" value="production_Germanic:buyCitadel"/>
+	    <option name="productionRule" value="production_Germanic_Combat:buyCitadel"/>
             <option name="productionRule" value="production_Germanic:buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Germanic:-buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Germanic:-buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Germanic:-buyCastle"/>
 	    <option name="productionRule" value="production_Germanic_Combat:-buyCastle"/>
-            <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
+            <option name="removeUnits" value="all:Develop-Citadel" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="2"/>
+            <option name="purchase" value="Citadel" count="2"/>
             <option name="uses" value="1"/>
         </attachment>
-        <attachment name="conditionAttachment-Romanic-Develop-Fortress" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachment-Romanic-Develop-Citadel" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Develop-Fortress" count="1"/>
+            <option name="unitPresence" value="Develop-Citadel" count="1"/>
         </attachment>
-        <attachment name="triggerAttachment_Romanic_Develop_Fortress" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Romanic-Develop-Fortress"/>
+        <attachment name="triggerAttachment_Romanic_Develop_Citadel" attachTo="Romanic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Romanic-Develop-Citadel"/>
             <option name="when" value="after:RomanicPlace"/>
-            <option name="productionRule" value="production_Romanic:buyFortress"/>
-	    <option name="productionRule" value="production_Romanic_Combat:buyFortress"/>
+            <option name="productionRule" value="production_Romanic:buyCitadel"/>
+	    <option name="productionRule" value="production_Romanic_Combat:buyCitadel"/>
             <option name="productionRule" value="production_Romanic:buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Romanic:-buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Romanic:-buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Romanic:-buyCastle"/>
 	    <option name="productionRule" value="production_Romanic_Combat:-buyCastle"/>
-            <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
+            <option name="removeUnits" value="all:Develop-Citadel" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="2"/>
+            <option name="purchase" value="Citadel" count="2"/>
             <option name="uses" value="1"/>
         </attachment>
-        <attachment name="conditionAttachment-Baltic-Develop-Fortress" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachment-Baltic-Develop-Citadel" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Develop-Fortress" count="1"/>
+            <option name="unitPresence" value="Develop-Citadel" count="1"/>
         </attachment>
-        <attachment name="triggerAttachment_Baltic_Develop_Fortress" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Baltic-Develop-Fortress"/>
+        <attachment name="triggerAttachment_Baltic_Develop_Citadel" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Baltic-Develop-Citadel"/>
             <option name="when" value="after:BalticPlace"/>
-            <option name="productionRule" value="production_Baltic:buyFortress"/>
-	    <option name="productionRule" value="production_Baltic_Combat:buyFortress"/>
+            <option name="productionRule" value="production_Baltic:buyCitadel"/>
+	    <option name="productionRule" value="production_Baltic_Combat:buyCitadel"/>
             <option name="productionRule" value="production_Baltic:buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Baltic:-buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Baltic:-buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Baltic:-buyCastle"/>
 	    <option name="productionRule" value="production_Baltic_Combat:-buyCastle"/>
-            <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
+            <option name="removeUnits" value="all:Develop-Citadel" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="2"/>
+            <option name="purchase" value="Citadel" count="2"/>
             <option name="uses" value="1"/>
         </attachment>
-        <attachment name="conditionAttachment-Hellenic-Develop-Fortress" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachment-Hellenic-Develop-Citadel" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Develop-Fortress" count="1"/>
+            <option name="unitPresence" value="Develop-Citadel" count="1"/>
         </attachment>
-        <attachment name="triggerAttachment_Hellenic_Develop_Fortress" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Hellenic-Develop-Fortress"/>
+        <attachment name="triggerAttachment_Hellenic_Develop_Citadel" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Hellenic-Develop-Citadel"/>
             <option name="when" value="after:HellenicPlace"/>
-            <option name="productionRule" value="production_Hellenic:buyFortress"/>
-	    <option name="productionRule" value="production_Hellenic_Combat:buyFortress"/>
+            <option name="productionRule" value="production_Hellenic:buyCitadel"/>
+	    <option name="productionRule" value="production_Hellenic_Combat:buyCitadel"/>
             <option name="productionRule" value="production_Hellenic:buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Hellenic:-buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Hellenic:-buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Hellenic:-buyCastle"/>
 	    <option name="productionRule" value="production_Hellenic_Combat:-buyCastle"/>
-            <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
+            <option name="removeUnits" value="all:Develop-Citadel" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="2"/>
+            <option name="purchase" value="Citadel" count="2"/>
             <option name="uses" value="1"/>
         </attachment>
-        <attachment name="conditionAttachment-Slavic-Develop-Fortress" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachment-Slavic-Develop-Citadel" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Develop-Fortress" count="1"/>
+            <option name="unitPresence" value="Develop-Citadel" count="1"/>
         </attachment>
-        <attachment name="triggerAttachment_Slavic_Develop_Fortress" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Slavic-Develop-Fortress"/>
+        <attachment name="triggerAttachment_Slavic_Develop_Citadel" attachTo="Slavic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Slavic-Develop-Citadel"/>
             <option name="when" value="after:SlavicPlace"/>
-            <option name="productionRule" value="production_Slavic:buyFortress"/>
-	    <option name="productionRule" value="production_Slavic_Combat:buyFortress"/>
+            <option name="productionRule" value="production_Slavic:buyCitadel"/>
+	    <option name="productionRule" value="production_Slavic_Combat:buyCitadel"/>
             <option name="productionRule" value="production_Slavic:buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Slavic:-buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Slavic:-buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Slavic:-buyCastle"/>
 	    <option name="productionRule" value="production_Slavic_Combat:-buyCastle"/>
-            <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
+            <option name="removeUnits" value="all:Develop-Citadel" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="2"/>
+            <option name="purchase" value="Citadel" count="2"/>
             <option name="uses" value="1"/>
         </attachment>
-        <attachment name="conditionAttachment-Hattic-Develop-Fortress" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachment-Hattic-Develop-Citadel" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Develop-Fortress" count="1"/>
+            <option name="unitPresence" value="Develop-Citadel" count="1"/>
         </attachment>
-        <attachment name="triggerAttachment_Hattic_Develop_Fortress" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-Hattic-Develop-Fortress"/>
+        <attachment name="triggerAttachment_Hattic_Develop_Citadel" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-Hattic-Develop-Citadel"/>
             <option name="when" value="after:HatticPlace"/>
-            <option name="productionRule" value="production_Hattic:buyFortress"/>
-	    <option name="productionRule" value="production_Hattic_Combat:buyFortress"/>
+            <option name="productionRule" value="production_Hattic:buyCitadel"/>
+	    <option name="productionRule" value="production_Hattic_Combat:buyCitadel"/>
             <option name="productionRule" value="production_Hattic:buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Hattic:-buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_Hattic:-buyDevelop-Citadel"/>
             <option name="productionRule" value="production_Hattic:-buyCastle"/>
 	    <option name="productionRule" value="production_Hattic_Combat:-buyCastle"/>
-            <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
+            <option name="removeUnits" value="all:Develop-Citadel" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="2"/>
+            <option name="purchase" value="Citadel" count="2"/>
             <option name="uses" value="1"/>
         </attachment>
-        <attachment name="conditionAttachment-AI-Barbarians-Develop-Fortress" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+        <attachment name="conditionAttachment-AI-Barbarians-Develop-Citadel" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
-            <option name="unitPresence" value="Develop-Fortress" count="1"/>
+            <option name="unitPresence" value="Develop-Citadel" count="1"/>
         </attachment>
-        <attachment name="triggerAttachment_AI-Barbarians_Develop_Fortress" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
-            <option name="conditions" value="conditionAttachment-AI-Barbarians-Develop-Fortress"/>
+        <attachment name="triggerAttachment_AI-Barbarians_Develop_Citadel" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+            <option name="conditions" value="conditionAttachment-AI-Barbarians-Develop-Citadel"/>
             <option name="when" value="after:AI-BarbariansPlace"/>
-            <option name="productionRule" value="production_AI-Barbarians:buyFortress"/>
-	    <option name="productionRule" value="production_AI-Barbarians_Combat:buyFortress"/>
+            <option name="productionRule" value="production_AI-Barbarians:buyCitadel"/>
+	    <option name="productionRule" value="production_AI-Barbarians_Combat:buyCitadel"/>
             <option name="productionRule" value="production_AI-Barbarians:buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_AI-Barbarians:-buyDevelop-Fortress"/>
+            <option name="productionRule" value="production_AI-Barbarians:-buyDevelop-Citadel"/>
             <option name="productionRule" value="production_AI-Barbarians:-buyCastle"/>
 	    <option name="productionRule" value="production_AI-Barbarians_Combat:-buyCastle"/>
-            <option name="removeUnits" value="all:Develop-Fortress" count="1"/>
+            <option name="removeUnits" value="all:Develop-Citadel" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
-            <option name="purchase" value="Fortress" count="2"/>
+            <option name="purchase" value="Citadel" count="2"/>
             <option name="uses" value="1"/>
         </attachment>
-<!-- End Fortress development -->
+<!-- End Citadel development -->
 <!-- Start Command-Bunker development -->
         <attachment name="conditionAttachment-Brittonic-Develop-Command-Bunker" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
@@ -7423,8 +7443,8 @@
 	    <option name="productionRule" value="production_Brittonic_Combat:buyCommand-Bunker"/>
             <option name="productionRule" value="production_Brittonic:buyDevelop-Missile-Shield"/>
             <option name="productionRule" value="production_Brittonic:-buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Brittonic:-buyFortress"/>
-	    <option name="productionRule" value="production_Brittonic_Combat:-buyFortress"/>
+            <option name="productionRule" value="production_Brittonic:-buyCitadel"/>
+	    <option name="productionRule" value="production_Brittonic_Combat:-buyCitadel"/>
             <option name="removeUnits" value="all:Develop-Command-Bunker" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
@@ -7443,8 +7463,8 @@
 	    <option name="productionRule" value="production_Celtic_Combat:buyCommand-Bunker"/>
             <option name="productionRule" value="production_Celtic:buyDevelop-Missile-Shield"/>
             <option name="productionRule" value="production_Celtic:-buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Celtic:-buyFortress"/>
-	    <option name="productionRule" value="production_Celtic_Combat:-buyFortress"/>
+            <option name="productionRule" value="production_Celtic:-buyCitadel"/>
+	    <option name="productionRule" value="production_Celtic_Combat:-buyCitadel"/>
             <option name="removeUnits" value="all:Develop-Command-Bunker" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
@@ -7463,8 +7483,8 @@
 	    <option name="productionRule" value="production_Germanic_Combat:buyCommand-Bunker"/>
             <option name="productionRule" value="production_Germanic:buyDevelop-Missile-Shield"/>
             <option name="productionRule" value="production_Germanic:-buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Germanic:-buyFortress"/>
-	    <option name="productionRule" value="production_Germanic_Combat:-buyFortress"/>
+            <option name="productionRule" value="production_Germanic:-buyCitadel"/>
+	    <option name="productionRule" value="production_Germanic_Combat:-buyCitadel"/>
             <option name="removeUnits" value="all:Develop-Command-Bunker" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
@@ -7483,8 +7503,8 @@
 	    <option name="productionRule" value="production_Romanic_Combat:buyCommand-Bunker"/>
             <option name="productionRule" value="production_Romanic:buyDevelop-Missile-Shield"/>
             <option name="productionRule" value="production_Romanic:-buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Romanic:-buyFortress"/>
-	    <option name="productionRule" value="production_Romanic_Combat:-buyFortress"/>
+            <option name="productionRule" value="production_Romanic:-buyCitadel"/>
+	    <option name="productionRule" value="production_Romanic_Combat:-buyCitadel"/>
             <option name="removeUnits" value="all:Develop-Command-Bunker" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
@@ -7503,8 +7523,8 @@
 	    <option name="productionRule" value="production_Baltic_Combat:buyCommand-Bunker"/>
             <option name="productionRule" value="production_Baltic:buyDevelop-Missile-Shield"/>
             <option name="productionRule" value="production_Baltic:-buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Baltic:-buyFortress"/>
-	    <option name="productionRule" value="production_Baltic_Combat:-buyFortress"/>
+            <option name="productionRule" value="production_Baltic:-buyCitadel"/>
+	    <option name="productionRule" value="production_Baltic_Combat:-buyCitadel"/>
             <option name="removeUnits" value="all:Develop-Command-Bunker" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
@@ -7523,8 +7543,8 @@
 	    <option name="productionRule" value="production_Hellenic_Combat:buyCommand-Bunker"/>
             <option name="productionRule" value="production_Hellenic:buyDevelop-Missile-Shield"/>
             <option name="productionRule" value="production_Hellenic:-buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Hellenic:-buyFortress"/>
-	    <option name="productionRule" value="production_Hellenic_Combat:-buyFortress"/>
+            <option name="productionRule" value="production_Hellenic:-buyCitadel"/>
+	    <option name="productionRule" value="production_Hellenic_Combat:-buyCitadel"/>
             <option name="removeUnits" value="all:Develop-Command-Bunker" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
@@ -7543,8 +7563,8 @@
 	    <option name="productionRule" value="production_Slavic_Combat:buyCommand-Bunker"/>
             <option name="productionRule" value="production_Slavic:buyDevelop-Missile-Shield"/>
             <option name="productionRule" value="production_Slavic:-buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Slavic:-buyFortress"/>
-	    <option name="productionRule" value="production_Slavic_Combat:-buyFortress"/>
+            <option name="productionRule" value="production_Slavic:-buyCitadel"/>
+	    <option name="productionRule" value="production_Slavic_Combat:-buyCitadel"/>
             <option name="removeUnits" value="all:Develop-Command-Bunker" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
@@ -7563,8 +7583,8 @@
 	    <option name="productionRule" value="production_Hattic_Combat:buyCommand-Bunker"/>
             <option name="productionRule" value="production_Hattic:buyDevelop-Missile-Shield"/>
             <option name="productionRule" value="production_Hattic:-buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_Hattic:-buyFortress"/>
-	    <option name="productionRule" value="production_Hattic_Combat:-buyFortress"/>
+            <option name="productionRule" value="production_Hattic:-buyCitadel"/>
+	    <option name="productionRule" value="production_Hattic_Combat:-buyCitadel"/>
             <option name="removeUnits" value="all:Develop-Command-Bunker" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
@@ -7583,8 +7603,8 @@
 	    <option name="productionRule" value="production_AI-Barbarians_Combat:buyCommand-Bunker"/>
             <option name="productionRule" value="production_AI-Barbarians:buyDevelop-Missile-Shield"/>
             <option name="productionRule" value="production_AI-Barbarians:-buyDevelop-Command-Bunker"/>
-            <option name="productionRule" value="production_AI-Barbarians:-buyFortress"/>
-	    <option name="productionRule" value="production_AI-Barbarians_Combat:-buyFortress"/>
+            <option name="productionRule" value="production_AI-Barbarians:-buyCitadel"/>
+	    <option name="productionRule" value="production_AI-Barbarians_Combat:-buyCitadel"/>
             <option name="removeUnits" value="all:Develop-Command-Bunker" count="1"/>
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
@@ -7609,7 +7629,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Missile-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7628,7 +7648,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Missile-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7647,7 +7667,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Missile-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7666,7 +7686,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Missile-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7685,7 +7705,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Missile-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7704,7 +7724,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Missile-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7723,7 +7743,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Missile-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7742,7 +7762,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Missile-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7761,7 +7781,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Missile-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7781,7 +7801,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Energy-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7799,7 +7819,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Energy-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7817,7 +7837,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Energy-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7835,7 +7855,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Energy-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7853,7 +7873,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Energy-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7871,7 +7891,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Energy-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7889,7 +7909,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Energy-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7907,7 +7927,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Energy-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -7925,7 +7945,7 @@
             <option name="removeUnits" value="all:Camp" count="1"/>
             <option name="removeUnits" value="all:Fort" count="1"/>
             <option name="removeUnits" value="all:Castle" count="1"/>
-            <option name="removeUnits" value="all:Fortress" count="1"/>
+            <option name="removeUnits" value="all:Citadel" count="1"/>
             <option name="purchase" value="Energy-Shield" count="1"/>
             <option name="uses" value="1"/>
         </attachment>
@@ -14567,7 +14587,7 @@
             <option name="when" value="after:AI-NatureBattle"/>
             <option name="when" value="after:AI-PlagueBattle"/>
             <option name="when" value="after:AIBattle"/>
-        </attachment>        
+        </attachment>
         <attachment name="conditionAttachment-Atomic-Ardhan" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Ardhan" count="1"/>
             <option name="unitPresence" value="Nuke-Explosion" count="1"/>
@@ -14609,7 +14629,7 @@
             <option name="when" value="after:AI-NatureBattle"/>
             <option name="when" value="after:AI-PlagueBattle"/>
             <option name="when" value="after:AIBattle"/>
-        </attachment>        
+        </attachment>
         <attachment name="conditionAttachment-Atomic-Armenia" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Armenia" count="1"/>
             <option name="unitPresence" value="Nuke-Explosion" count="1"/>
@@ -18662,7 +18682,7 @@
             <option name="when" value="after:AI-NatureBattle"/>
             <option name="when" value="after:AI-PlagueBattle"/>
             <option name="when" value="after:AIBattle"/>
-        </attachment>        
+        </attachment>
         <attachment name="conditionAttachment-Atomic-Sea Zone 26" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Sea Zone 26" count="1"/>
             <option name="unitPresence" value="Nuke-Explosion" count="1"/>
@@ -19837,7 +19857,7 @@
             <territoryOwner territory="Cilicia" owner="AI-Barbarians"/>
             <territoryOwner territory="Cimbria" owner="AI-Nature"/>
             <territoryOwner territory="Cimmeria" owner="AI-Nature"/>
-            <territoryOwner territory="Civitatica" owner="AI-Barbarians"/>
+            <territoryOwner territory="Civitatica" owner="AI-Nature"/>
             <territoryOwner territory="Colchia" owner="AI-Barbarians"/>
             <territoryOwner territory="Corsica" owner="AI-Nature"/>
             <territoryOwner territory="Creta" owner="AI-Nature"/>
@@ -19942,7 +19962,7 @@
             <territoryOwner territory="Selonia" owner="AI-Nature"/>
             <territoryOwner territory="Semigallia" owner="AI-Barbarians"/>
             <territoryOwner territory="Severia" owner="AI-Barbarians"/>
-            <territoryOwner territory="Sicilia" owner="AI-Nature"/>
+            <territoryOwner territory="Sicilia" owner="AI-Barbarians"/>
             <territoryOwner territory="Sindica" owner="AI-Barbarians"/>
             <territoryOwner territory="Siracena" owner="AI-Barbarians"/>
             <territoryOwner territory="Sitones" owner="AI-Barbarians"/>
@@ -19960,7 +19980,7 @@
             <territoryOwner territory="Ulaidia" owner="AI-Barbarians"/>
             <territoryOwner territory="Ulich" owner="AI-Barbarians"/>
             <territoryOwner territory="Uruatri" owner="AI-Barbarians"/>
-            <territoryOwner territory="Vagoth" owner="AI-Barbarians"/>
+            <territoryOwner territory="Vagoth" owner="AI-Nature"/>
             <territoryOwner territory="Vandalia" owner="AI-Nature"/>
             <territoryOwner territory="Vasconia" owner="AI-Barbarians"/>
             <territoryOwner territory="Venedi" owner="AI-Nature"/>
@@ -19973,12 +19993,11 @@
             <territoryOwner territory="Yotvingia" owner="AI-Nature"/>
             <territoryOwner territory="Zaueces" owner="AI-Barbarians"/>
         </ownerInitialize>
-
         <unitInitialize>
             <unitPlacement unitType="Caveman" territory="Aquitania" quantity="1" owner="AI-Barbarians"/>
-            <unitPlacement unitType="Caveman" territory="Aukstaitia" quantity="1" owner="AI-Barbarians"/>
             <unitPlacement unitType="Caves" territory="Ardhan" quantity="1" owner="AI-Nature"/>
             <unitPlacement unitType="Cave-Bear" territory="Ardhan" quantity="1" owner="AI-Nature"/>
+            <unitPlacement unitType="Caveman" territory="Aukstaitia" quantity="1" owner="AI-Barbarians"/>
             <unitPlacement unitType="Wild-Mammoth" territory="Baku" quantity="1" owner="AI-Nature"/>
             <unitPlacement unitType="Caveman" territory="Balticum" quantity="10" owner="Baltic"/>
             <unitPlacement unitType="Camp" territory="Balticum" quantity="1" owner="Baltic"/>
@@ -20004,8 +20023,8 @@
             <unitPlacement unitType="Wild-Mammoth" territory="Dacia" quantity="1" owner="AI-Nature"/>
             <unitPlacement unitType="Caveman" territory="Dania" quantity="1" owner="AI-Barbarians"/>
             <unitPlacement unitType="Caveman" territory="Dumnonia" quantity="1" owner="AI-Barbarians"/>
-            <unitPlacement unitType="Wild-Mammoth" territory="Etruria" quantity="1" owner="AI-Nature"/>
             <unitPlacement unitType="Cave-Bear" territory="Etruria" quantity="1" owner="AI-Nature"/>
+            <unitPlacement unitType="Wild-Mammoth" territory="Etruria" quantity="1" owner="AI-Nature"/>
             <unitPlacement unitType="Caveman" territory="Finni" quantity="1" owner="AI-Barbarians"/>
             <unitPlacement unitType="Wild-Mammoth" territory="Frisia" quantity="1" owner="AI-Nature"/>
             <unitPlacement unitType="Saber-Tooth" territory="Gallaecia" quantity="1" owner="AI-Nature"/>
@@ -20059,6 +20078,7 @@
             <unitPlacement unitType="Caveman" territory="Roxalania" quantity="1" owner="AI-Barbarians"/>
             <unitPlacement unitType="Cave-Bear" territory="Rugi" quantity="1" owner="AI-Nature"/>
             <unitPlacement unitType="Saber-Tooth" territory="Selonia" quantity="1" owner="AI-Nature"/>
+            <unitPlacement unitType="Caveman" territory="Sicilia" quantity="1" owner="AI-Barbarians"/>
             <unitPlacement unitType="Caveman" territory="Slavoicum" quantity="10" owner="Slavic"/>
             <unitPlacement unitType="Camp" territory="Slavoicum" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Saber-Tooth" territory="Suiones" quantity="1" owner="AI-Nature"/>
@@ -20361,7 +20381,7 @@
             <boolean/>
         </property>
 
-        <property name="AI Bonus Income Flat Rate" value="15" editable="true">
+        <property name="AI Bonus Income Flat Rate" value="10" editable="true">
             <number min="0" max="100"/>
         </property>
         <property name="AI Bonus Income Percentage" value="0" editable="true">
@@ -20464,7 +20484,7 @@
 <br><b><span style="font-size:14px;color:0C0C0C;">Buildings:</span></b><br>
 <br><center><img src="Command-Bunker.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Bases</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">Players can develop bigger and more productive bases throughout the game. Old and obsolete base types are sometimes torn down. The Camp is the first base type. The Fort is the second base type. When the third base type is developed, the Castle, all camps are removed from the map. When the forth base type is developed, the Fortress, all Forts are removed, and so forth. This means that a player can only have and use the two latest base types. Missile Shields and Energy Shields also outdate any base type older than the Command Bunker. All bases can be bombarded, thereby getting damaged or destroyed. If a base is damaged, its production capacity is reduced.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">Players can develop bigger and more productive bases throughout the game. Old and obsolete base types are sometimes torn down. The Camp is the first base type. The Fort is the second base type. When the third base type is developed, the Castle, all camps are removed from the map. When the forth base type is developed, the Citadel, all Forts are removed, and so forth. This means that a player can only have and use the two latest base types. Missile Shields and Energy Shields also outdate any base type older than the Command Bunker. All bases can be bombarded, thereby getting damaged or destroyed. If a base is damaged, its production capacity is reduced.</span><br>
 <br><center><img src="Missile-Shield.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Missile Shields</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">These are the strongest anti-air unit available. Each building will fire at up to five enemy aircraft in every battle round. Each aircraft will have a 42% risk of getting hit. Only Stealth Bombers can lower this risk to 33%. These shields also fire during Strategic Bombardment attacks.</span><br>
@@ -20482,7 +20502,7 @@
 <br><span style="font-size:12px;color:0C0C0C;">These balloons assist artillery units in spotting enemies from afar. Afterward, they help guide artillery attacks against them. A total of up to three friendly artillery units may in this manner receive a +2 on their attack or defense dice.</span><br>
 <br><center><img src="Submarine.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Submarines</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">Submarines are special naval units of the late ages. They have the special ability to perform instant killing first strikes, to submerge before or after battle start, and finally to move unnoticed into enemy waters during the non combat phase.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">Submarines are special naval units of the late ages. They have the special ability to perform instant killing first strikes, to submerge before or after battle start, and finally to move unnoticed into enemy waters during the non combat phase. Only Submarines can prevent enemy Submarines from submerging out of battle.</span><br>
 <br><center><img src="Mortar.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Mortars</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">These units are specialized in devastating enemy bases from a distance. They fire volleys of exploding iron ordinance towards enemy buildings. Though specialized against buildings, the mortar can also attack other military units within range.</span><br>
@@ -20503,10 +20523,10 @@
 <br><span style="font-size:12px;color:0C0C0C;">War Robots and Attack Drones are deadly killing machines of the future. They have the special advantage of being immune to the deadly radiation effects of nuclear weapons and the hampering conditions of Radiation Zones.</span><br>
 <br><center><img src="Barrage-Balloon.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Barrage Balloons</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">These balloons are the first form of anti-air weapons available. For every Barrage-Balloon present during battle rounds, one aircraft, except bombers and paradropping air transports, has a 16.66% risk of colliding with balloon cables. The units are relative cheap and the crews will also fight against any enemy ground forces they encounter.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">These balloons are the first form of anti-air weapons available. For every Barrage-Balloon present during battle rounds, one aircraft, except bombers and paradropping air transports, has a 25% risk of colliding with balloon cables. The units are relative cheap and the crews will also fight against any enemy ground forces they encounter.</span><br>
 <br><center><img src="Anti-Air.png"/></center>
 <b><span style="font-size:12px;color:0C0C0C;">Anti-Air Units</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">This weapon system may fire at every type of enemy aircraft it encounters. For every Anti-Air unit present during battle rounds, one aircraft has a 33.33% risk of getting shot down. Furthermore, the Anti-Air crews will also fight against any enemy ground forces they encounter.</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">This weapon system may fire at every type of enemy aircraft it encounters. For every Anti-Air unit present during battle rounds, one aircraft has a 33.33% risk of getting shot down. Furthermore, the Anti-Air crews will fight against any enemy ground forces they encounter as well as attack any enemy aircraft flying over them.</span><br>
 <br>
 <center><img src="Line6.png"/></center>
 <br><b><span style="font-size:14px;color:0C0C0C;">Nukes:</span></b>
@@ -20521,6 +20541,7 @@
 <br><span style="font-size:12px;color:0C0C0C;"><li>Radiation zones prevent attackers from blitzing.</li></span>
 <br><span style="font-size:12px;color:0C0C0C;"><li>It is possible to attack with a nuke alongside other forces, but then the nuke will only blow if the attack fails.</li></span>
 <br><span style="font-size:12px;color:0C0C0C;"><li>If the attack succeeds, the nuke will not blow. Nuke bombers may in this case fly back to friendly territory.</li></span>
+<br><span style="font-size:12px;color:0C0C0C;"><li>International nuclear regulations prevent tribes from possessing more than one nuke plane at a time.</li></span>
 </ul>
 <br><center><img src="Nuke.png"/></center>
 <br><b><span style="font-size:14px;color:0C0C0C;">Nuclear Missile Silos:</span></b>
@@ -20528,16 +20549,18 @@
 <br>
 <center><img src="Line7.png"/></center>
 <br><b><span style="font-size:14px;color:0C0C0C;">Game Options:</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">15 PU AI Bonus Income Flat Rate is recommended for human vs. AI games on the original map. (This is the default setting)</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">10 PU AI Bonus Income Flat Rate is recommended for human vs. AI games on the Primeval map. (This is the default setting)</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">15 PU AI Bonus Income Flat Rate is recommended for human vs. AI games on the Classical map. (This is the default setting)</span><br>
 <br><span style="font-size:12px;color:0C0C0C;">20 PU AI Bonus Income Flat Rate is recommended for human vs. AI games on the Renaissance map. (This is the default setting)</span><br>
-<br><span style="font-size:12px;color:0C0C0C;">25 PU AI Bonus Income Flat Rate is recommended for human vs. AI games on the Cold War map. (This is the default setting)</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">25 PU AI Bonus Income Flat Rate is recommended for human vs. AI games on the Modern map. (This is the default setting)</span><br>
+<br><span style="font-size:12px;color:0C0C0C;">30 PU AI Bonus Income Flat Rate is recommended for human vs. AI games on the Cold War map. (This is the default setting)</span><br>
 <br><span style="font-size:12px;color:0C0C0C;">In-game music can be turned off by disabling Game - Sound Options - Start of Your Turn Control.</span><br>
 <br>
 <center><img src="Line8.png"/></center>
 <br><b><span style="font-size:14px;color:0C0C0C;">Credits:</span></b>
 <br><span style="font-size:12px;color:0C0C0C;">Thanks to the TripleA community and developer forum for help, tips and support.</span>
-<br><span style="font-size:12px;color:0C0C0C;">Special thanks to lead beta tester Crazy German for all the testing and good ideas.</span>
 <br><span style="font-size:12px;color:0C0C0C;">Shield dice images are made by TripleA community member Cernel.</span>
+<br><span style="font-size:12px;color:0C0C0C;">Special thanks to lead beta tester Crazy German for all the testing and good ideas.</span>
 <br><span style="font-size:12px;color:0C0C0C;">Map designed and created by Frostion</span><br>
 <br><center><img src="TripleALogoNew.png"/></center>
 <br>
