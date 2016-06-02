@@ -17928,35 +17928,47 @@
 <!-- End The Western and Eastern leaders transfer PUs to the minor nations -->
 
 <!-- Start canals -->
-        <attachment name="canalAttachment" attachTo="Sea Zone 7" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+        <attachment name="canalAttachmentThe Sea of Propontis" attachTo="Sea Zone 7" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
             <option name="canalName" value="The Sea of Propontis"/>
             <option name="landTerritories" value="Thrace:Mysia"/>
         </attachment>
-        <attachment name="canalAttachment" attachTo="Sea Zone 8" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+        <attachment name="canalAttachmentThe Sea of Propontis" attachTo="Sea Zone 8" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
             <option name="canalName" value="The Sea of Propontis"/>
             <option name="landTerritories" value="Thrace:Mysia"/>
         </attachment>
-        <attachment name="canalAttachment" attachTo="Sea Zone 31" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
-            <option name="canalName" value="The Danish straits"/>
+
+        <attachment name="canalAttachmentStorebaelt" attachTo="Sea Zone 31" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+            <option name="canalName" value="Storebaelt"/>
             <option name="landTerritories" value="Cimbria:Dania"/>
         </attachment>
-        <attachment name="canalAttachment" attachTo="Sea Zone 32" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
-            <option name="canalName" value="The Danish straits"/>
+        <attachment name="canalAttachmentStorebaelt" attachTo="Sea Zone 32" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+            <option name="canalName" value="Storebaelt"/>
             <option name="landTerritories" value="Cimbria:Dania"/>
         </attachment>
-        <attachment name="canalAttachment" attachTo="Sea Zone 12" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+
+        <attachment name="canalAttachmentOresund" attachTo="Sea Zone 31" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+            <option name="canalName" value="Oresund"/>
+            <option name="landTerritories" value="Dania:Bergio"/>
+        </attachment>
+        <attachment name="canalAttachmentOresund" attachTo="Sea Zone 32" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+            <option name="canalName" value="Oresund"/>
+            <option name="landTerritories" value="Dania:Bergio"/>
+        </attachment>
+
+        <attachment name="canalAttachmentThe Strait of Messina" attachTo="Sea Zone 12" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
             <option name="canalName" value="The Strait of Messina"/>
             <option name="landTerritories" value="Sicilia:Samnium"/>
         </attachment>
-        <attachment name="canalAttachment" attachTo="Sea Zone 15" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+        <attachment name="canalAttachmentThe Strait of Messina" attachTo="Sea Zone 15" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
             <option name="canalName" value="The Strait of Messina"/>
             <option name="landTerritories" value="Sicilia:Samnium"/>
         </attachment>
-        <attachment name="canalAttachment" attachTo="Sea Zone 18" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+
+        <attachment name="canalAttachmentThe Strait of Gibraltar" attachTo="Sea Zone 18" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
             <option name="canalName" value="The Strait of Gibraltar"/>
             <option name="landTerritories" value="Turdetania:Mauria"/>
         </attachment>
-        <attachment name="canalAttachment" attachTo="Sea Zone 19" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
+        <attachment name="canalAttachmentThe Strait of Gibraltar" attachTo="Sea Zone 19" javaClass="games.strategy.triplea.attachments.CanalAttachment" type="territory">
             <option name="canalName" value="The Strait of Gibraltar"/>
             <option name="landTerritories" value="Turdetania:Mauria"/>
         </attachment>
@@ -18490,6 +18502,9 @@
             <boolean/>
         </property>
         <property name="Two HitPoint Units Require Repair Facilities" value="false" editable="false">
+            <boolean/>
+        </property>
+        <property name="Control All Canals Between Territories To Pass" value ="false" editable="false">
             <boolean/>
         </property>
 
