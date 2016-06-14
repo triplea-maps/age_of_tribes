@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Modern" version="0.2.6"/>
+  <info name="Age of Tribes: Modern" version="0.2.7"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="12"/>
@@ -4207,7 +4207,7 @@
             <option name="conditions" value="conditionAttachmentModernAge"/>
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic"/>
             <option name="when" value="before:BrittonicCombatMove"/>
-            <option name="notification" value="Note7"/>
+            <option name="notification" value="Note7B"/>
         </attachment>
         <attachment name="triggerAttachment_Modern_Age_2" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentModernAge"/>
@@ -17764,9 +17764,11 @@
         </property>
 
 
-        <property name="Land Battle Rounds" value="5" editable="false">
+        <property name="Land Battle Rounds" value="5" editable="true">
+            <number min="1" max="10"/>
         </property>
-        <property name="Sea Battle Rounds" value="5" editable="false">
+        <property name="Sea Battle Rounds" value="5" editable="true">
+            <number min="1" max="10"/>
         </property>
         <property name="Air Battle Rounds" value="1" editable="false">
         </property>

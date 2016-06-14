@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Primeval" version="0.2.6"/>
+  <info name="Age of Tribes: Primeval" version="0.2.7"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="12"/>
@@ -20266,9 +20266,11 @@
         </property>
 
 
-        <property name="Land Battle Rounds" value="5" editable="false">
+        <property name="Land Battle Rounds" value="5" editable="true">
+            <number min="1" max="10"/>
         </property>
-        <property name="Sea Battle Rounds" value="5" editable="false">
+        <property name="Sea Battle Rounds" value="5" editable="true">
+            <number min="1" max="10"/>
         </property>
         <property name="Air Battle Rounds" value="1" editable="false">
         </property>
