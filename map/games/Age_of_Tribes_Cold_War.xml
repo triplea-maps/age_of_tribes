@@ -1244,7 +1244,7 @@
             <result resourceOrUnit="Develop-Attack-Helicopter" quantity="1"/>
         </productionRule>
         <productionRule name="buyAttack-Helicopter">
-            <cost resource="PUs" quantity="26"/>
+            <cost resource="PUs" quantity="25"/>
             <result resourceOrUnit="Attack-Helicopter" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-War-Robot">
@@ -2478,7 +2478,7 @@
         <attachment name="unitAttachment" attachTo="Attack-Helicopter" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="attack" value="8"/>
             <option name="defense" value="6"/>
-            <option name="movement" value="4"/>
+            <option name="movement" value="5"/>
             <option name="carrierCost" value="1"/>
             <option name="isAir" value="true"/>
             <option name="canIntercept" value="true"/>
