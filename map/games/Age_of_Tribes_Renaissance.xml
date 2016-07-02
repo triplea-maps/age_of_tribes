@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Renaissance" version="1.0.2"/>
+  <info name="Age of Tribes: Renaissance" version="1.0.3"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="12"/>
@@ -1116,7 +1116,7 @@
             <result resourceOrUnit="Submarine" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Fleet-Carrier">
-            <cost resource="Tech" quantity="335"/>
+            <cost resource="Tech" quantity="275"/>
             <result resourceOrUnit="Develop-Fleet-Carrier" quantity="1"/>
         </productionRule>
         <productionRule name="buyFleet-Carrier">
@@ -1132,6 +1132,7 @@
             <cost resource="PUs" quantity="17"/>
             <result resourceOrUnit="Mammoth" quantity="1"/>
         </productionRule>
+
         <productionRule name="buyDevelop-Axeman">
             <cost resource="Tech" quantity="3"/>
             <result resourceOrUnit="Develop-Axeman" quantity="1"/>
@@ -1189,7 +1190,7 @@
             <result resourceOrUnit="Infantry" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Shock-Trooper">
-            <cost resource="Tech" quantity="570"/>
+            <cost resource="Tech" quantity="500"/>
             <result resourceOrUnit="Develop-Shock-Trooper" quantity="1"/>
         </productionRule>
         <productionRule name="buyShock-Trooper">
@@ -1238,7 +1239,7 @@
             <result resourceOrUnit="Truck" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Attack-Helicopter">
-            <cost resource="Tech" quantity="365"/>
+            <cost resource="Tech" quantity="465"/>
             <result resourceOrUnit="Develop-Attack-Helicopter" quantity="1"/>
         </productionRule>
         <productionRule name="buyAttack-Helicopter">
@@ -1246,7 +1247,7 @@
             <result resourceOrUnit="Attack-Helicopter" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-War-Robot">
-            <cost resource="Tech" quantity="620"/>
+            <cost resource="Tech" quantity="550"/>
             <result resourceOrUnit="Develop-War-Robot" quantity="1"/>
         </productionRule>
         <productionRule name="buyWar-Robot">
@@ -1303,7 +1304,7 @@
             <result resourceOrUnit="Battle-Tank" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Battle-Mech">
-            <cost resource="Tech" quantity="700"/>
+            <cost resource="Tech" quantity="600"/>
             <result resourceOrUnit="Develop-Battle-Mech" quantity="1"/>
         </productionRule>
         <productionRule name="buyBattle-Mech">
@@ -1401,19 +1402,19 @@
             <result resourceOrUnit="Fighter" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Bomber">
-            <cost resource="Tech" quantity="315"/>
+            <cost resource="Tech" quantity="305"/>
             <result resourceOrUnit="Develop-Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyBomber">
-            <cost resource="PUs" quantity="43"/>
+            <cost resource="PUs" quantity="36"/>
             <result resourceOrUnit="Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Air-Transport">
-            <cost resource="Tech" quantity="295"/>
+            <cost resource="Tech" quantity="305"/>
             <result resourceOrUnit="Develop-Air-Transport" quantity="1"/>
         </productionRule>
         <productionRule name="buyAir-Transport">
-            <cost resource="PUs" quantity="37"/>
+            <cost resource="PUs" quantity="40"/>
             <result resourceOrUnit="Air-Transport" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Jet-Fighter">
@@ -1429,7 +1430,7 @@
             <result resourceOrUnit="Develop-Stealth-Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyStealth-Bomber">
-            <cost resource="PUs" quantity="45"/>
+            <cost resource="PUs" quantity="38"/>
             <result resourceOrUnit="Stealth-Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Attack-Drone">
@@ -1478,19 +1479,19 @@
             <result resourceOrUnit="Command-Bunker" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Missile-Shield">
-            <cost resource="Tech" quantity="400"/>
+            <cost resource="Tech" quantity="510"/>
             <result resourceOrUnit="Develop-Missile-Shield" quantity="1"/>
         </productionRule>
         <productionRule name="buyMissile-Shield">
-            <cost resource="PUs" quantity="20"/>
+            <cost resource="PUs" quantity="50"/>
             <result resourceOrUnit="Missile-Shield" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Energy-Shield">
-            <cost resource="Tech" quantity="580"/>
+            <cost resource="Tech" quantity="520"/>
             <result resourceOrUnit="Develop-Energy-Shield" quantity="1"/>
         </productionRule>
         <productionRule name="buyEnergy-Shield">
-            <cost resource="PUs" quantity="40"/>
+            <cost resource="PUs" quantity="25"/>
             <result resourceOrUnit="Energy-Shield" quantity="1"/>
         </productionRule>
 
@@ -1520,7 +1521,7 @@
         </productionRule>
 
         <productionRule name="buyDevelop-Missile-Silo">
-            <cost resource="Tech" quantity="850"/>
+            <cost resource="Tech" quantity="1000"/>
             <result resourceOrUnit="Develop-Missile-Silo" quantity="1"/>
         </productionRule>
         <productionRule name="buyMissile-Silo">
@@ -2145,7 +2146,7 @@
             <option name="defense" value="7"/>
             <option name="movement" value="3"/>
             <option name="isSea" value="true"/>
-            <option name="carrierCapacity" value="10"/>
+            <option name="carrierCapacity" value="6"/>
         </attachment>
 
         <attachment name="unitAttachment" attachTo="Develop-Axeman" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -2665,6 +2666,7 @@
             <option name="isAAforFlyOverOnly" value="false"/>
             <option name="transportCost" value="1"/>
             <option name="typeAA" value="balloon cable collision"/>
+            <option name="mayOverStackAA" value="true"/>
             <option name="targetsAA" value="Attack-Helicopter:Warplane:Fighter:Jet-Fighter:Attack-Drone"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Develop-Anti-Air" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -2693,6 +2695,7 @@
             <option name="isAAforFlyOverOnly" value="true"/>
             <option name="transportCost" value="1"/>
             <option name="typeAA" value="anti-air gun"/>
+            <option name="mayOverStackAA" value="true"/>
             <option name="targetsAA" value="Attack-Helicopter:Warplane:Fighter:Bomber:Air-Transport:Jet-Fighter:Stealth-Bomber:Attack-Drone"/>
         </attachment>
         <attachment name="unitAttachment" attachTo="Develop-Rocket-Launcher" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
@@ -2900,7 +2903,7 @@
             <option name="carrierCost" value="3"/>
             <option name="isAir" value="true"/>
             <option name="isStrategicBomber" value="true"/>
-            <option name="bombingMaxDieSides" value="9"/>
+            <option name="bombingMaxDieSides" value="4"/>
             <option name="canIntercept" value="true"/>
             <option name="canAirBattle" value="true"/>
             <option name="airAttack" value="3"/>
@@ -2971,7 +2974,7 @@
             <option name="carrierCost" value="3"/>
             <option name="isAir" value="true"/>
             <option name="isStrategicBomber" value="true"/>
-            <option name="bombingMaxDieSides" value="10"/>
+            <option name="bombingMaxDieSides" value="5"/>
             <option name="canIntercept" value="true"/>
             <option name="canAirBattle" value="true"/>
             <option name="airAttack" value="4"/>
@@ -17662,16 +17665,15 @@
             <boolean/>
         </property>
 
-
         <property name="Land Battle Rounds" value="5" editable="true">
             <number min="1" max="10"/>
         </property>
         <property name="Sea Battle Rounds" value="5" editable="true">
             <number min="1" max="10"/>
         </property>
-        <property name="Air Battle Rounds" value="1" editable="false">
+        <property name="Air Battle Rounds" value="2" editable="false">
+            <number min="1" max="10"/>
         </property>
-        
 
         <property name="AA Territory Restricted" value="false" editable="false">
             <boolean/>
@@ -17835,8 +17837,8 @@
 <br><span style="font-size:12px;color:0C0C0C;"><li>This is a 4 vs. 4 player map.</li></span>
 <br><span style="font-size:12px;color:0C0C0C;"><li>The dices used are 12-sided.</li></span>
 <br><span style="font-size:12px;color:0C0C0C;"><li>Combat Moves and Non Combat Moves are done before Purchase and Placement.</li></span>
-<br><span style="font-size:12px;color:0C0C0C;"><li>Land and sea battles can only last up to 5 battle rounds.</li></span>
-<br><span style="font-size:12px;color:0C0C0C;"><li>Bombing interceptions can only last 1 battle round.</li></span>
+<br><span style="font-size:12px;color:0C0C0C;"><li>Land and sea battles only last 5 battle rounds.</li></span>
+<br><span style="font-size:12px;color:0C0C0C;"><li>Bombing interceptions only last 2 battle rounds.</li></span>
 <br><span style="font-size:12px;color:0C0C0C;"><li>Units do not need to be placed in the same round as they are bought.</li></span>
 <br><span style="font-size:12px;color:0C0C0C;"><li>One cannot build bases in newly captured territories.</li></span>
 <br><span style="font-size:12px;color:0C0C0C;"><li>It is possible to buy and place new aircraft directly on newly placed carriers.</li></span>
