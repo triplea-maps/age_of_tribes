@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Modern" version="1.0.3"/>
+  <info name="Age of Tribes: Modern" version="1.0.4"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="12"/>
@@ -1118,7 +1118,7 @@
             <result resourceOrUnit="Submarine" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Fleet-Carrier">
-            <cost resource="Tech" quantity="275"/>
+            <cost resource="Tech" quantity="310"/>
             <result resourceOrUnit="Develop-Fleet-Carrier" quantity="1"/>
         </productionRule>
         <productionRule name="buyFleet-Carrier">
@@ -1241,7 +1241,7 @@
             <result resourceOrUnit="Truck" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Attack-Helicopter">
-            <cost resource="Tech" quantity="465"/>
+            <cost resource="Tech" quantity="420"/>
             <result resourceOrUnit="Develop-Attack-Helicopter" quantity="1"/>
         </productionRule>
         <productionRule name="buyAttack-Helicopter">
@@ -1404,7 +1404,7 @@
             <result resourceOrUnit="Fighter" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Bomber">
-            <cost resource="Tech" quantity="305"/>
+            <cost resource="Tech" quantity="310"/>
             <result resourceOrUnit="Develop-Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyBomber">
@@ -1412,7 +1412,7 @@
             <result resourceOrUnit="Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Air-Transport">
-            <cost resource="Tech" quantity="305"/>
+            <cost resource="Tech" quantity="310"/>
             <result resourceOrUnit="Develop-Air-Transport" quantity="1"/>
         </productionRule>
         <productionRule name="buyAir-Transport">
@@ -1485,7 +1485,7 @@
             <result resourceOrUnit="Develop-Missile-Shield" quantity="1"/>
         </productionRule>
         <productionRule name="buyMissile-Shield">
-            <cost resource="PUs" quantity="50"/>
+            <cost resource="PUs" quantity="40"/>
             <result resourceOrUnit="Missile-Shield" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Energy-Shield">
@@ -1493,7 +1493,7 @@
             <result resourceOrUnit="Develop-Energy-Shield" quantity="1"/>
         </productionRule>
         <productionRule name="buyEnergy-Shield">
-            <cost resource="PUs" quantity="25"/>
+            <cost resource="PUs" quantity="20"/>
             <result resourceOrUnit="Energy-Shield" quantity="1"/>
         </productionRule>
 
@@ -2871,7 +2871,7 @@
         <attachment name="unitAttachment" attachTo="Warplane" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="attack" value="6"/>
             <option name="defense" value="6"/>
-            <option name="movement" value="4"/>
+            <option name="movement" value="5"/>
             <option name="carrierCost" value="2"/>
             <option name="isAir" value="true"/>
             <option name="canIntercept" value="true"/>
@@ -17501,7 +17501,7 @@
             <unitPlacement unitType="Command-Bunker" territory="Cimmeria" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Truck" territory="Cimmeria" quantity="1" owner="Slavic"/>
             <unitPlacement unitType="Barrage-Balloon" territory="Cimmeria" quantity="1" owner="Slavic"/>
-            <unitPlacement unitType="Infantry" territory="Dalmatia" quantity="1" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Dalmatia" quantity="2" owner="Germanic"/>
             <unitPlacement unitType="Cannon" territory="Dalmatia" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Command-Bunker" territory="Dalmatia" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Barrage-Balloon" territory="Dalmatia" quantity="1" owner="Germanic"/>
@@ -17556,7 +17556,7 @@
             <unitPlacement unitType="Carabinier" territory="Massylia" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Carabinier" territory="Mauria" quantity="1" owner="Hattic"/>
             <unitPlacement unitType="Carabinier" territory="Maxyes" quantity="1" owner="Hattic"/>
-            <unitPlacement unitType="Infantry" territory="Navari" quantity="2" owner="Germanic"/>
+            <unitPlacement unitType="Infantry" territory="Navari" quantity="3" owner="Germanic"/>
             <unitPlacement unitType="Cannon" territory="Navari" quantity="1" owner="Germanic"/>
             <unitPlacement unitType="Carabinier" territory="Neuri" quantity="2" owner="Slavic"/>
             <unitPlacement unitType="Infantry" territory="Norici" quantity="1" owner="Germanic"/>

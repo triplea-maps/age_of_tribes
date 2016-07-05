@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Primeval" version="1.0.3"/>
+  <info name="Age of Tribes: Primeval" version="1.0.4"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="12"/>
@@ -1191,7 +1191,7 @@
             <result resourceOrUnit="Submarine" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Fleet-Carrier">
-            <cost resource="Tech" quantity="275"/>
+            <cost resource="Tech" quantity="310"/>
             <result resourceOrUnit="Develop-Fleet-Carrier" quantity="1"/>
         </productionRule>
         <productionRule name="buyFleet-Carrier">
@@ -1314,7 +1314,7 @@
             <result resourceOrUnit="Truck" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Attack-Helicopter">
-            <cost resource="Tech" quantity="465"/>
+            <cost resource="Tech" quantity="420"/>
             <result resourceOrUnit="Develop-Attack-Helicopter" quantity="1"/>
         </productionRule>
         <productionRule name="buyAttack-Helicopter">
@@ -1477,7 +1477,7 @@
             <result resourceOrUnit="Fighter" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Bomber">
-            <cost resource="Tech" quantity="305"/>
+            <cost resource="Tech" quantity="310"/>
             <result resourceOrUnit="Develop-Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyBomber">
@@ -1485,7 +1485,7 @@
             <result resourceOrUnit="Bomber" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Air-Transport">
-            <cost resource="Tech" quantity="305"/>
+            <cost resource="Tech" quantity="310"/>
             <result resourceOrUnit="Develop-Air-Transport" quantity="1"/>
         </productionRule>
         <productionRule name="buyAir-Transport">
@@ -1558,7 +1558,7 @@
             <result resourceOrUnit="Develop-Missile-Shield" quantity="1"/>
         </productionRule>
         <productionRule name="buyMissile-Shield">
-            <cost resource="PUs" quantity="50"/>
+            <cost resource="PUs" quantity="40"/>
             <result resourceOrUnit="Missile-Shield" quantity="1"/>
         </productionRule>
         <productionRule name="buyDevelop-Energy-Shield">
@@ -1566,7 +1566,7 @@
             <result resourceOrUnit="Develop-Energy-Shield" quantity="1"/>
         </productionRule>
         <productionRule name="buyEnergy-Shield">
-            <cost resource="PUs" quantity="25"/>
+            <cost resource="PUs" quantity="20"/>
             <result resourceOrUnit="Energy-Shield" quantity="1"/>
         </productionRule>
 
@@ -2913,7 +2913,7 @@
         <attachment name="unitAttachment" attachTo="Warplane" javaClass="games.strategy.triplea.attachments.UnitAttachment" type="unitType">
             <option name="attack" value="6"/>
             <option name="defense" value="6"/>
-            <option name="movement" value="4"/>
+            <option name="movement" value="5"/>
             <option name="carrierCost" value="2"/>
             <option name="isAir" value="true"/>
             <option name="canIntercept" value="true"/>
@@ -4081,7 +4081,6 @@
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI-Barbarians"/>
             <option name="impArtTech" value="false"/>
         </attachment>
-
         <attachment name="supportAttachmentStealth-Bomber" attachTo="Stealth-Bomber" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
             <option name="unitType" value="Boat:Galley:Sail-Ship:Ironclad:Warship:Submarine:Fleet-Carrier:Wild-Mammoth:Cave-Bear:Saber-Tooth:Anti-Air:Observation-Balloon:Barrage-Balloon:Rocket:Mortar-Bombardment:Caveman:Axeman:Spearman:Swordsman:Halberdman:Musketman:Rifleman:Infantry:Shock-Trooper:Chariot:Horseman:Knight:Carabinier:Truck:Attack-Helicopter:War-Robot:Slinger:Bowman:Crossbowman:Mortar:Rocket-Launcher:Catapult:Ballista:Trebuchet:Cannon:Tank:Battle-Tank:Battle-Mech:Warplane:Fighter:Bomber:Air-Transport:Jet-Fighter:Stealth-Bomber:Attack-Drone"/>
             <option name="faction" value="enemy"/>
@@ -4093,7 +4092,6 @@
             <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:AI-Barbarians"/>
             <option name="impArtTech" value="false"/>
         </attachment>
-
         <attachment name="supportAttachmentCatapult" attachTo="Catapult" javaClass="games.strategy.triplea.attachments.UnitSupportAttachment" type="unitType">
             <option name="unitType" value="Caveman:Axeman:Spearman:Swordsman:Halberdman:Musketman:Rifleman:Infantry:Shock-Trooper:War-Robot"/>
             <option name="faction" value="allied"/>
