@@ -3367,7 +3367,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Alps" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="0"/>
-            <option name="isImpassible" value="true"/>
+            <option name="isImpassable" value="true"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Anglia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
@@ -3467,14 +3467,14 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Carpathian Mountains" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="0"/>
-            <option name="isImpassible" value="true"/>
+            <option name="isImpassable" value="true"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Caspian Steppe" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="1"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Caucasus Mountains" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="0"/>
-            <option name="isImpassible" value="true"/>
+            <option name="isImpassable" value="true"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Celtiberia" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
@@ -3668,7 +3668,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Kjolen Mountains" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="0"/>
-            <option name="isImpassible" value="true"/>
+            <option name="isImpassable" value="true"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Ladogaski" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
@@ -3843,7 +3843,7 @@
         </attachment>
         <attachment name="territoryAttachment" attachTo="Pyrenees" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="0"/>
-            <option name="isImpassible" value="true"/>
+            <option name="isImpassable" value="true"/>
         </attachment>
         <attachment name="territoryAttachment" attachTo="Radimich" javaClass="games.strategy.triplea.attachments.TerritoryAttachment" type="territory">
             <option name="production" value="3"/>
