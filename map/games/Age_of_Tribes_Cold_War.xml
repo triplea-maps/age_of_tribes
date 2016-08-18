@@ -4158,7 +4158,7 @@
 <!-- Start Battle-Calculator Cleaning-->
 <!-- Change to Battle Frontier-->
         <attachment name="conditionAttachmentFrontierSwap" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_Frontier_Swap_1a" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFrontierSwap"/>
@@ -4261,7 +4261,7 @@
 
 <!-- Start Age notification popup -->
         <attachment name="conditionAttachmentColdWarAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="66"/>
+            <option name="rounds" value="66"/>
         </attachment>
         <attachment name="triggerAttachment_Cold_War_Age_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarAge"/>
@@ -4311,7 +4311,7 @@
         </attachment>
 
         <attachment name="conditionAttachmentWarmWar" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="69"/>
+            <option name="rounds" value="69"/>
         </attachment>
         <attachment name="triggerAttachment_The_Cold_War_has_now_turned_warm" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentWarmWar"/>
@@ -4322,7 +4322,7 @@
 
 <!-- Start special 'end of cold war' triggers that will prevent an error from happening if aircraft attacks an enemy ship in a friendly sea territory - The ship could have moved into the sea zone it during the cold war and not capture it - This only works in conjuntion with the step AIPostColdWarSeaTerritoryOwnershipBattle -->
         <attachment name="conditionAttachmentWarmWar" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="68"/>
+            <option name="rounds" value="68"/>
         </attachment>
         <attachment name="conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter1" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Sea Zone 6" count="1"/>
@@ -4415,7 +4415,7 @@
 <!-- End special 'end of cold war' triggers that will prevent an error from happening if aircraft attacks an enemy ship in a friendly sea territory - The ship could have moved into the sea zone it during the cold war and not capture it - This only works in conjuntion with the step AIPostColdWarSeaTerritoryOwnershipBattle -->
 
         <attachment name="conditionAttachmentFuturisticAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="71"/>
+            <option name="rounds" value="71"/>
         </attachment>
         <attachment name="triggerAttachment_Futuristic_Age_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFuturisticAge"/>
@@ -4531,7 +4531,7 @@
 
 <!-- Start remove all unused rockets before non-combat move -->
         <attachment name="conditionAttachmentRemove-Rockets" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_Unused_Brittonic_rockets_are_stowed" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemove-Rockets"/>
@@ -4577,7 +4577,7 @@
 
 <!-- Start remove all unused Mortar-Bombardments before non-combat move -->
         <attachment name="conditionAttachmentRemove-Mortar-Bombardments" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_Unused_Brittonic_Mortar-Bombardments_are_stowed" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemove-Mortar-Bombardments"/>
@@ -4623,7 +4623,7 @@
 
 <!-- Start remove all unused missiles before non-combat move -->
         <attachment name="conditionAttachmentRemove-Ballistic-Missiles" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_Unused_Brittonic_missiles_are_stowed" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemove-Ballistic-Missiles"/>
@@ -4669,7 +4669,7 @@
 
 <!-- Start relationship triggers -->
         <attachment name="conditionAttachmentCold-War" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="66"/>
+            <option name="rounds" value="66"/>
         </attachment>
         <attachment name="triggerAttachment_The_eastern_and_western_tribes_agree_on_a_ceasefire" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentCold-War"/>
@@ -4692,7 +4692,7 @@
             <option name="when" value="before:BrittonicCombatMove"/>
         </attachment>
         <attachment name="conditionAttachmentGreatTribalWar" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="69"/>
+            <option name="rounds" value="69"/>
         </attachment>
         <attachment name="triggerAttachment_The_eastern_and_western_tribes_start_the_Great_Tribal_War" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentGreatTribalWar"/>
@@ -4903,7 +4903,7 @@
             <option name="when" value="after:AICombatMove"/>
         </attachment>
         <attachment name="conditionAttachmentNukesMove4again" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_Nuke_2" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentNukesMove4again"/>
@@ -4923,7 +4923,7 @@
 
 <!-- Start give players Tech resources during the game -->
         <attachment name="conditionAttachment200TechPerTurn" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="56-70"/>
+            <option name="rounds" value="56-70"/>
         </attachment>
         <attachment name="triggerAttachment_Modern_age_gives_200_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment200TechPerTurn"/>
@@ -5022,7 +5022,7 @@
             <option name="when" value="before:HatticPurchase"/>
         </attachment>
         <attachment name="conditionAttachment400TechPerTurn" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="71-84"/>
+            <option name="rounds" value="71-84"/>
         </attachment>
         <attachment name="triggerAttachment_Futuristic_age_gives_400_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment400TechPerTurn"/>
@@ -5073,7 +5073,7 @@
             <option name="when" value="before:HatticPurchase"/>
         </attachment>
         <attachment name="conditionAttachment40PUsPerTurn" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="71-+"/>
+            <option name="rounds" value="71-+"/>
         </attachment>
         <attachment name="triggerAttachment_Futuristic_age_gives_40_PUs_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment40PUsPerTurn"/>
@@ -5124,7 +5124,7 @@
             <option name="when" value="before:HatticPurchase"/>
         </attachment>
         <attachment name="conditionAttachment145TechPerTurn" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="85"/>
+            <option name="rounds" value="85"/>
         </attachment>
         <attachment name="triggerAttachment_Futuristic_age_gives_145_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment145TechPerTurn"/>
@@ -15677,7 +15677,7 @@
 
 <!-- Start No move during the Cold War. This works by removing movement before combat and adding it back again after combat -->
         <attachment name="conditionAttachmentNoCombatMoves" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="66-68"/>
+            <option name="rounds" value="66-68"/>
         </attachment>
         <attachment name="triggerAttachment_No_combat_during_the_cold_war_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
 	<option name="conditions" value="conditionAttachmentNoCombatMoves"/>
@@ -16506,7 +16506,7 @@
 
 <!-- Start No move during the Cold War. Mortar-Bombardment and Rockets seem to give players the unwanted Combat Move -->
         <attachment name="conditionAttachmentColdWarNoAmmo" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="65-67"/>
+            <option name="rounds" value="65-67"/>
         </attachment>
         <attachment name="triggerAttachment_Cold_War_Ammo_1" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarNoAmmo"/>
@@ -17223,10 +17223,10 @@
         <property name="Air Attack Sub Restricted" value="true" editable="false">
             <boolean/>
         </property>
-        <property name="Units repair at beginning of round" value="true" editable="false">
+        <property name="Units Repair Hits Start Turn" value="true" editable="false">
             <boolean/>
         </property>
-        <property name="Units repair at end of round" value="false" editable="false">
+        <property name="Units Repair Hits End Turn" value="false" editable="false">
             <boolean/>
         </property>
         <property name="Two HitPoint Units Require Repair Facilities" value="false" editable="false">

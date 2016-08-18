@@ -4243,7 +4243,7 @@
 <!-- Start Battle-Calculator Cleaning-->
 <!-- Change to Battle Frontier-->
         <attachment name="conditionAttachmentFrontierSwap" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_Frontier_Swap_1a" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFrontierSwap"/>
@@ -4358,7 +4358,7 @@
 
 <!-- Start Age notification popup -->
         <attachment name="conditionAttachmentPrimevalAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1"/>
+            <option name="rounds" value="1"/>
         </attachment>
         <attachment name="triggerAttachment_Primeval_Age" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentPrimevalAge"/>
@@ -4368,7 +4368,7 @@
         </attachment>
         
         <attachment name="conditionAttachmentPrehistoricAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="6"/>
+            <option name="rounds" value="6"/>
         </attachment>
         <attachment name="triggerAttachment_Prehistoric_Age" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentPrehistoricAge"/>
@@ -4378,7 +4378,7 @@
         </attachment>
 
         <attachment name="conditionAttachmentClassicalAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="16"/>
+            <option name="rounds" value="16"/>
         </attachment>
         <attachment name="triggerAttachment_Classical_Age_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentClassicalAge"/>
@@ -4433,7 +4433,7 @@
         </attachment>
 
         <attachment name="conditionAttachmentMedievalAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="26"/>
+            <option name="rounds" value="26"/>
         </attachment>
         <attachment name="triggerAttachment_Medieval_Age_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentMedievalAge"/>
@@ -4497,7 +4497,7 @@
         </attachment>
 
         <attachment name="conditionAttachmentRenaissanceAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="36"/>
+            <option name="rounds" value="36"/>
         </attachment>
         <attachment name="triggerAttachment_Renaissance_Age_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRenaissanceAge"/>
@@ -4615,7 +4615,7 @@
         </attachment>
 
         <attachment name="conditionAttachmentIndustrialAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="46"/>
+            <option name="rounds" value="46"/>
         </attachment>
         <attachment name="triggerAttachment_Industrial_Age_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentIndustrialAge"/>
@@ -4733,7 +4733,7 @@
         </attachment>
 
         <attachment name="conditionAttachmentModernAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="56"/>
+            <option name="rounds" value="56"/>
         </attachment>
         <attachment name="triggerAttachment_Modern_Age_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentModernAge"/>
@@ -4851,7 +4851,7 @@
         </attachment>
 
         <attachment name="conditionAttachmentColdWarAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="66"/>
+            <option name="rounds" value="66"/>
         </attachment>
         <attachment name="triggerAttachment_Cold_War_Age_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarAge"/>
@@ -4906,7 +4906,7 @@
         </attachment>
 
         <attachment name="conditionAttachmentWarmWar" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="69"/>
+            <option name="rounds" value="69"/>
         </attachment>
         <attachment name="triggerAttachment_The_Cold_War_has_now_turned_warm" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentWarmWar"/>
@@ -4917,7 +4917,7 @@
 
 <!-- Start special 'end of cold war' triggers that will prevent an error from happening if aircraft attacks an enemy ship in a friendly sea territory - The ship could have moved into the sea zone it during the cold war and not capture it - This only works in conjuntion with the step AIPostColdWarSeaTerritoryOwnershipBattle -->
         <attachment name="conditionAttachmentWarmWar" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="68"/>
+            <option name="rounds" value="68"/>
         </attachment>
         <attachment name="conditionAttachmentEndColdWarWithShipInEnemyConvoyCenter1" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="Sea Zone 6" count="1"/>
@@ -5010,7 +5010,7 @@
 <!-- End special 'end of cold war' triggers that will prevent an error from happening if aircraft attacks an enemy ship in a friendly sea territory - The ship could have moved into the sea zone it during the cold war and not capture it - This only works in conjuntion with the step AIPostColdWarSeaTerritoryOwnershipBattle -->
 
         <attachment name="conditionAttachmentFuturisticAge" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="71"/>
+            <option name="rounds" value="71"/>
         </attachment>
         <attachment name="triggerAttachment_Futuristic_Age_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFuturisticAge"/>
@@ -5139,14 +5139,14 @@
 
 <!-- Start Place Black-Death in every capital during Medieval Age -->
         <attachment name="conditionAttachmentBlackDeathParthia" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="26"/>
+            <option name="rounds" value="26"/>
         </attachment>
         <attachment name="triggerAttachment_A_plague_hits_Parthia" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBlackDeathParthia"/>
             <option name="placement" value="Parthia:Plague" count="1"/>
         </attachment>
         <attachment name="conditionAttachmentBlackDeathHatti" attachTo="Hattic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="27"/>
+            <option name="rounds" value="27"/>
         </attachment>
         <attachment name="triggerAttachment_The_Black_Death_arives_in_Hatti" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBlackDeathHatti"/>
@@ -5154,7 +5154,7 @@
             <option name="placement" value="Hatti:Plague" count="5"/>
         </attachment>
         <attachment name="conditionAttachmentBlackDeathHellas" attachTo="Hellenic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="28"/>
+            <option name="rounds" value="28"/>
         </attachment>
         <attachment name="triggerAttachment_The_Black_Death_arives_in_Hellas" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBlackDeathHellas"/>
@@ -5162,7 +5162,7 @@
             <option name="placement" value="Hellas:Plague" count="6"/>
         </attachment>
         <attachment name="conditionAttachmentBlackDeathRoma" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="28"/>
+            <option name="rounds" value="28"/>
         </attachment>
         <attachment name="triggerAttachment_The_Black_Death_arives_in_Roma" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBlackDeathRoma"/>
@@ -5171,7 +5171,7 @@
             <option name="when" value="after:AI-PlagueCombatMove"/>
         </attachment>
         <attachment name="conditionAttachmentBlackDeathCeltica" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="29"/>
+            <option name="rounds" value="29"/>
         </attachment>
         <attachment name="triggerAttachment_The_Black_Death_arives_in_Celtica" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBlackDeathCeltica"/>
@@ -5180,7 +5180,7 @@
             <option name="when" value="after:AI-PlagueCombatMove"/>
         </attachment>
         <attachment name="conditionAttachmentBlackDeathGermania" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="29"/>
+            <option name="rounds" value="29"/>
         </attachment>
         <attachment name="triggerAttachment_The_Black_Death_arives_in_Germania" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBlackDeathGermania"/>
@@ -5189,7 +5189,7 @@
             <option name="when" value="after:AI-PlagueCombatMove"/>
         </attachment>
         <attachment name="conditionAttachmentBlackDeathBalticum" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="29"/>
+            <option name="rounds" value="29"/>
         </attachment>
         <attachment name="triggerAttachment_The_Black_Death_arives_in_Balticum" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBlackDeathBalticum"/>
@@ -5198,7 +5198,7 @@
             <option name="when" value="after:AI-PlagueCombatMove"/>
         </attachment>
         <attachment name="conditionAttachmentBlackDeathSlavoicum" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="29"/>
+            <option name="rounds" value="29"/>
         </attachment>
         <attachment name="triggerAttachment_The_Black_Death_arives_in_Slavoicum" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBlackDeathSlavoicum"/>
@@ -5207,7 +5207,7 @@
             <option name="when" value="after:AI-PlagueCombatMove"/>
         </attachment>
         <attachment name="conditionAttachmentBlackDeathBritannia" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="30"/>
+            <option name="rounds" value="30"/>
         </attachment>
         <attachment name="triggerAttachment_The_Black_Death_arives_in_Britannia" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBlackDeathBritannia"/>
@@ -5219,7 +5219,7 @@
 
 <!-- Start Remove Black-Death in the end of the Medieval Age -->
         <attachment name="conditionAttachmentBlackDeathIsOver" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="34"/>
+            <option name="rounds" value="34"/>
         </attachment>
         <attachment name="triggerAttachment_The_Black_Death_seems_to_be_over" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBlackDeathIsOver"/>
@@ -5230,7 +5230,7 @@
             <option name="when" value="after:AI-PlagueEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBlackDeathIsOver2" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="35-+"/>
+            <option name="rounds" value="35-+"/>
         </attachment>
         <attachment name="triggerAttachment_The_Black_Death_cannot_spread_anymore" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBlackDeathIsOver"/>
@@ -5243,7 +5243,7 @@
 
 <!-- Start Plague is in decline trigger -->
         <attachment name="conditionAttachmentAI-PlagueIsNoMore" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="35-+"/>
+            <option name="rounds" value="35-+"/>
         </attachment>
         <attachment name="triggerAttachment_The_plague_seems_to_be_in_decline" attachTo="AI-Plague" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentAI-PlagueIsNoMore"/>
@@ -5255,7 +5255,7 @@
 
 <!-- Start open op for Convoy Centers and their PU income -->
         <attachment name="conditionAttachmentNew-Convoy-Center" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="36"/>
+            <option name="rounds" value="36"/>
         </attachment>
         <attachment name="triggerAttachment_New_Baltic_Convoy_Center_available_near_Balticum" attachTo="Baltic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentNew-Convoy-Center"/>
@@ -5357,7 +5357,7 @@
 
 <!-- Start remove all unused rockets before non-combat move -->
         <attachment name="conditionAttachmentRemove-Rockets" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_Unused_Brittonic_rockets_are_stowed" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemove-Rockets"/>
@@ -5408,7 +5408,7 @@
 
 <!-- Start remove all unused Mortar-Bombardments before non-combat move -->
         <attachment name="conditionAttachmentRemove-Mortar-Bombardments" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_Unused_Brittonic_Mortar-Bombardments_are_stowed" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemove-Mortar-Bombardments"/>
@@ -5459,7 +5459,7 @@
 
 <!-- Start remove all unused missiles before non-combat move -->
         <attachment name="conditionAttachmentRemove-Ballistic-Missiles" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_Unused_Brittonic_missiles_are_stowed" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentRemove-Ballistic-Missiles"/>
@@ -5510,7 +5510,7 @@
 
 <!-- Start relationship triggers -->
         <attachment name="conditionAttachmentFriendship" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="6"/>
+            <option name="rounds" value="6"/>
         </attachment>
         <attachment name="triggerAttachment_The_eastern_and_western_tribes_form_tribal_friendships" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentFriendship"/>
@@ -5529,7 +5529,7 @@
             <option name="when" value="before:BrittonicCombatMove"/>
         </attachment>
         <attachment name="conditionAttachmentAlliance" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="16"/>
+            <option name="rounds" value="16"/>
         </attachment>
         <attachment name="triggerAttachment_The_eastern_and_western_tribes_band_together_against_their_enemies" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentAlliance"/>
@@ -5548,7 +5548,7 @@
             <option name="when" value="before:BrittonicCombatMove"/>
         </attachment>
         <attachment name="conditionAttachmentCold-War" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="66"/>
+            <option name="rounds" value="66"/>
         </attachment>
         <attachment name="triggerAttachment_The_eastern_and_western_tribes_agree_on_a_ceasefire" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentCold-War"/>
@@ -5571,7 +5571,7 @@
             <option name="when" value="before:BrittonicCombatMove"/>
         </attachment>
         <attachment name="conditionAttachmentGreatTribalWar" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="69"/>
+            <option name="rounds" value="69"/>
         </attachment>
         <attachment name="triggerAttachment_The_eastern_and_western_tribes_start_the_Great_Tribal_War" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentGreatTribalWar"/>
@@ -5597,7 +5597,7 @@
 
 <!-- Start Nature Decline trigger -->
         <attachment name="conditionAttachmentNatureDecline" attachTo="AI-Nature" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="5"/>
+            <option name="rounds" value="5"/>
         </attachment>
         <attachment name="triggerAttachment_The_Nature_population_is_in_decline" attachTo="AI-Nature" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentNatureDecline"/>
@@ -5612,7 +5612,7 @@
 
 <!-- Start Nature Extinction trigger -->
         <attachment name="conditionAttachmentNatureExtinction" attachTo="AI-Nature" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="10-+"/>
+            <option name="rounds" value="10-+"/>
         </attachment>
         <attachment name="triggerAttachment_Prehistoric_animals_go_extinct" attachTo="AI-Nature" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentNatureExtinction"/>
@@ -5631,7 +5631,7 @@
 
 <!-- Start Barbarians are weakened every turn by removing PUs -->
         <attachment name="conditionAttachmentBarbariansAreWeakened1" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1"/>
+            <option name="rounds" value="1"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_1" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened1"/>
@@ -5640,7 +5640,7 @@
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened2" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="2"/>
+            <option name="rounds" value="2"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_2" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened2"/>
@@ -5649,7 +5649,7 @@
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened3" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="3"/>
+            <option name="rounds" value="3"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_3" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened3"/>
@@ -5658,7 +5658,7 @@
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened4" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="4"/>
+            <option name="rounds" value="4"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_4" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened4"/>
@@ -5667,7 +5667,7 @@
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened5" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="5"/>
+            <option name="rounds" value="5"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_5" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened5"/>
@@ -5676,7 +5676,7 @@
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened6" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="6"/>
+            <option name="rounds" value="6"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_6" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened6"/>
@@ -5685,7 +5685,7 @@
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened7" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="7"/>
+            <option name="rounds" value="7"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_7" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened7"/>
@@ -5694,7 +5694,7 @@
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened8" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="8"/>
+            <option name="rounds" value="8"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_8" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened8"/>
@@ -5703,7 +5703,7 @@
             <option name="when" value="after:AI-BarbariansEndTurn"/>
         </attachment>
         <attachment name="conditionAttachmentBarbariansAreWeakened9" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="9-+"/>
+            <option name="rounds" value="9-+"/>
         </attachment>
         <attachment name="triggerAttachment_Barbarians_have_a_low_income_9" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentBarbariansAreWeakened9"/>
@@ -6009,7 +6009,7 @@
             <option name="when" value="after:AI-BarbariansCombatMove"/>
         </attachment>
         <attachment name="conditionAttachmentNukesMove4again" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-+"/>
+            <option name="rounds" value="1-+"/>
         </attachment>
         <attachment name="triggerAttachment_Nuke_2" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentNukesMove4again"/>
@@ -6029,7 +6029,7 @@
 
 <!-- Start give players Tech resources during the game -->
         <attachment name="conditionAttachment1TechPerTurn" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="1-5"/>
+            <option name="rounds" value="1-5"/>
         </attachment>
         <attachment name="triggerAttachment_Primeval_age_gives_1_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment1TechPerTurn"/>
@@ -6135,7 +6135,7 @@
         </attachment>
 
         <attachment name="conditionAttachment5TechPerTurn" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="6-15"/>
+            <option name="rounds" value="6-15"/>
         </attachment>
         <attachment name="triggerAttachment_Prehistoric_age_gives_5_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment5TechPerTurn"/>
@@ -6241,7 +6241,7 @@
         </attachment>
 
         <attachment name="conditionAttachment10TechPerTurn" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="16-25"/>
+            <option name="rounds" value="16-25"/>
         </attachment>
         <attachment name="triggerAttachment_Classical_age_gives_10_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment10TechPerTurn"/>
@@ -6347,7 +6347,7 @@
         </attachment>
 
         <attachment name="conditionAttachment20TechPerTurn" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="26-35"/>
+            <option name="rounds" value="26-35"/>
         </attachment>
         <attachment name="triggerAttachment_Medieval_age_gives_20_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment20TechPerTurn"/>
@@ -6453,7 +6453,7 @@
         </attachment>
 
         <attachment name="conditionAttachment50TechPerTurn" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="36-45"/>
+            <option name="rounds" value="36-45"/>
         </attachment>
         <attachment name="triggerAttachment_Renaissance_age_gives_50_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment50TechPerTurn"/>
@@ -6559,7 +6559,7 @@
         </attachment>
 
         <attachment name="conditionAttachment100TechPerTurn" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="46-55"/>
+            <option name="rounds" value="46-55"/>
         </attachment>
         <attachment name="triggerAttachment_Industrial_age_gives_100_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment100TechPerTurn"/>
@@ -6665,7 +6665,7 @@
         </attachment>
 
         <attachment name="conditionAttachment200TechPerTurn" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="56-70"/>
+            <option name="rounds" value="56-70"/>
         </attachment>
         <attachment name="triggerAttachment_Modern_age_gives_200_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment200TechPerTurn"/>
@@ -6771,7 +6771,7 @@
         </attachment>
 
         <attachment name="conditionAttachment400TechPerTurn" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="71-84"/>
+            <option name="rounds" value="71-84"/>
         </attachment>
         <attachment name="triggerAttachment_Futuristic_age_gives_400_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment400TechPerTurn"/>
@@ -6829,7 +6829,7 @@
         </attachment>
         
         <attachment name="conditionAttachment40PUsPerTurn" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="71-+"/>
+            <option name="rounds" value="71-+"/>
         </attachment>
         <attachment name="triggerAttachment_Futuristic_age_gives_40_PUs_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment40PUsPerTurn"/>
@@ -6881,7 +6881,7 @@
         </attachment>
         
         <attachment name="conditionAttachment300TechPerTurn" attachTo="AI-Barbarians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="85"/>
+            <option name="rounds" value="85"/>
         </attachment>
         <attachment name="triggerAttachment_Futuristic_age_gives_300_Tech_per_turn_to_Brittonic" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment300TechPerTurn"/>
@@ -18897,7 +18897,7 @@
 
 <!-- Start No move during the Cold War. This works by removing movement before combat and adding it back again after combat -->
         <attachment name="conditionAttachmentNoCombatMoves" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="66-68"/>
+            <option name="rounds" value="66-68"/>
         </attachment>
         <attachment name="triggerAttachment_No_combat_during_the_cold_war_1" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
 	<option name="conditions" value="conditionAttachmentNoCombatMoves"/>
@@ -19726,7 +19726,7 @@
 
 <!-- Start No move during the Cold War. Mortar-Bombardment and Rockets seem to give players the unwanted Combat Move -->
         <attachment name="conditionAttachmentColdWarNoAmmo" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
-            <option name="turns" value="65-67"/>
+            <option name="rounds" value="65-67"/>
         </attachment>
         <attachment name="triggerAttachment_Cold_War_Ammo_1" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachmentColdWarNoAmmo"/>
@@ -20333,10 +20333,10 @@
         <property name="Air Attack Sub Restricted" value="true" editable="false">
             <boolean/>
         </property>
-        <property name="Units repair at beginning of round" value="true" editable="false">
+        <property name="Units Repair Hits Start Turn" value="true" editable="false">
             <boolean/>
         </property>
-        <property name="Units repair at end of round" value="false" editable="false">
+        <property name="Units Repair Hits End Turn" value="false" editable="false">
             <boolean/>
         </property>
         <property name="Two HitPoint Units Require Repair Facilities" value="false" editable="false">
