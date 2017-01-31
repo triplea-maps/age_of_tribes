@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Classical" version="1.0.4"/>
+  <info name="Age of Tribes: Classical" version="1.0.5"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="12"/>
@@ -18405,7 +18405,7 @@
         <property name="Contested Territories Produce No Income" value="true" editable="false">
             <boolean/>
         </property>
-        <property name="Abandoned Territories May Be Taken Over Immediately" value="true" editable="false">
+        <property name="Abandoned Territories May Be Taken Over Immediately" value="false" editable="false">
             <boolean/>
         </property>
         <property name="Units May Give Bonus Movement" value="true" editable="false">
