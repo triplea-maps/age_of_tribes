@@ -1,0 +1,8 @@
+Britannia  (740,1106)
+Celtica  (780,1553)
+Germania  (1638,1086)
+Roma  (1577,2062)
+Balticum  (2248,684)
+Hellas  (2299,2425)
+Slavoicum  (3196,820)
+Hatti  (3131,2307)
