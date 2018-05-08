@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Classical" version="1.0.7"/>
+  <info name="Age of Tribes: Classical" version="1.0.8"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="12"/>
@@ -7968,6 +7968,7 @@
             <option name="uses" value="1"/>
         </attachment>
 <!-- End Fleet-Carrier unit development -->
+
 <!-- Start Axeman unit development -->
         <attachment name="conditionAttachment-Brittonic-Develop-Axeman" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
@@ -7977,6 +7978,7 @@
             <option name="conditions" value="conditionAttachment-Brittonic-Develop-Axeman"/>
             <option name="when" value="after:BrittonicPlace"/>
             <option name="productionRule" value="production_Brittonic:buyAxeman"/>
+            <option name="productionRule" value="production_Brittonic_Combat:buyAxeman"/>
             <option name="productionRule" value="production_Brittonic:buyDevelop-Boat"/>
             <option name="productionRule" value="production_Brittonic:buyDevelop-Spearman"/>
             <option name="productionRule" value="production_Brittonic:buyDevelop-Chariot"/>
@@ -7996,6 +7998,7 @@
             <option name="conditions" value="conditionAttachment-Celtic-Develop-Axeman"/>
             <option name="when" value="after:CelticPlace"/>
             <option name="productionRule" value="production_Celtic:buyAxeman"/>
+            <option name="productionRule" value="production_Celtic_Combat:buyAxeman"/>
             <option name="productionRule" value="production_Celtic:buyDevelop-Boat"/>
             <option name="productionRule" value="production_Celtic:buyDevelop-Spearman"/>
             <option name="productionRule" value="production_Celtic:buyDevelop-Chariot"/>
@@ -8015,6 +8018,7 @@
             <option name="conditions" value="conditionAttachment-Germanic-Develop-Axeman"/>
             <option name="when" value="after:GermanicPlace"/>
             <option name="productionRule" value="production_Germanic:buyAxeman"/>
+            <option name="productionRule" value="production_Germanic_Combat:buyAxeman"/>
             <option name="productionRule" value="production_Germanic:buyDevelop-Boat"/>
             <option name="productionRule" value="production_Germanic:buyDevelop-Spearman"/>
             <option name="productionRule" value="production_Germanic:buyDevelop-Chariot"/>
@@ -8034,6 +8038,7 @@
             <option name="conditions" value="conditionAttachment-Romanic-Develop-Axeman"/>
             <option name="when" value="after:RomanicPlace"/>
             <option name="productionRule" value="production_Romanic:buyAxeman"/>
+            <option name="productionRule" value="production_Romanic_Combat:buyAxeman"/>
             <option name="productionRule" value="production_Romanic:buyDevelop-Boat"/>
             <option name="productionRule" value="production_Romanic:buyDevelop-Spearman"/>
             <option name="productionRule" value="production_Romanic:buyDevelop-Chariot"/>
@@ -8053,6 +8058,7 @@
             <option name="conditions" value="conditionAttachment-Baltic-Develop-Axeman"/>
             <option name="when" value="after:BalticPlace"/>
             <option name="productionRule" value="production_Baltic:buyAxeman"/>
+            <option name="productionRule" value="production_Baltic_Combat:buyAxeman"/>
             <option name="productionRule" value="production_Baltic:buyDevelop-Boat"/>
             <option name="productionRule" value="production_Baltic:buyDevelop-Spearman"/>
             <option name="productionRule" value="production_Baltic:buyDevelop-Chariot"/>
@@ -8072,6 +8078,7 @@
             <option name="conditions" value="conditionAttachment-Hellenic-Develop-Axeman"/>
             <option name="when" value="after:HellenicPlace"/>
             <option name="productionRule" value="production_Hellenic:buyAxeman"/>
+            <option name="productionRule" value="production_Hellenic_Combat:buyAxeman"/>
             <option name="productionRule" value="production_Hellenic:buyDevelop-Boat"/>
             <option name="productionRule" value="production_Hellenic:buyDevelop-Spearman"/>
             <option name="productionRule" value="production_Hellenic:buyDevelop-Chariot"/>
@@ -8091,6 +8098,7 @@
             <option name="conditions" value="conditionAttachment-Slavic-Develop-Axeman"/>
             <option name="when" value="after:SlavicPlace"/>
             <option name="productionRule" value="production_Slavic:buyAxeman"/>
+            <option name="productionRule" value="production_Slavic_Combat:buyAxeman"/>
             <option name="productionRule" value="production_Slavic:buyDevelop-Boat"/>
             <option name="productionRule" value="production_Slavic:buyDevelop-Spearman"/>
             <option name="productionRule" value="production_Slavic:buyDevelop-Chariot"/>
@@ -8110,6 +8118,7 @@
             <option name="conditions" value="conditionAttachment-Hattic-Develop-Axeman"/>
             <option name="when" value="after:HatticPlace"/>
             <option name="productionRule" value="production_Hattic:buyAxeman"/>
+            <option name="productionRule" value="production_Hattic_Combat:buyAxeman"/>
             <option name="productionRule" value="production_Hattic:buyDevelop-Boat"/>
             <option name="productionRule" value="production_Hattic:buyDevelop-Spearman"/>
             <option name="productionRule" value="production_Hattic:buyDevelop-Chariot"/>
@@ -8122,7 +8131,6 @@
             <option name="uses" value="1"/>
         </attachment>
 <!-- End Axeman unit development -->
-
 <!-- Start Spearman unit development -->
         <attachment name="conditionAttachment-Brittonic-Develop-Spearman" attachTo="Brittonic" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="map" count="1"/>
@@ -18716,11 +18724,6 @@
 <br>
 <center><img src="Line7.png"/></center>
 <br><b><span style="font-size:14px;color:0C0C0C;">Game Options:</span></b>
-<br><span style="font-size:12px;color:0C0C0C;">10 PU AI Bonus Income Flat Rate is recommended for human vs. AI games on the Primeval map. (This is the default setting)</span><br>
-<br><span style="font-size:12px;color:0C0C0C;">15 PU AI Bonus Income Flat Rate is recommended for human vs. AI games on the Classical map. (This is the default setting)</span><br>
-<br><span style="font-size:12px;color:0C0C0C;">20 PU AI Bonus Income Flat Rate is recommended for human vs. AI games on the Renaissance map. (This is the default setting)</span><br>
-<br><span style="font-size:12px;color:0C0C0C;">25 PU AI Bonus Income Flat Rate is recommended for human vs. AI games on the Modern map. (This is the default setting)</span><br>
-<br><span style="font-size:12px;color:0C0C0C;">30 PU AI Bonus Income Flat Rate is recommended for human vs. AI games on the Cold War map. (This is the default setting)</span><br>
 <br><span style="font-size:12px;color:0C0C0C;">In-game music can be turned off by disabling Game - Sound Options - Start of Your Turn Control.</span><br>
 <br>
 <center><img src="Line8.png"/></center>
