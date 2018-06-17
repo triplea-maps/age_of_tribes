@@ -17213,7 +17213,7 @@
             <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Romanics_15_PU:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Romanics_15_PU-2:1:false:false:false:false"/>
             <option name="text" value="GERMANIC_ROMANIC_15"/>
-            <option name="costResources" value="15:PUs"/>>
+            <option name="costResources" value="15:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
