@@ -17133,7 +17133,7 @@
             <option name="activateTrigger" value="triggerAttachment_Hattics_Aid_Slavics_10_PU:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Hattics_Aid_Slavics_10_PU-2:1:false:false:false:false"/>
             <option name="text" value="HATTIC_SLAVIC_10"/>
-            <option name="costPU" value="10"/>
+            <option name="costResources" value="10:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -17153,7 +17153,7 @@
             <option name="activateTrigger" value="triggerAttachment_Hattics_Aid_Baltics_15_PU:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Hattics_Aid_Baltics_15_PU-2:1:false:false:false:false"/>
             <option name="text" value="HATTIC_BALTIC_15"/>
-            <option name="costPU" value="15"/>
+            <option name="costResources" value="15:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -17173,7 +17173,7 @@
             <option name="activateTrigger" value="triggerAttachment_Hattics_Aid_Hellenics_20_PU:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Hattics_Aid_Hellenics_20_PU-2:1:false:false:false:false"/>
             <option name="text" value="HATTIC_HELLENIC_20"/>
-            <option name="costPU" value="20"/>
+            <option name="costResources" value="20:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -17193,7 +17193,7 @@
             <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Brittonics_10_PU:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Brittonics_10_PU-2:1:false:false:false:false"/>
             <option name="text" value="GERMANIC_BRITTONIC_10"/>
-            <option name="costPU" value="10"/>
+            <option name="costResources" value="10:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
         
@@ -17213,7 +17213,7 @@
             <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Romanics_15_PU:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Romanics_15_PU-2:1:false:false:false:false"/>
             <option name="text" value="GERMANIC_ROMANIC_15"/>
-            <option name="costPU" value="15"/>
+            <option name="costResources" value="15:PUs"/>>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 
@@ -17233,7 +17233,7 @@
             <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Celtics_20_PU:1:false:false:false:false"/>
             <option name="activateTrigger" value="triggerAttachment_Germanics_Aid_Celtics_20_PU-2:1:false:false:false:false"/>
             <option name="text" value="GERMANIC_CELTIC_20"/>
-            <option name="costPU" value="20"/>
+            <option name="costResources" value="20:PUs"/>
             <option name="attemptsPerTurn" value="1"/>
         </attachment>
 <!-- End The Western and Eastern leaders transfer PUs to the minor nations -->
