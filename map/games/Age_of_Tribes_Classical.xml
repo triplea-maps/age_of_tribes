@@ -12905,7 +12905,7 @@
         <attachment name="conditionAttachment-Atomic-Akkad" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="1:Akkad"/>
             <option name="unitPresence" value="1:Nuke-Explosion"/>
-            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:Diseases:"/>
+            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:Diseases"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Akkad" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Akkad"/>
