@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Age of Tribes: Classical" version="1.0.8"/>
+  <info name="Age of Tribes: Classical" version="1.0.9"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.9"/>
   <diceSides value="12"/>
@@ -964,7 +964,6 @@
 
     <gamePlay>
         <delegate name="initDelegate" javaClass="games.strategy.triplea.delegate.InitializationDelegate" display="Initializing Delegates"/>
-
         <delegate name="bid" javaClass="games.strategy.triplea.delegate.BidPurchaseDelegate" display="Bid Purchase"/>
         <delegate name="placeBid" javaClass="games.strategy.triplea.delegate.BidPlaceDelegate" display="Bid Placement"/>
         <delegate name="userActions" javaClass="games.strategy.triplea.delegate.UserActionDelegate" display="User Actions"/>
@@ -977,25 +976,13 @@
         <delegate name="place" javaClass="games.strategy.triplea.delegate.PlaceDelegate" display="Place Units"/>
         <delegate name="politics" javaClass="games.strategy.triplea.delegate.PoliticsDelegate" display="Politics"/>
         <delegate name="endTurn" javaClass="games.strategy.triplea.delegate.EndTurnDelegate" display="Turn Complete"/>
-        <delegate name="radiationbattle1" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="radiationbattle2" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="radiationbattle3" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="radiationbattle4" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="radiationbattle5" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="radiationbattle6" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="radiationbattle7" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="radiationbattle8" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="radiationbattle9" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="PostColdWarbattle" javaClass="games.strategy.triplea.delegate.BattleDelegate" display="Ongoing Battle"/>
-        <delegate name="Fake1" javaClass="games.strategy.triplea.delegate.UserActionDelegate" display="User Actions"/>
-        <delegate name="Fake2" javaClass="games.strategy.triplea.delegate.UserActionDelegate" display="User Actions"/>
         <delegate name="endRound" javaClass="games.strategy.triplea.delegate.EndRoundDelegate" display="Round Complete"/>
 
             <sequence>
                 <step name="gameInitDelegate" delegate="initDelegate" display="Initializing Delegates" maxRunCount="1"/>
-                <step name="DiseasesFakeStart" delegate="Fake1" player="Diseases" maxRunCount="1"/>
-                <step name="AIFakeStart" delegate="Fake2" player="AI" display="User Actions" maxRunCount="1"/>
-                <step name="AIPostColdWarSeaTerritoryOwnershipBattle" delegate="PostColdWarbattle" player="AI" display="Ongoing Battle"/>
+                <step name="DiseasesStart" delegate="userActions" player="Diseases" maxRunCount="1"/>
+                <step name="AIStart" delegate="userActions" player="AI" display="User Actions" maxRunCount="1"/>
+                <step name="PostColdWarRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
 
                 <step name="BrittonicCombatMove" delegate="move" player="Brittonic" display="Combat Move"/>
                 <step name="BrittonicBattle" delegate="battle" player="Brittonic" display="Combat"/>
@@ -1004,7 +991,7 @@
                 <step name="BrittonicPlace" delegate="place" player="Brittonic" display="Place Units"/>
                 <step name="BrittonicEndTurn" delegate="endTurn" player="Brittonic" display="Turn Complete"/>
 
-                <step name="BrittonicRadiationBattle" delegate="radiationbattle1" player="AI" display="Ongoing Battle"/>
+                <step name="BrittonicRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
 
                 <step name="BalticCombatMove" delegate="move" player="Baltic" display="Combat Move"/>
                 <step name="BalticBattle" delegate="battle" player="Baltic" display="Combat"/>
@@ -1013,7 +1000,7 @@
                 <step name="BalticPlace" delegate="place" player="Baltic" display="Place Units"/>
                 <step name="BalticEndTurn" delegate="endTurn" player="Baltic" display="Turn Complete"/>
 
-                <step name="BalticRadiationBattle" delegate="radiationbattle2" player="AI" display="Ongoing Battle"/>
+                <step name="BalticRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
 
                 <step name="GermanicCombatMove" delegate="move" player="Germanic" display="Combat Move"/>
                 <step name="GermanicBattle" delegate="battle" player="Germanic" display="Combat"/>
@@ -1022,7 +1009,7 @@
                 <step name="GermanicPlace" delegate="place" player="Germanic" display="Place Units"/>
                 <step name="GermanicEndTurn" delegate="endTurn" player="Germanic" display="Turn Complete"/>
 
-                <step name="GermanicRadiationBattle" delegate="radiationbattle3" player="AI" display="Ongoing Battle"/>
+                <step name="GermanicRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
 
                 <step name="SlavicCombatMove" delegate="move" player="Slavic" display="Combat Move"/>
                 <step name="SlavicBattle" delegate="battle" player="Slavic" display="Combat"/>
@@ -1031,7 +1018,7 @@
                 <step name="SlavicPlace" delegate="place" player="Slavic" display="Place Units"/>
                 <step name="SlavicEndTurn" delegate="endTurn" player="Slavic" display="Turn Complete"/>
 
-                <step name="SlavicRadiationBattle" delegate="radiationbattle4" player="AI" display="Ongoing Battle"/>
+                <step name="SlavicRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
 
                 <step name="CelticCombatMove" delegate="move" player="Celtic" display="Combat Move"/>
                 <step name="CelticBattle" delegate="battle" player="Celtic" display="Combat"/>
@@ -1040,7 +1027,7 @@
                 <step name="CelticPlace" delegate="place" player="Celtic" display="Place Units"/>
                 <step name="CelticEndTurn" delegate="endTurn" player="Celtic" display="Turn Complete"/>
 
-                <step name="CelticRadiationBattle" delegate="radiationbattle5" player="AI" display="Ongoing Battle"/>
+                <step name="CelticRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
 
                 <step name="HellenicCombatMove" delegate="move" player="Hellenic" display="Combat Move"/>
                 <step name="HellenicBattle" delegate="battle" player="Hellenic" display="Combat"/>
@@ -1050,7 +1037,7 @@
                 <step name="HellenicPlace" delegate="place" player="Hellenic" display="Place Units"/>
                 <step name="HellenicEndTurn" delegate="endTurn" player="Hellenic" display="Turn Complete"/>
 
-                <step name="HellenicRadiationBattle" delegate="radiationbattle6" player="AI" display="Ongoing Battle"/>
+                <step name="HellenicRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
 
                 <step name="RomanicCombatMove" delegate="move" player="Romanic" display="Combat Move"/>
                 <step name="RomanicBattle" delegate="battle" player="Romanic" display="Combat"/>
@@ -1060,7 +1047,7 @@
                 <step name="RomanicPlace" delegate="place" player="Romanic" display="Place Units"/>
                 <step name="RomanicEndTurn" delegate="endTurn" player="Romanic" display="Turn Complete"/>
 
-                <step name="RomanicRadiationBattle" delegate="radiationbattle7" player="AI" display="Ongoing Battle"/>
+                <step name="RomanicRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
 
                 <step name="HatticCombatMove" delegate="move" player="Hattic" display="Combat Move"/>
                 <step name="HatticBattle" delegate="battle" player="Hattic" display="Combat"/>
@@ -1069,7 +1056,7 @@
                 <step name="HatticPlace" delegate="place" player="Hattic" display="Place Units"/>
                 <step name="HatticEndTurn" delegate="endTurn" player="Hattic" display="Turn Complete"/>
 
-                <step name="HatticRadiationBattle" delegate="radiationbattle8" player="AI" display="Ongoing Battle"/>
+                <step name="HatticRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
 
                 <step name="DiseasesCombatMove" delegate="move" player="Diseases" display="Combat Move" maxRunCount="35"/>
                 <step name="DiseasesBattle" delegate="battle" player="Diseases" display="Combat" maxRunCount="35"/>
@@ -1078,7 +1065,7 @@
                 <step name="DiseasesPlace" delegate="place" player="Diseases" display="Place Units" maxRunCount="35"/>
                 <step name="DiseasesEndTurn" delegate="endTurn" player="Diseases" display="Turn Complete" maxRunCount="35"/>
 
-                <step name="DiseasesRadiationBattle" delegate="radiationbattle9" player="AI" display="Ongoing Battle"/>
+                <step name="DiseasesRadiationBattle" delegate="battle" player="AI" display="Ongoing Battle"/>
 
                 <step name="endRoundStep" delegate="endRound" display="Round Complete"/>
             </sequence>
@@ -12905,7 +12892,7 @@
         <attachment name="conditionAttachment-Atomic-Akkad" attachTo="AI" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
             <option name="directPresenceTerritories" value="1:Akkad"/>
             <option name="unitPresence" value="1:Nuke-Explosion"/>
-            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:Diseases:"/>
+            <option name="players" value="Baltic:Germanic:Brittonic:Celtic:Romanic:Hellenic:Slavic:Hattic:Diseases"/>
         </attachment>
         <attachment name="triggerAttachment_Atomic_blast_in_Akkad" attachTo="AI" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
             <option name="conditions" value="conditionAttachment-Atomic-Akkad"/>
