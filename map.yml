@@ -1,0 +1,7 @@
+map_name: age_of_tribes
+games:
+- {game_name: 'Age of Tribes: Classical', file_name: Age_of_Tribes_Classical.xml}
+- {game_name: 'Age of Tribes: Renaissance', file_name: Age_of_Tribes_Renaissance.xml}
+- {game_name: 'Age of Tribes: Cold War', file_name: Age_of_Tribes_Cold_War.xml}
+- {game_name: 'Age of Tribes: Primeval', file_name: Age_of_Tribes_Primeval.xml}
+- {game_name: 'Age of Tribes: Modern', file_name: Age_of_Tribes_Modern.xml}
